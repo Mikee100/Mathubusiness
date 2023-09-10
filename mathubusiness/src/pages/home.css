@@ -132,4 +132,78 @@ top:4rem;
     background-color: #065a82;
     color: #fff;
 }
+.modal{
+    background-color: rgba(0,0,0,0.5);
+     position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        scroll-behavior: auto;
+    
+    }
+    .popup_product{
+        position: absolute;
+        top:2rem;
+        left:30rem;
+        width: 24rem;
+        height: 35rem;
+      background-color: aqua;
+    }
+    .product_image_popup_cart{
+        position: absolute;
+        max-height: 100%;
+        min-width: 100%;
+       
 
+    }
+    .pop_product-title{
+        position: absolute;
+        top:25rem;
+        font-size: 1.9rem;
+
+    }
+    .pop_product-price{
+        position: absolute;
+        top:28rem;
+        font-size: 1.9rem;
+
+    }
+    .pop_btn{
+        position: absolute;
+        bottom: 1rem;
+        left: 3rem;
+        padding: .7rem;
+        border:none;
+        border-radius: 5px;
+        background-color: grey;
+    }
+    .pop_btn_wish{
+
+        position: absolute;
+        bottom: 1rem;
+        left: 11rem;
+        padding: .7rem;
+        border:none;
+        border-radius: 5px;
+        background-color: grey;
+    }
+    .pop_btn:hover , .pop_btn_wish:hover {
+        opacity: .7;
+    }
+    .cross{
+        position: absolute;
+        top:1rem;
+        left: 21rem;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 6px;
+    }
+    .cross:hover{
+        background-color: black;
+        color: white;
+    }
+ 
+
+    

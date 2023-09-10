@@ -58,3 +58,12 @@ text-decoration-line: none;
 .cart-icon:hover{
   color:grey;
 }
+.count{
+  position: absolute;
+  top:2rem;
+  left: 54.5rem;
+
+
+
+
+}

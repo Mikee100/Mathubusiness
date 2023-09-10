@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "./home.css";
+import {FaTimes} from 'react-icons/fa'
 
 
 const products = [
@@ -53,7 +54,28 @@ const products = [
         price: 2500,
     }
     ];
+
+  
+
 export default function Home() {
+    
+    const  [modal, setModal] = useState(false);
+
+    const toggleModal = () =>{
+    
+      setModal(!modal)
+    
+    
+    }
+    
+const [popupcontent, setpopupcontent] = useState([]);
+const changecontent = (product) =>{
+    setpopupcontent([product]);
+    setModal(!modal);
+  
+  }
+
+  
 
     return(
       <main>
@@ -63,7 +85,7 @@ export default function Home() {
 <div className="products">
 {products.map((product) => (
  
-  <div className="product"
+  <div className="product" 
    key={product.id}>
 
     <img  
@@ -80,11 +102,14 @@ export default function Home() {
       {product.price}$ 
     </span>
    <div className="buttons"> 
-   <button className="btn"> details </button>
-   <button className="btn" >
-    Add to Cart
+   <button className="btn" onClick={ () => changecontent(product)}> details </button>
+   <button className="btn"> 
+    Add to Cart 
    
     </button>
+
+
+
    </div>
 
 
@@ -92,7 +117,64 @@ export default function Home() {
   
     ))}
 
-</div> 
+</div>
+
+{ modal &&  (
+  <div className='modal'  onClick={toggleModal} >
+
+    
+{popupcontent.map((pop) => {
+return(
+  <div className="popup_product"
+ key={pop.id}>
+
+  <img  
+    className="product_image_popup_cart" 
+    src={pop.image}
+    alt={pop.image}
+    
+  />
+  
+ <h4 className="pop_product-title" >
+      {pop.title}
+
+    </h4>
+    <span  className="pop_product-price" >
+      {pop.price}$ 
+    </span>
+    <button className="pop_btn" >
+    Add to Cart
+   
+    </button>
+     <button className="pop_btn_wish" >
+    Wish List
+   
+    </button>
+
+
+
+ <button onClick={changecontent} className='cross'  ><FaTimes/></button>
+
+</div>
+)
+
+
+}
+  
+
+
+
+  )}
+    
+    </div> 
+
+) 
+
+
+
+}
+
+
 </div>
 </main>
     )

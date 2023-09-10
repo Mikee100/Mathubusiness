@@ -1,11 +1,12 @@
 
-.container-cart::before{
+.container_shopping{
+    position: absolute;
+    top:10rem;
+    left: 6rem;
+    width: 60rem;
+    height: 30rem;
+    background-color: aqua;
+
   
-    height: 20rem;
-    width: 20rem;
-    visibility: none;
-}
-.container-cart::after{
-    visibility: visible;
-    background-color:aqua ;
+
 }

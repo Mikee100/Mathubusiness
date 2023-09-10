@@ -19,7 +19,6 @@ function App() {
     
 <main>
  <Navbar />  
- <Shoppingcart />
 
 
       <Routes> 
@@ -28,7 +27,7 @@ function App() {
 
     <Route path="about" element={<About />}/>
     <Route path="contact" element={<Contact /> }/>
-    <Route path="shoppingcart" element={<Shoppingcart /> }/>
+    <Route path="shoppingcart" element={<Shoppingcart  /> }/>
 
 
 </Routes>

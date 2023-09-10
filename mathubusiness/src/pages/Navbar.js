@@ -19,7 +19,7 @@ function Navbar() {
        <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Contact  </li></Link>
       </ul>
 
-     <Link to="./shoppingcart" style={{color:"black"}}  > <FaShoppingCart  className='cart-icon'  /></Link>
+     <Link to="./shoppingcart" style={{color:"black"}}  ><p className='count' >0</p> <FaShoppingCart  className='cart-icon'  /></Link>
         </div >
         <hr className='nav_line' />
       
