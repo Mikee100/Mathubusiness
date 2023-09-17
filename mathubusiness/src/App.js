@@ -23,11 +23,10 @@ function App() {
 
       <Routes> 
    <Route path="home" element={<Home />}/>
-      <Route path="navbar" element={<Navbar />}/>
-
+   <Route path="navbar" element={<Navbar />}/>
     <Route path="about" element={<About />}/>
     <Route path="contact" element={<Contact /> }/>
-    <Route path="shoppingcart" element={<Shoppingcart  /> }/>
+    <Route path="shoppingcart" element={<Shoppingcart   /> }/>
 
 
 </Routes>

@@ -6,6 +6,9 @@
     width: 60rem;
     height: 30rem;
     background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   
 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./home.css";
 import {FaTimes} from 'react-icons/fa'
+import ShoppingCart from "./Shoppingcart";
 
 
 const products = [
@@ -74,7 +75,16 @@ const changecontent = (product) =>{
     setModal(!modal);
   
   }
+  const [cart,setCart] = useState([]); 
 
+
+  const handleClick = (product) => {
+
+    cart.push(product);
+   setCart(cart);
+   console.log(cart)
+  
+  }
   
 
     return(
@@ -84,10 +94,10 @@ const changecontent = (product) =>{
 
 <div className="products">
 {products.map((product) => (
- 
+
   <div className="product" 
    key={product.id}>
-
+ 
     <img  
       className="product-image"
       src={product.image}
@@ -101,9 +111,11 @@ const changecontent = (product) =>{
     <span  className="product-price" >
       {product.price}$ 
     </span>
+
+
    <div className="buttons"> 
    <button className="btn" onClick={ () => changecontent(product)}> details </button>
-   <button className="btn"> 
+   <button className="btn" onClick={ () => handleClick(product)  } > 
     Add to Cart 
    
     </button>
@@ -115,7 +127,7 @@ const changecontent = (product) =>{
 
   </div>
   
-    ))}
+     ))}
 
 </div>
 
@@ -165,7 +177,7 @@ return(
 
 
   )}
-    
+    <ShoppingCart  cart={cart}/>
     </div> 
 
 ) 
@@ -173,6 +185,7 @@ return(
 
 
 }
+
 
 
 </div>
