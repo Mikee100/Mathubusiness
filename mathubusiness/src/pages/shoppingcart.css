@@ -2,14 +2,24 @@
 .container_shopping{
     position: absolute;
     top:10rem;
-    left: 6rem;
-    width: 60rem;
+    left: 13rem;
+    width: 50rem;
     height: 30rem;
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid grey;
+    border-radius: 10px;
 
   
+  
 
+}
+.container_shopping h2{
+    position: absolute;
+    top:2rem;
+    left:3rem;
+
+}
+hr{
+    position: absolute;
+    top:5rem;
+    width: 100%;
 }

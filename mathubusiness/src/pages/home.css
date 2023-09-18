@@ -147,13 +147,14 @@ top:4rem;
         position: absolute;
         top:2rem;
         left:30rem;
-        width: 24rem;
+        width: 28rem;
         height: 35rem;
-      background-color: aqua;
+        background-color:rgb(228, 203, 203);
+    ;
     }
     .product_image_popup_cart{
         position: absolute;
-        max-height: 100%;
+        max-height: 70%;
         min-width: 100%;
        
 
@@ -167,35 +168,47 @@ top:4rem;
     .pop_product-price{
         position: absolute;
         top:28rem;
-        font-size: 1.9rem;
+        font-size: 1.4rem;
 
     }
     .pop_btn{
         position: absolute;
         bottom: 1rem;
-        left: 3rem;
-        padding: .7rem;
+        right: 1rem;
+        padding: .9rem;
         border:none;
         border-radius: 5px;
         background-color: grey;
+        display: flex;
+        width: 7rem;
+        justify-content: start;
+        
+        align-items: start;
     }
     .pop_btn_wish{
 
         position: absolute;
-        bottom: 1rem;
-        left: 11rem;
+        bottom: 7rem;
+        left: 7rem;
         padding: .7rem;
         border:none;
         border-radius: 5px;
         background-color: grey;
     }
     .pop_btn:hover , .pop_btn_wish:hover {
-        opacity: .7;
+        opacity: .9;
+        color: white;
+    }
+    .product_about{
+        position: absolute;
+        bottom: 1rem;
+        width: 15rem;
+        font-size: .8rem;
     }
     .cross{
         position: absolute;
         top:1rem;
-        left: 21rem;
+        left: 25rem;
         border: none;
         font-size: 1.1rem;
         border-radius: 6px;
@@ -204,6 +217,23 @@ top:4rem;
         background-color: black;
         color: white;
     }
- 
+    .icon_heart{
+        position: absolute;
+        bottom:7.5rem;
+        right: 3rem;
+        font-size: 1.7rem;
+    }
+    .icon_heart:hover{
+       color: red;
+        cursor: pointer;
+    }
+    .carticon{
+        position: absolute;
+        right:.4rem;
+    }
+    .carticon:hover{
+        color: white;
+    }
+
 
     
