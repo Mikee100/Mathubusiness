@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./home.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
-import {FaShoppingCart} from 'react-icons/fa'
+import {FaShoppingCart} from 'react-icons/fa';
 
 
 
@@ -97,14 +97,16 @@ const changecontent = (product) =>{
   const [cart,setCart] = useState([]); 
 
 
+
+
   const handleClick = (product) => {
 
     cart.push(product);
-   setCart(cart);
-   console.log(cart)
+ setCart([cart]);
+
+  
   
   }
-  
 
     return(
       <main>
@@ -121,7 +123,8 @@ const changecontent = (product) =>{
       className="product-image"
       src={product.image}
       alt={product.image}
-      
+      value={cart}
+   
     />
     <h4 className="product-title" >
       {product.title}
@@ -136,7 +139,7 @@ const changecontent = (product) =>{
 
    <div className="buttons"> 
    <button className="btn" onClick={ () => changecontent(product)}> details </button>
-   <button className="btn" onClick={ () => handleClick(product)  } > 
+   <button className="btn" onClick={() => handleClick(product)}> 
     Add to Cart 
    
     </button>
@@ -211,13 +214,18 @@ return(
 
 
 
+
+
 </div>
+
 </main>
+
     )
- 
+
         
 
 
-  
+ 
  
 }
+

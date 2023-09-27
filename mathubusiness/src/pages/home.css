@@ -146,7 +146,7 @@ top:4rem;
     .popup_product{
         position: absolute;
         top:2rem;
-        left:30rem;
+        left:25rem;
         width: 28rem;
         height: 35rem;
         background-color:rgb(228, 203, 203);
@@ -154,8 +154,8 @@ top:4rem;
     }
     .product_image_popup_cart{
         position: absolute;
-        max-height: 70%;
-        min-width: 100%;
+        min-height: 12rem;
+        min-width: 27.9rem;
        
 
     }
