@@ -4,23 +4,27 @@ import "./navbar.css";
 import {FaShoppingCart} from 'react-icons/fa'
 
 
-function Navbar() {
+function Navbar({cartItems}) {
   return (
 
     <div className='container_navbar'> 
         
     <div className="nav">
-       <Link to='./home' > <h1 className=" company_name ">Soleil Africa Leather </h1></Link>
+       <Link to='./produts' > <h1 className=" company_name ">Soleil Africa Leather </h1></Link>
       
             
             <ul>
-       <Link to='./home'  style={{ textDecoration: 'none'}} > <li >Home  </li></Link>
+       <Link to='/products'  style={{ textDecoration: 'none'}} > <li >Home  </li></Link>
+      
        <Link to='./about'  style={{ textDecoration: 'none'}} > <li> About </li></Link>
+  
        <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Contact  </li></Link>
+     
       </ul>
 
-     <Link to="./shoppingcart" style={{color:"black"}}  ><p className='count' >0</p> <FaShoppingCart  className='cart-icon'  /></Link>
+     <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>
         </div >
+ 
         <hr className='nav_line' />
       
     </div>

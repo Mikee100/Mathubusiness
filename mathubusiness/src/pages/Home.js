@@ -103,6 +103,7 @@ const changecontent = (product) =>{
 
     cart.push(product);
  setCart([cart]);
+ console.log(cart);
 
   
   
@@ -113,47 +114,7 @@ const changecontent = (product) =>{
         
 <div  className="container"> 
 
-<div className="products">
-{products.map((product) => (
 
-  <div className="product" 
-   key={product.id}>
- 
-    <img  
-      className="product-image"
-      src={product.image}
-      alt={product.image}
-      value={cart}
-   
-    />
-    <h4 className="product-title" >
-      {product.title}
-
-    </h4>
-
-
-    <span  className="product-price" >
-      {product.price}$ 
-    </span>
-
-
-   <div className="buttons"> 
-   <button className="btn" onClick={ () => changecontent(product)}> details </button>
-   <button className="btn" onClick={() => handleClick(product)}> 
-    Add to Cart 
-   
-    </button>
-
-
-
-   </div>
-
-
-  </div>
-  
-     ))}
-
-</div>
 
 { modal &&  (
   <div className='modal'  onClick={toggleModal} >
