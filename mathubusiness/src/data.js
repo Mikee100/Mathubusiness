@@ -14,7 +14,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
 
-    price: 2500,
+    price: 10000,
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
 
-    price: 2500,
+    price: 9500,
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const products = [
     title: "Chanel Bag",
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
-    price: 2500,
+    price: 6500,
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
     title: "Chanel Bag",
-    price: 2500,
+    price: 5500,
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
 
-    price: 2500,
+    price: 4500,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
 
-    price: 2500,
+    price: 10500,
   },
 
   {
@@ -67,7 +67,7 @@ const products = [
     about:
       "this is a very good looking Chanel bag from Spain made of pure cotton",
 
-    price: 2500,
+    price: 12500,
   },
 ];
 

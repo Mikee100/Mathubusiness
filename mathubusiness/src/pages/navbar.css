@@ -1,12 +1,11 @@
 .nav{
-    position: absolute;
+    position: fixed;
     width:100%;
-    padding:30px;
+    height: 8rem;
     top:0rem;
-    left: 8rem;
+    left: 0rem;
    
-
-}
+  }
 
 ul {
     position: absolute;
@@ -40,6 +39,7 @@ text-decoration-line: none;
     font-weight: 700;
     left:5rem;
     color: black;
+    top:2rem;
    
 }
 .nav_line{

@@ -78,21 +78,21 @@ function App() {
 
     
 <main>
- <Navbar  cartItems={cartItems} />  
+ 
 
 
       <Routes> 
 
-   <Route path="/navbar" element={<Navbar />}/>
+   
 
 <Route path="/routees"  element={<Routees  />}/>
 <Route path='products' element={<Products productItems={productItems} handleAddProduct={handleAddProduct}   />}  />
 <Route path='about' element={<About />}  />
 <Route path='shoppingcart' element={<Shoppingcart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClearance={handleCartClearance} />}  />
 <Route path='contact' element={<Contact />}  />
-
+<Route path="/navbar" element={<Navbar />}/>
 </Routes>
-
+<Navbar  cartItems={cartItems} />  
  </main>
 
       </BrowserRouter>
