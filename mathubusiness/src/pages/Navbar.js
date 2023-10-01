@@ -25,7 +25,7 @@ function Navbar({cartItems}) {
      <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>
         </div >
  
-        <hr className='nav_line' />
+       {/* <hr className='nav_line' /> */}
       
     </div>
 

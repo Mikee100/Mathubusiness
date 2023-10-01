@@ -6,75 +6,6 @@ import {FaShoppingCart} from 'react-icons/fa';
 
 
 
-const products = [
-    {
-        id: 0,
-        image:  '/images/bag1.jfif',
-        title:  'Chanel Bag' ,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-   
-        price: 2500,
-    },
-    
-    {
-        id: 1,
-        image:  '/images/bag2.jfif',
-        title:  'Chanel Bag' ,
-        price: 2500,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-    },
-    {
-        id: 2,
-        image:  '/images/bag3.jfif',
-        title:  'Chanel Bag' ,
-        price: 2500,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-    },
-    {
-        id: 3,
-        image:  '/images/bag4.jfif',
-        title:  'Chanel Bag' ,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-        price: 2500,
-    },
-    {
-        id: 4,
-        image:  '/images/bag5.jfif',
-        title:  'Chanel Bag' ,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-        price: 2500,
-    },
-    {
-        id: 5,
-        image:  '/images/bag6.jfif',
-        title:  'Chanel Bag' ,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-        price: 2500,
-    },
-    {
-        id: 6,
-        image:  '/images/bag7.jfif',
-        title:  'Chanel Bag' ,
-        about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-        price: 2500,
-    },
-    
-    {
-        id: 7,
-        image:  '/images/bag8.jfif',
-        title:  'Chanel Bag' ,
-          about:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit architecto nulla autem libero temporibus facilis porro assumenda",
-        price: 2500,
-    }
-    ];
 
 
 export default function Home() {
@@ -94,21 +25,6 @@ const changecontent = (product) =>{
     setModal(!modal);
   
   }
-  const [cart,setCart] = useState([]); 
-
-
-
-
-  const handleClick = (product) => {
-
-    cart.push(product);
- setCart([cart]);
- console.log(cart);
-
-  
-  
-  }
-
     return(
       <main>
         
@@ -142,7 +58,7 @@ return(
       Ksh.{pop.price} 
     </span>
     <button className="pop_btn" >
-    Add to Cart
+    ADD TO CART
    <FaShoppingCart  className="carticon" />
     </button>
     {/** 

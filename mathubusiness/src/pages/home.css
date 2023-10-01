@@ -1,238 +1,225 @@
-
-.container{
-    position: absolute;
-    top:10rem;
-    left: 6rem;
-    width: 60rem;
-    height: 30rem;
-
-  
-
+.container {
+  position: relative;
+  top: 10rem;
+  left: 6rem;
+  width: 60rem;
+  height: 80rem;
 }
 
-.bag_pad{
-    position: absolute;
-    height: 8rem;
-    width: 7rem;
-    left: 5rem;
-    top:4rem;
-    cursor: pointer;
-
- 
+.bag_pad {
+  position: absolute;
+  height: 8rem;
+  width: 7rem;
+  left: 5rem;
+  top: 4rem;
+  cursor: pointer;
 }
-.img1{
-    position: absolute;
-    max-width: 80%;
-    min-height: 70%;
-    left:1rem;
-    border-radius: 5px;
-
+.img1 {
+  position: absolute;
+  max-width: 80%;
+  min-height: 70%;
+  left: 1rem;
+  border-radius: 5px;
 }
-.bag_pad p{
-    position: absolute;
-    top:6rem;
-    font-size: 16px;
-   left: 2.5rem;
-   font-weight: 700;
-   color: black;
+.bag_pad p {
+  position: absolute;
+  top: 6rem;
+  font-size: 16px;
+  left: 2.5rem;
+  font-weight: 700;
+  color: black;
 }
 
-
-.clothes_pad{
-    position: absolute;
-    height: 8rem;
-    width: 7rem;
-    left: 15rem;
-    cursor: pointer;
-top:4rem;
- 
+.clothes_pad {
+  position: absolute;
+  height: 8rem;
+  width: 7rem;
+  left: 15rem;
+  cursor: pointer;
+  top: 4rem;
 }
-.img2{
-    position: absolute;
-    min-width: 90%;
-    max-height: 100%;
-    left:0.5rem;
-    border-radius: 5px;
-
+.img2 {
+  position: absolute;
+  min-width: 90%;
+  max-height: 100%;
+  left: 0.5rem;
+  border-radius: 5px;
 }
-.clothes_pad p{
-    position: absolute;
-    top:6rem;
-    font-size: 16px;
-   left: 2.5rem;
-   font-weight: 700;
-   color: black;
+.clothes_pad p {
+  position: absolute;
+  top: 6rem;
+  font-size: 16px;
+  left: 2.5rem;
+  font-weight: 700;
+  color: black;
 }
 
-.products{
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
-    grid-gap: 50px;
-    width: 40rem;
-    
-    
- 
-    top:2rem;
-    left: 10rem;
-}
-.product{
-    position: relative;
-    background-color:white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 15rem;
-    width: 13rem;
+.products {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  width: 40rem;
 
+  top: 2rem;
+  left: 10rem;
 }
-.product-image{
-    border-radius: 10px;
-    height: 10rem;
-    width: 10rem;
+.product {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 13rem;
 }
-.product-title{
-    font-weight: 700;
-    font-size: 18px;
+.product-image {
+  border-radius: 10px;
+  height: 10rem;
+  width: 10rem;
 }
-.product-price{
-    font-weight: 700;
-    font-size: 18px;
+.product-title {
+  font-weight: 700;
+  font-size: 18px;
 }
-.buttons{
-    position: absolute;
-    top:0;
-    left:0;
-    transition: opacity 0.5s;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000044;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    gap: 10px;
+.product-price {
+  font-weight: 700;
+  font-size: 18px;
 }
-.product:hover .buttons{
-    opacity: 1;
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000044;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 10px;
 }
-.buttons .btn{
-    position: relative;
-    left: 3rem;
-    background-color: #dddddd;
-    padding: 5px ;
-    width:50%;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    border: none;
+.product:hover .buttons {
+  opacity: 1;
 }
-.buttons .btn:hover{
-    background-color: #065a82;
-    color: #fff;
+.buttons .btn {
+  position: relative;
+  left: 3rem;
+  background-color: #dddddd;
+  padding: 5px;
+  width: 50%;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  border: none;
 }
-.modal{
-    background-color: rgba(0,0,0,0.5);
-     position: fixed;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow-y: auto;
-        scroll-behavior: auto;
-    
-    }
-    .popup_product{
-        position: absolute;
-        top:2rem;
-        left:25rem;
-        width: 28rem;
-        height: 35rem;
-        background-color:rgb(228, 203, 203);
-    ;
-    }
-    .product_image_popup_cart{
-        position: absolute;
-        min-height: 12rem;
-        min-width: 27.9rem;
-       
-
-    }
-    .pop_product-title{
-        position: absolute;
-        top:25rem;
-        font-size: 1.9rem;
-
-    }
-    .pop_product-price{
-        position: absolute;
-        top:28rem;
-        font-size: 1.4rem;
-        left: 0rem;
-
-    }
-    .pop_btn{
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        padding: .9rem;
-        border:none;
-        border-radius: 5px;
-        background-color: grey;
-        display: flex;
-        width: 7rem;
-       
-    }
-    .pop_btn_wish{
-
-        position: absolute;
-        bottom: 7rem;
-        left: 7rem;
-        padding: .7rem;
-        border:none;
-        border-radius: 5px;
-        background-color: grey;
-    }
-    .pop_btn:hover , .pop_btn_wish:hover {
-        opacity: .9;
-        color: white;
-    }
-    .product_about{
-        position: absolute;
-        bottom: 1rem;
-        width: 15rem;
-        font-size: 1rem;
-    }
-    .cross{
-        position: absolute;
-        top:1rem;
-        left: 25rem;
-        border: none;
-        font-size: 1.1rem;
-        border-radius: 6px;
-    }
-    .cross:hover{
-        background-color: black;
-        color: white;
-    }
-    .icon_heart{
-        position: absolute;
-        bottom:7.5rem;
-        right: 3rem;
-        font-size: 1.7rem;
-    }
-    .icon_heart:hover{
-       color: red;
-        cursor: pointer;
-    }
-    .carticon{
-        position: absolute;
-        right:.4rem;
-    }
-    .carticon:hover{
-        color: white;
-    }
-
-
-    
+.buttons .btn:hover {
+  background-color: #065a82;
+  color: #fff;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  scroll-behavior: auto;
+}
+.popup_product {
+  position: absolute;
+  top: 7rem;
+  left: 20rem;
+  width: 45rem;
+  height: 25rem;
+  background-color: white;
+  border-radius: 8px;
+}
+.product_image_popup_cart {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+}
+.pop_product-title {
+  position: absolute;
+  top: 5rem;
+  left: 20rem;
+  font-size: 1.9rem;
+}
+.pop_product-price {
+  position: absolute;
+  top: 10rem;
+  font-size: 1.4rem;
+  left: 20rem;
+  color: rgb(128, 101, 66);
+}
+.pop_btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 20rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(128, 101, 66);
+  display: flex;
+  width: 12rem;
+  justify-content: center;
+}
+.pop_btn_wish {
+  position: absolute;
+  bottom: 7rem;
+  left: 7rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+}
+.pop_btn:hover,
+.pop_btn_wish:hover {
+  opacity: 0.9;
+  color: white;
+}
+.product_about {
+  position: absolute;
+  top: 15rem;
+  left: 20rem;
+  width: 15rem;
+  font-size: 1rem;
+}
+.cross {
+  position: absolute;
+  top: 1rem;
+  left: 42rem;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cross:hover {
+  background-color: black;
+  color: white;
+}
+.icon_heart {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 1.7rem;
+  color: rgb(128, 101, 66);
+}
+.icon_heart:hover {
+  color: red;
+  cursor: pointer;
+}
+.carticon {
+  position: absolute;
+  right: 0.7rem;
+}
+.carticon:hover {
+  color: white;
+}

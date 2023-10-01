@@ -4,7 +4,7 @@ const products = [
     image: "/images/bag1.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
     price: 2500,
   },
   {
@@ -12,7 +12,7 @@ const products = [
     image: "/images/bag2.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
 
     price: 10000,
   },
@@ -21,7 +21,7 @@ const products = [
     image: "/images/bag3.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
 
     price: 9500,
   },
@@ -30,14 +30,14 @@ const products = [
     image: "/images/bag4.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
     price: 6500,
   },
   {
     id: 4,
     image: "/images/bag5.jfif",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
     title: "Chanel Bag",
     price: 5500,
   },
@@ -46,7 +46,7 @@ const products = [
     image: "/images/bag6.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
 
     price: 4500,
   },
@@ -55,7 +55,7 @@ const products = [
     image: "/images/bag7.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
 
     price: 10500,
   },
@@ -65,7 +65,7 @@ const products = [
     image: "/images/bag8.jfif",
     title: "Chanel Bag",
     about:
-      "this is a very good looking Chanel bag from Spain made of pure cotton",
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
 
     price: 12500,
   },

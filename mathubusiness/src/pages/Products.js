@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./home.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
-import {FaShoppingCart} from 'react-icons/fa';
+
 
 
 export default function Products({productItems, handleAddProduct }) {
@@ -83,9 +83,7 @@ return(
     alt={pop.image}
     
   />
-      <span  className="product-about" >
-      {pop.about}$ 
-    </span>
+     
   
  <h4 className="pop_product-title" >
       {pop.title}
@@ -97,8 +95,8 @@ return(
       Ksh.{pop.price} 
     </span>
     <button className="pop_btn"   onClick={() => handleAddProduct(pop)}  >
-    Add to Cart
-   <FaShoppingCart  className="carticon" />
+   ADD TO CART
+  
     </button>
     {/** 
      <button className="pop_btn_wish" >
