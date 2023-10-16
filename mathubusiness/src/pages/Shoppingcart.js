@@ -42,20 +42,21 @@ export default function ShoppingCart({cartItems,handleAddProduct ,handleRemovePr
 
     <button className='increase-item'  onClick={()=> handleAddProduct(item) } >+</button>
     <button className='decrease-item'  onClick={()=> handleRemoveProduct(item)} >-</button>
-   
+   <hr className='line-cart' />
 </div>
   </div>
 ) )}
 
-
-
-
-</div>
 <div className='total_container'>
   <p>Total</p>
 <small>${totalPrice}</small>
+<button className='checkout' >Checkout</button>
  
       </div>
+
+
+</div>
+
       </>
   )
 }

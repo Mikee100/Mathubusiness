@@ -4,13 +4,13 @@
     top:10rem;
     left: 15rem;
     width: 50rem;
-    height: 35rem;
+    height: 50rem;
     border: 1px solid grey;
     border-radius: 10px;
     overflow-y: auto;
     overflow-x: hidden;
 
-
+border: none;
   
 
 }
@@ -76,12 +76,12 @@ display: grid;
     font-weight: 500;
 }
 .total_container{
-    position: fixed;
+
     position: absolute;
-    top: 40.1rem;
-    height:5rem;
+    bottom: -5rem;
+    height:8rem;
     background-color: rgba(0,0,0,0.1);
-    left: 15rem;
+    left: 0rem;
     width: 50rem;
 
   
@@ -126,4 +126,22 @@ font-size: 1.4rem;
 }
 .bt_clear:hover{
     background-color: black;
+}
+.checkout{
+    position: absolute;
+    left: 35rem;
+    top:4rem;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+}
+.line-cart{
+    position: relative;
+    top: 1.8rem;
+
+    background-color: red;
+
 }

@@ -14,11 +14,11 @@ function Navbar({cartItems}) {
       
             
             <ul>
-       <Link to='/products'  style={{ textDecoration: 'none'}} > <li >Home  </li></Link>
+       <Link to='/products'  style={{ textDecoration: 'none'}} > <li >Bags  </li></Link>
       
-       <Link to='./about'  style={{ textDecoration: 'none'}} > <li> About </li></Link>
+       <Link to='./about'  style={{ textDecoration: 'none'}} > <li> Shoes </li></Link>
   
-       <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Contact  </li></Link>
+       <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Dresses </li></Link>
      
       </ul>
 

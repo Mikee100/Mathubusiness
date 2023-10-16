@@ -8,9 +8,12 @@ import Products from './pages/Products';
 import About from './pages/About';
 import Shoppingcart from  "./pages/Shoppingcart"
 import Contact from './pages/Contact';
-
+import shoes from './shoes';
+import dressesdata from './dressesdata'
 function App() {
   const productItems = products;
+  const productShoes = shoes;
+  const productDresses = dressesdata;
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -87,9 +90,9 @@ function App() {
 
 <Route path="/routees"  element={<Routees  />}/>
 <Route path='products' element={<Products productItems={productItems} handleAddProduct={handleAddProduct}   />}  />
-<Route path='about' element={<About />}  />
+<Route path='about' element={<About productShoes={productShoes} handleAddProduct={handleAddProduct} />}  />
 <Route path='shoppingcart' element={<Shoppingcart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClearance={handleCartClearance} />}  />
-<Route path='contact' element={<Contact />}  />
+<Route path='contact' element={<Contact productDresses={productDresses} handleAddProduct={handleAddProduct} />}  />
 <Route path="/navbar" element={<Navbar />}/>
 </Routes>
 <Navbar  cartItems={cartItems} />  
