@@ -10,11 +10,11 @@ function Navbar({cartItems}) {
     <div className='container_navbar'> 
         
     <div className="nav">
-       <Link to='./produts' > <h1 className=" company_name ">Soleil Africa Leather </h1></Link>
+       <Link to='./products' > <h1 className=" company_name ">MEZURI SHOPPING WEBSITE </h1></Link>
       
             
             <ul>
-       <Link to='/products'  style={{ textDecoration: 'none'}} > <li >Bags  </li></Link>
+       <Link to='./products'  style={{ textDecoration: 'none'}} > <li >Bags  </li></Link>
       
        <Link to='./about'  style={{ textDecoration: 'none'}} > <li> Shoes </li></Link>
   

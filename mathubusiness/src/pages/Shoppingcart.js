@@ -5,6 +5,7 @@ export default function ShoppingCart({cartItems,handleAddProduct ,handleRemovePr
 
   const totalPrice =cartItems.reduce((price,item) => price+item.quantity * item.price, 0 )
 
+ 
   return (
     <>
     <div className='container_shopping' >
