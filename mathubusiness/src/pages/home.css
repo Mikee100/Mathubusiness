@@ -3,7 +3,9 @@
   top: 10rem;
   left: 6rem;
   width: 60rem;
-  height: 80rem;
+  height: 40rem;
+
+
 }
 
 .bag_pad {
@@ -61,8 +63,9 @@
   grid-gap: 50px;
   width: 40rem;
 
-  top: 2rem;
+  top: 0rem;
   left: 10rem;
+
 }
 .product {
   position: relative;

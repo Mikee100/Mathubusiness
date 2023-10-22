@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./home.css";
+import "./navbar.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
 

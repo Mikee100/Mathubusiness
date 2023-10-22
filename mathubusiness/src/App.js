@@ -84,7 +84,7 @@ function App() {
 <main>
   
     
-<Search productItems={productItems} />
+
 
 
       <Routes> 
@@ -99,7 +99,7 @@ function App() {
 <Route path="search" element={<Search productItems={productItems} />}/>
 
 </Routes>
-
+<Search  productItems={productItems}/>
 <Navbar  cartItems={cartItems} />  
  </main>
 
