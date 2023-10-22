@@ -223,3 +223,54 @@
 .carticon:hover {
   color: white;
 }
+
+@media (max-width:700px){
+  .container{
+    position: absolute;
+    left: 0rem;
+    width: 100%;
+  
+
+  }
+  .products{
+    
+    left: 0rem;
+    display: grid;
+    grid-gap: 5px;
+    width: 100%;
+    top:1rem;
+  }
+
+  .modal{
+    width: 100%;
+
+  }
+  .popup_product{
+    left: 0rem;
+    width: 100%;
+    top:15rem;
+  }
+  .product_image_popup_cart{
+    width: 15rem;
+    height: 15rem;
+
+  }
+  .product_about{
+    left: 0rem;
+    color: black;
+   
+  }
+  .pop_btn{
+    left: 0rem;
+  }
+  .pop_product-price{
+    left:15rem;
+  }
+  .pop_product-title{
+    left: 15rem;
+  }
+  .cross{
+    left:23rem;
+    
+  }
+}

@@ -155,3 +155,45 @@ font-size: 1.4rem;
     overflow-y: auto;
     scroll-behavior: auto;
   }
+  @media (max-width:700px){
+    .container_shopping{
+        left: 0rem;
+        
+        width: 100%;
+    }
+    .cart_empty{
+        left: 5rem;
+    }.bt_clear{
+        left: 20rem;
+    }
+   .checkout{
+    left: 0rem;
+   }
+   .cart_image{
+    left: 0rem;
+    height: 7rem;
+    width: 5rem;
+   }
+   .cart-title{
+    left: 10rem;
+   }
+   .cart-price{
+    left: 22rem;
+   }
+   .increase-item{
+    left: 16rem;
+    
+   }
+   .decrease-item{
+    left: 19.5rem;
+   }
+   .cart-price p{
+    left: -4rem;
+   }
+   .total_container small{
+    position: absolute;
+    left: 20rem;
+   }
+
+   
+}
