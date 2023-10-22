@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import "./home.css"
 export default function Search(productItems) {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
 
   return (
@@ -17,35 +17,30 @@ export default function Search(productItems) {
         } }
         placeholder="Search..."
       />
-      <div className='container'>
-     
-        {
-          
-          productItems?.productItems.filter((val) => {
+    
 
-            if(searchTerm === ""){
-              return val;
-          }else if(val.title?.toLowerCase().includes(searchTerm.toLowerCase()))
-          {
+{productItems?.productItems
+// eslint-disable-next-line
+        .filter((val) => {
+          if (val.title?.toLowerCase().includes(searchTerm?.toLowerCase())) {
             return val;
           }
-          return false;
         })
-
-
-      .map((val) => {
-          return(
+        
+        .map((val) => {
+          return (
+            
             <div className='template'>
+              
               <h1>{val.title}</h1>
                <img src={val.image} alt="" />
+               <h1>{val.price}</h1>
 
             </div>
-          )
-        } )
+           
+          );
+        })}
       
-
-      }
-      </div>
     </div>
   );
 };

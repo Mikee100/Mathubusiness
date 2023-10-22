@@ -31,6 +31,8 @@ function Navbar({cartItems}) {
           {Mobile ? <FaTimes/> : <FaBars  />}</button>
        {/* <hr className='nav_line' /> */}
       
+      
+
     </div>
 
 
