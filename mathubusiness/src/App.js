@@ -10,6 +10,7 @@ import Shoppingcart from  "./pages/Shoppingcart"
 import Contact from './pages/Contact';
 import shoes from './shoes';
 import dressesdata from './dressesdata'
+import Search from './pages/Search';
 function App() {
   const productItems = products;
   const productShoes = shoes;
@@ -82,12 +83,12 @@ function App() {
 
 <main>
   
- 
+    
+<Search productItems={productItems} />
 
 
       <Routes> 
 
-   
 
 <Route path="/routees"  element={<Routees  />}/>
 <Route path='products' element={<Products productItems={productItems} handleAddProduct={handleAddProduct}   />}  />
@@ -95,7 +96,10 @@ function App() {
 <Route path='shoppingcart' element={<Shoppingcart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClearance={handleCartClearance} />}  />
 <Route path='contact' element={<Contact productDresses={productDresses} handleAddProduct={handleAddProduct} />}  />
 <Route path="navbar" element={<Navbar />}/>
+<Route path="search" element={<Search productItems={productItems} />}/>
+
 </Routes>
+
 <Navbar  cartItems={cartItems} />  
  </main>
 

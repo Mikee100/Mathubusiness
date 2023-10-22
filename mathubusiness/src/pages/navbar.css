@@ -68,6 +68,9 @@ color: white;
 
 
 } 
+.bars{
+  visibility: hidden;
+}
 
 @media (max-width:700px){
   .nav-links-mobile {
@@ -111,8 +114,5 @@ ul{
   left: 21rem;
   top: 1rem; 
 }
-small{
-  position: absolute;
-  bottom:10rem;
-}
+
 }
