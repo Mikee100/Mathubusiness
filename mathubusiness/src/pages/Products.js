@@ -5,6 +5,7 @@ import {FaRegHeart} from 'react-icons/fa'
 
 
 
+
 export default function Products({productItems, handleAddProduct }) {
     const  [modal, setModal] = useState(false);
 
@@ -24,6 +25,7 @@ const changecontent = (product) =>{
 
   return (
     <div className='container'>
+   
         <div className="products">
 {productItems.map((product) => (
 

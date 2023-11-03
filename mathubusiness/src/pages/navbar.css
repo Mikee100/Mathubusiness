@@ -72,33 +72,36 @@ color: white;
   visibility: hidden;
 }
 .search{
-  position: absolute;
-  top:7rem;
-  left: 30rem;
+  position: fixed;
+  top:2.5rem;
+  left: 57rem;
   width: 20rem;
   height: 2rem;
   border-radius: 6px;
- 
+
+
 
 }
 .template{
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 30rem;
-  width: 40rem;
-  top:15rem;
+  position: relative;
+
+
+  height: 55rem;
+  width: 50rem;
+  top:-30rem;
   left: 20rem;
-  color: grey;
-  display: flex;
-  justify-content: center;
-  align-items: start;
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
 
 }
-.template img{
-  position: absolute;
-  top:5rem;
+.template-products{
+position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+ 
 }
+
+
 
 
 @media (max-width:700px){

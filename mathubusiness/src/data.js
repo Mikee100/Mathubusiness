@@ -2,7 +2,7 @@ const products = [
   {
     id: 0,
     image: "/images/bag1.jfif",
-    title: "Chanel Bag",
+    title: "Loius Bag",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
     price: 2500,
