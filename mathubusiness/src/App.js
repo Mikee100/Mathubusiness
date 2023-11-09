@@ -105,7 +105,7 @@ function App() {
         </Routes>
         
         <Navbar cartItems={cartItems} />
-           <Search productItems={productItems}/> 
+           
       </main>
     </BrowserRouter>
   );

@@ -4,6 +4,7 @@ import "./navbar.css";
 import {FaShoppingCart} from 'react-icons/fa'
 import {FaBars} from "react-icons/fa"
 import {FaTimes} from "react-icons/fa"
+import {FaSearch} from "react-icons/fa"
 
 function Navbar({cartItems}) {
   const[Mobile, setMobile] = useState(false)
@@ -16,13 +17,13 @@ function Navbar({cartItems}) {
        <Link to='./products' > <h1 className=" company_name ">MEZURI SHOPPING WEBSITE </h1></Link>
       
             
-       <ul className={Mobile ? "nav-links-mobile":"nav-ul"} onClick={ ()=> setMobile(false)  } >
+       <ul className={Mobile ? "nav-links-mobile":"nav-ul"} onClick={ ()=> setMobile(false)  }>
        <Link to='./products'  style={{ textDecoration: 'none'}} > <li >Bags  </li></Link>
       
        <Link to='./about'  style={{ textDecoration: 'none'}} > <li> Shoes </li></Link>
   
        <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Dresses </li></Link>
-     
+     <Link  to="./search" style={{ textDecoration: 'none'}} className='search_icon'>< FaSearch/> </Link>
       
       </ul>
      <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>

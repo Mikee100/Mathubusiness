@@ -73,10 +73,11 @@ color: white;
 }
 .search{
   position: fixed;
-  top:2.5rem;
-  left: 57rem;
+  top:6.5rem;
+  left: 35rem;
   width: 20rem;
   height: 2rem;
+ 
   border-radius: 6px;
 
 
@@ -88,7 +89,7 @@ color: white;
 
   height: 55rem;
   width: 50rem;
-  top:-30rem;
+  top:10rem;
   left: 20rem;
    display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -97,8 +98,14 @@ color: white;
 }
 .template-products{
 position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
  
+ 
+}
+.search_icon{
+  position: absolute;
+  left: 50rem;
+  top:2rem;
+  color: white;
 }
 
 
