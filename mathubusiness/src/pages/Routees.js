@@ -3,14 +3,20 @@ import{Route, Routes} from "react-router-dom"
 import Products from './Products'
 import Search from './Search'
 
-export default function Routees(productItems) {
+
+export default function Routees(productItems,productShoes,productDresses) {
   return (
     <div>
    
       <Routes>
 
    <Route   element={<Products productItems={productItems} />} >  </Route>
-   <Route   element={<Search productItems={productItems} />} >  </Route>
+   <Route   element={<Search productItems={productItems}    productShoes={productShoes}
+                productDresses={productDresses} />} > 
+                
+             
+               </Route>
+  
    
 </Routes>
 

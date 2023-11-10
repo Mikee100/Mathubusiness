@@ -85,8 +85,16 @@ color: white;
 }
 .template{
   position: relative;
+  height: 55rem;
+  width: 50rem;
+  top:10rem;
+  left: 20rem;
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
-
+.template2{
+  position: relative;
   height: 55rem;
   width: 50rem;
   top:10rem;
@@ -94,13 +102,17 @@ color: white;
    display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-
 }
+
+
+
 .template-products{
 position: relative;
- 
- 
 }
+.template2-products{
+  position: relative;
+ 
+  }
 .search_icon{
   position: absolute;
   left: 50rem;

@@ -100,12 +100,17 @@ function App() {
           <Route path="navbar" element={<Navbar />} />
           <Route
             path="search"
-            element={<Search productItems={productItems} />}
+            element={
+              <Search
+                productItems={productItems}
+                productShoes={productShoes}
+                productDresses={productDresses}
+              />
+            }
           />
         </Routes>
-        
+
         <Navbar cartItems={cartItems} />
-           
       </main>
     </BrowserRouter>
   );
