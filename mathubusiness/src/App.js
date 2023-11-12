@@ -24,7 +24,7 @@ function App() {
     if (ProductExist) {
       setCartItems(
         cartItems.map((item) =>
-          item.id === product.id
+          item.id === product.id 
             ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
             : item
         )
@@ -105,6 +105,7 @@ function App() {
                 productItems={productItems}
                 productShoes={productShoes}
                 productDresses={productDresses}
+                handleAddProduct={handleAddProduct}
               />
             }
           />

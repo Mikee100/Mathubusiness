@@ -1,10 +1,11 @@
 
 import React,{useState} from 'react'
 import "./home.css"
-export default function Search(productItems,productDresses,productShoes ) {
+import "./navbar.css"
+export default function Search(productItems,productDresses,productShoes, handleAddProduct) {
   const [searchTerm, setSearchTerm] = useState("");
 
-console.log(productItems);
+
 
   return (
     <div>
@@ -24,23 +25,49 @@ console.log(productItems);
         
 {productItems?.productItems
 // eslint-disable-next-line
-        .filter((val) => {
-          if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-            return val;
+        .filter((product) => {
+          if (product.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return product;
           }
         })
         
-        .map((val) => {
+        .map((product) => {
 
           return (
             
       
               <div className='template-products' > 
-              <h1>{val.title}</h1>
-               <img src={val.image} alt="" />
-               <h1>{val.price}</h1>
+             <div className="product" 
+   key={product.id}>
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+      {product.price}$ 
+    </span>
+
+    <div className="buttons"> 
+   <button className="btn" > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
               </div>
-           
+              </div>
+              </div>
            
           );
         })}
