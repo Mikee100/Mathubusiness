@@ -103,8 +103,6 @@ function App() {
             element={
               <Search
                 productItems={productItems}
-                productShoes={productShoes}
-                productDresses={productDresses}
                 handleAddProduct={handleAddProduct}
               />
             }

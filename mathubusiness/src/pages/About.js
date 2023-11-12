@@ -14,10 +14,7 @@ export default function About({productShoes, handleAddProduct }) {
     
     
     }
-    
-    
-    
-
+  
 const [popupcontent, setpopupcontent] = useState([]);
 const changecontent = (product) =>{
     setpopupcontent([product]);

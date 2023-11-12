@@ -2,9 +2,27 @@
 import React,{useState} from 'react'
 import "./home.css"
 import "./navbar.css"
-export default function Search(productItems,productDresses,productShoes, handleAddProduct) {
-  const [searchTerm, setSearchTerm] = useState("");
+import {FaTimes} from 'react-icons/fa'
+import {FaRegHeart} from 'react-icons/fa'
 
+
+export default function Search(productItems,{productDresses,productShoes, handleAddProduct}) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const  [modal, setModal] = useState(false);
+
+  const toggleModal = () =>{
+  
+    setModal(!modal)
+  
+  
+  }
+  
+const [popupcontent, setpopupcontent] = useState([]);
+const changecontent = (product) =>{
+  setpopupcontent([product]);
+  setModal(!modal);
+
+}
 
 
   return (
@@ -31,71 +49,109 @@ export default function Search(productItems,productDresses,productShoes, handleA
           }
         })
         
-        .map((product) => {
+        .map((product) => (
 
-          return (
-            
-      
-              <div className='template-products' > 
-             <div className="product" 
-   key={product.id}>
- 
-    <img  
-      className="product-image"
-      src={product.image}
-      alt={product.image}
+          <div className="product" 
+           key={product.id}>
+         
+            <img  
+              className="product-image"
+              src={product.image}
+              alt={product.image}
+             
+           
+            />
+            <h4 className="product-title" >
+              {product.title}
+        
+            </h4>
+        
+        
+        
+        
+            <span  className="product-price" >
+              {product.price}$ 
+            </span>
+        
+        
+           <div className="buttons"> 
+           <button className="btn" onClick={() => changecontent(product)} > details </button>
+           <button className="btn"  onClick={() => handleAddProduct(product)} > 
+            Add to Cart 
+           
+            </button>
+        
+        
+        
+           </div>
+        
+        
+          </div>
+          
+             ))}
+       </div>
+       { modal &&  (
+  <div className='modal'  onClick={toggleModal} >
+
+    
+{popupcontent.map((pop) => {
+return(
+  <div className="popup_product"
+ key={pop.id}>
+
+  <img  
+    className="product_image_popup_cart" 
+    src={pop.image}
+    alt={pop.image}
+    
+  />
      
-   
-    />
-    <h4 className="product-title" >
-      {product.title}
+  
+ <h4 className="pop_product-title" >
+      {pop.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
-      {product.price}$ 
+    
+    <p className="product_about">{pop.about}</p>
+    <span  className="pop_product-price" >
+      Ksh.{pop.price} 
     </span>
-
-    <div className="buttons"> 
-   <button className="btn" > details </button>
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
+    <button className="pop_btn"   onClick={() => handleAddProduct(pop)}  >
+   ADD TO CART
+  
+    </button>
+    {/** 
+     <button className="pop_btn_wish" >
+    Wish List
    
     </button>
-              </div>
-              </div>
-              </div>
-           
-          );
-        })}
-       </div>
+*/}
+<FaRegHeart  className="icon_heart" />
+
+ <button onClick={changecontent} className='cross'  ><FaTimes/></button>
+
+</div>
+)
+
+
+}
   
+
+
+
+  )}
+    </div> 
+
+) 
+
+
+
+}
+
     
 
 
-  {/** <div className='template2'>
-{productShoes?.productShoes
-// eslint-disable-next-line
-        .filter((val) => {
-          if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-            return val;
-          }
-        })
-        
-        .map((val) => {
-
-          return (
-              <div className='template2-products' > 
-              <h1>{val.title}</h1>
-               <img src={val.image} alt="" />
-               <h1>{val.price}</h1>
-              </div>
-          );
-        })}
-       </div> */}    
+  
   
 
     </div>
