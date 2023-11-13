@@ -5,6 +5,8 @@ import {FaShoppingCart} from 'react-icons/fa'
 import {FaBars} from "react-icons/fa"
 import {FaTimes} from "react-icons/fa"
 import {FaSearch} from "react-icons/fa"
+import {AiFillHeart} from 'react-icons/ai'
+
 
 function Navbar({cartItems}) {
   const[Mobile, setMobile] = useState(false)
@@ -24,7 +26,7 @@ function Navbar({cartItems}) {
   
        <Link to='./contact' style={{ textDecoration: 'none'}}  > <li>Dresses </li></Link>
      <Link  to="./search" style={{ textDecoration: 'none'}} className='search_icon'>< FaSearch/> </Link>
-      
+     <Link  to="./liked" style={{ textDecoration: 'none'}} className='heart_icon' ><AiFillHeart    /> </Link>
       </ul>
      <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>
         </div >

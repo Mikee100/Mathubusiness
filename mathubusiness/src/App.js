@@ -11,14 +11,31 @@ import Contact from "./pages/Contact";
 import shoes from "./shoes";
 import dressesdata from "./dressesdata";
 import Search from "./pages/Search";
+import Liked from "./pages/Liked";
 function App() {
   const productItems = products;
   const productShoes = shoes;
   const productDresses = dressesdata;
 
   const [cartItems, setCartItems] = useState([]);
+  const [likedItems, setLikedItems] = useState([]);
 
-  
+  const handleAddLikedProduct = (product) => {
+    const ProductExist = cartItems.find((item) => item.id === product.id);
+
+    if (ProductExist) {
+      setLikedItems(
+        likedItems.map((item) =>
+          item.id === product.id 
+            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setLikedItems([...likedItems, { ...product, quantity: 1 }]);
+    }
+  };
+
 
   
   const handleAddProduct = (product) => {
@@ -58,6 +75,7 @@ function App() {
   };
 
   return (
+    <>
     <BrowserRouter>
       <main>
         <Routes>
@@ -108,13 +126,26 @@ function App() {
                 productItems={productItems}
                 handleAddProduct={handleAddProduct}
               />
+              
             }
           />
+          <Route path="liked" element={<Liked 
+         handleAddLikedProduct={handleAddLikedProduct}
+          cartItems={cartItems}
+
+          />} />
         </Routes>
 
         <Navbar cartItems={cartItems} />
       </main>
+
     </BrowserRouter>
+    <div  className="footer">
+      <p>&copy; Mathu shoe</p>
+
+
+    </div>
+    </>
   );
 }
 

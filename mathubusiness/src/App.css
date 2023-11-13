@@ -6,3 +6,12 @@
 body{
   height: 70rem;
 }
+.footer{
+  position: relative;
+  bottom:-80rem;
+  background-color: aqua;
+  height: 10rem;
+
+  width: 100%;
+
+}
