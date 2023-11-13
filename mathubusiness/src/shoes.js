@@ -2,7 +2,7 @@ const shoes = [
     {
       id: 0,
       image: "/images/shoe1.jfif",
-      title: "Kensie Shoe",
+      title: "Christian Louboutin",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
       price: 2500,
@@ -10,7 +10,7 @@ const shoes = [
     {
       id: 1,
       image: "/images/shoe2.jfif",
-      title: "Kensie Shoe",
+      title: "Jimmy Choo",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
   
@@ -19,7 +19,7 @@ const shoes = [
     {
       id: 2,
       image: "/images/shoe3.jfif",
-      title: "Kensie Shoe",
+      title: "Sergio Rossi",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
   
@@ -28,7 +28,7 @@ const shoes = [
     {
       id: 3,
       image: "/images/shoe4.jfif",
-      title: "Kensie Shoe",
+      title: "Casper & Pearl",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
       price: 6500,
@@ -38,13 +38,13 @@ const shoes = [
       image: "/images/shoe5.jfif",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
-      title: "Kensie Shoe",
+      title: "Valentino",
       price: 5500,
     },
     {
       id: 5,
       image: "/images/shoe6.jfif",
-      title: "Kensie Shoe",
+      title: "Cesare Paciotti",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
   
@@ -53,7 +53,7 @@ const shoes = [
     {
       id: 6,
       image: "/images/shoe7.jfif",
-      title: "Chanel Bag",
+      title: "Roger Vivier",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
   
@@ -63,12 +63,40 @@ const shoes = [
     {
       id: 7,
       image: "/images/shoe8.jfif",
-      title: "Kensie Shoe",
+      title: "Aquazzura",
       about:
         "This is a very good looking Kensie Shoe from Spain made of pure cotton",
   
       price: 12500,
     },
+    {
+      id: 8,
+      image: "/images/shoe8.jfif",
+      title: "Nicholas Kirkwood",
+      about:
+        "This is a very good looking Kensie Shoe from Spain made of pure cotton",
+  
+      price: 12500,
+    },
+    {
+      id: 9,
+      image: "/images/shoe8.jfif",
+      title: "Tamara Mellon",
+      about:
+        "This is a very good looking Kensie Shoe from Spain made of pure cotton",
+  
+      price: 12500,
+    },
+    {
+      id: 10,
+      image: "/images/shoe8.jfif",
+      title: "Charlotte Olympia",
+      about:
+        "This is a very good looking Kensie Shoe from Spain made of pure cotton",
+  
+      price: 12500,
+    },
+    
   ];
   
   export default shoes;

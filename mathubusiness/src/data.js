@@ -2,7 +2,7 @@ const products = [
   {
     id: 0,
     image: "/images/bag1.jfif",
-    title: "Loius Bag",
+    title: "Louis Vuitton ",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
     price: 2500,
@@ -10,7 +10,7 @@ const products = [
   {
     id: 1,
     image: "/images/bag2.jfif",
-    title: "Chanel Bag",
+    title: "Chanel ",
     about:
       "This is a very good looking Chanel Bag from Spain made of pure cotton",
 
@@ -19,7 +19,7 @@ const products = [
   {
     id: 2,
     image: "/images/bag3.jfif",
-    title: "Chanel Bag",
+    title: "Celine",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
 
@@ -28,7 +28,7 @@ const products = [
   {
     id: 3,
     image: "/images/bag4.jfif",
-    title: "Chanel Bag",
+    title: "Saint Laurent",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
     price: 6500,
@@ -38,13 +38,13 @@ const products = [
     image: "/images/bag5.jfif",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
-    title: "Chanel Bag",
+    title: "Michael Kors",
     price: 5500,
   },
   {
     id: 5,
     image: "/images/bag6.jfif",
-    title: "Chanel Bag",
+    title: "Kate Spade",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
 
@@ -53,7 +53,7 @@ const products = [
   {
     id: 6,
     image: "/images/bag7.jfif",
-    title: "Chanel Bag",
+    title: "Longchamp",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
 
@@ -63,7 +63,34 @@ const products = [
   {
     id: 7,
     image: "/images/bag8.jfif",
-    title: "Chanel Bag",
+    title: "Bottega Veneta",
+    about:
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
+
+    price: 12500,
+  },
+  {
+    id: 8,
+    image: "/images/bag8.jfif",
+    title: "Valentino",
+    about:
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
+
+    price: 12500,
+  },
+  {
+    id: 9,
+    image: "/images/bag8.jfif",
+    title: "Gucci",
+    about:
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
+
+    price: 12500,
+  },
+  {
+    id: 10,
+    image: "/images/bag8.jfif",
+    title: "Fendi",
     about:
       "This is a very good looking Chanel bag from Spain made of pure cotton",
 

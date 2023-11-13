@@ -2,7 +2,7 @@ const dressesdata = [
     {
       id: 0,
       image: "/images/dress1.jfif",
-      title: "Wedding dress",
+      title: "H&M",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
       price: 2500,
@@ -10,7 +10,7 @@ const dressesdata = [
     {
       id: 1,
       image: "/images/dress2.jfif",
-      title: "Wedding dress",
+      title: "ASOS",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
   
@@ -19,7 +19,7 @@ const dressesdata = [
     {
       id: 2,
       image: "/images/dress3.jfif",
-      title: "Wedding dress",
+      title: "Diane von Furstenberg",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
   
@@ -28,7 +28,7 @@ const dressesdata = [
     {
       id: 3,
       image: "/images/dress4.jfif",
-      title: "Wedding dress",
+      title: "Kate Spade New York",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
       price: 6500,
@@ -38,13 +38,13 @@ const dressesdata = [
       image: "/images/dress5.jfif",
       about:
         "This is a very good looking Wedding dressfrom Spain made of pure cotton",
-      title: "Wedding dress",
+      title: "Michael Kors",
       price: 5500,
     },
     {
       id: 5,
       image: "/images/dress6.jfif",
-      title: "Wedding dress",
+      title: "Alice+Olivia",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
   
@@ -53,22 +53,42 @@ const dressesdata = [
     {
       id: 6,
       image: "/images/dress7.jfif",
-      title: "Wedding dress",
+      title: "Marchesa Notte",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
   
       price: 10500,
     },
-  
     {
       id: 7,
-      image: "/images/dress8.jfif",
-      title: "Wedding dress",
+      image: "/images/dress7.jfif",
+      title: "Self-Portrait",
       about:
         "This is a very good looking Wedding dress from Spain made of pure cotton",
   
-      price: 12500,
+      price: 10500,
     },
+    {
+      id: 8,
+      image: "/images/dress7.jfif",
+      title: "Rixo",
+      about:
+        "This is a very good looking Wedding dress from Spain made of pure cotton",
+  
+      price: 10500,
+    },
+    {
+      id: 9,
+      image: "/images/dress7.jfif",
+      title: "Cinq a Sept",
+      about:
+        "This is a very good looking Wedding dress from Spain made of pure cotton",
+  
+      price: 10500,
+    },
+    
+  
+ 
   ];
   
  
