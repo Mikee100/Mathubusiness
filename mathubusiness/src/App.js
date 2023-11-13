@@ -34,7 +34,7 @@ function App() {
         )
       );
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      setLikedItems([...cartItems, { ...product, quantity: 1 }]);
     }
   };
 

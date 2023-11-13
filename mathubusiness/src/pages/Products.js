@@ -107,7 +107,7 @@ return(
     </button>
 */}
 
-<button onClick={() => addLikedProduct()}  > <FaRegHeart  className="icon_heart"  /> </button>
+ <FaRegHeart  className="icon_heart" onClick={() => addLikedProduct(pop)}  /> 
 
  <button onClick={changecontent} className='cross'  ><FaTimes/></button>
 
