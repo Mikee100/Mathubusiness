@@ -10,7 +10,7 @@ export default function Routees(productItems,productShoes,productDresses) {
    
       <Routes>
 
-   <Route   element={<Products productItems={productItems} />} >  </Route>
+   <Route   element={<Products productItems={productItems}  />} >  </Route>
    <Route   element={<Search productItems={productItems}    productShoes={productShoes}
                 productDresses={productDresses} />} > 
                 

@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function Liked({cartItems}) {
+export default function Liked({likedItems}) {
   return (
     <div className='container'>
         <div className="products">
-{cartItems.map((product) => (
+
+{likedItems.map((product) => (
 
   <div className="product" 
    key={product.id}>
@@ -31,7 +32,7 @@ export default function Liked({cartItems}) {
 
    <div className="buttons"> 
    <button className="btn"  > details </button>
-   <button className="btn"   > 
+   <button className="btn"  > 
     Add to Cart 
    
     </button>
@@ -44,6 +45,7 @@ export default function Liked({cartItems}) {
   </div>
   
      ))}
+
 
 </div>
 

@@ -18,10 +18,12 @@ function App() {
   const productDresses = dressesdata;
 
   const [cartItems, setCartItems] = useState([]);
-  const [likedItems, setLikedItems] = useState([]);
+  const [likedItems, setLikedItems ] = useState([]);
 
-  const handleAddLikedProduct = (product) => {
-    const ProductExist = cartItems.find((item) => item.id === product.id);
+
+  const addLikedProduct = (product) => {
+  
+    const ProductExist = likedItems.find((item) => item.id === product.id);
 
     if (ProductExist) {
       setLikedItems(
@@ -32,13 +34,14 @@ function App() {
         )
       );
     } else {
-      setLikedItems([...likedItems, { ...product, quantity: 1 }]);
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
   };
 
 
   
   const handleAddProduct = (product) => {
+  
     const ProductExist = cartItems.find((item) => item.id === product.id);
 
     if (ProductExist) {
@@ -72,7 +75,10 @@ function App() {
 
   const handleCartClearance = () => {
     setCartItems([]);
+    
   };
+
+
 
   return (
     <>
@@ -86,6 +92,8 @@ function App() {
               <Products
                 productItems={productItems}
                 handleAddProduct={handleAddProduct}
+                likedItems={likedItems}
+                addLikedProduct={addLikedProduct}
               />
             }
           />
@@ -124,14 +132,16 @@ function App() {
             element={
               <Search
                 productItems={productItems}
+                productShoes={productShoes}
                 handleAddProduct={handleAddProduct}
               />
               
             }
           />
-          <Route path="liked" element={<Liked 
-         handleAddLikedProduct={handleAddLikedProduct}
-          cartItems={cartItems}
+          <Route path="liked" element={
+          <Liked 
+         
+         likedItems={likedItems}
 
           />} />
         </Routes>

@@ -6,7 +6,7 @@ import {FaRegHeart} from 'react-icons/fa'
 
 
 
-export default function Products({productItems, handleAddProduct, handleAddLikedProduct }) {
+export default function Products({productItems, handleAddProduct, addLikedProduct }) {
     const  [modal, setModal] = useState(false);
 
     const toggleModal = () =>{
@@ -106,7 +106,8 @@ return(
    
     </button>
 */}
-<FaRegHeart  className="icon_heart" nClick={() => handleAddLikedProduct(pop)}  />
+
+<button onClick={() => addLikedProduct()}  > <FaRegHeart  className="icon_heart"  /> </button>
 
  <button onClick={changecontent} className='cross'  ><FaTimes/></button>
 
