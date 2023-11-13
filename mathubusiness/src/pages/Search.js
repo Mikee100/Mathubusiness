@@ -4,7 +4,7 @@ import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 
-export default function Search(productItems, productShoes ,{ handleAddProduct }) {
+export default function Search(productItems , handleAddProduct ) {
   const [searchTerm, setSearchTerm] = useState("");
   const [modal, setModal] = useState(false);
 
@@ -68,47 +68,7 @@ export default function Search(productItems, productShoes ,{ handleAddProduct })
             </div>
           ))}
       </div>
-      <div className="template">
-        {productShoes.productShoes
-          // eslint-disable-next-line
-          .filter((product) => {
-            if (
-              product.title.toLowerCase().includes(searchTerm.toLowerCase())
-            ) {
-              return product;
-            }
-          })
-
-          .map((product) => (
-            <div className="product" key={product.id}>
-              <img
-                className="product-image"
-                src={product.image}
-                alt={product.image}
-              />
-              <h4 className="product-title">{product.title}</h4>
-
-              <span className="product-price">{product.price}$</span>
-
-              <div className="buttons">
-                <button className="btn" onClick={() => changecontent(product)}>
-                  {" "}
-                  details{" "}
-                </button>
-                <button
-                  className="btn"
-                  onClick={() => {
-                    handleAddProduct(product);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          ))}
-      </div>
-
-
+     
 
 
 
