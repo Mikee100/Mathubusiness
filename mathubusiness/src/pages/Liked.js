@@ -1,56 +1,28 @@
-import React from 'react'
-import "./liked.css"
+import React from "react";
+import "./liked.css";
 
-
-export default function Liked({likedItems}) {
+export default function Liked({ likedItems }) {
   return (
-    <div className='container'>
-    <div className="products">
-{likedItems.map((product) => (
+    <div className="container">
+      <div className="products">
+        {likedItems.map((product) => (
+          <div className="product" key={product.id}>
+            <img
+              className="product-image"
+              src={product.image}
+              alt={product.image}
+            />
+            <h4 className="product-title">{product.title}</h4>
 
-<div className="product" 
-key={product.id}>
+            <span className="product-price">{product.price}$</span>
 
-<img  
-  className="product-image"
-  src={product.image}
-  alt={product.image}
- 
-
-/>
-<h4 className="product-title" >
-  {product.title}
-
-</h4>
-
-
-
-
-<span  className="product-price" >
-  {product.price}$ 
-</span>
-
-
-<div className="buttons"> 
-<button className="btn" > details </button>
-<button className="btn"   > 
-Add to Cart 
-
-</button>
-
-
-
-</div>
-
-
-</div>
-
- ))}
-
-</div>
-
-
-</div>
-
-  )
+            <div className="buttons">
+              <button className="btn"> details </button>
+              <button className="btn">Add to Cart</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

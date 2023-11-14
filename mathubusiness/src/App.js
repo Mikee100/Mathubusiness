@@ -19,6 +19,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems ] = useState([]);
+ 
 
 
   const addLikedProduct = (product) => {
@@ -134,6 +135,7 @@ function App() {
                 productItems={productItems}
                 productShoes={productShoes}
                 handleAddProduct={handleAddProduct}
+               
               />
               
             }
