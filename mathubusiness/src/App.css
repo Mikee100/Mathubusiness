@@ -10,8 +10,37 @@ body{
   position: relative;
   bottom:-80rem;
   background-color: aqua;
-  height: 10rem;
+  height: 12rem;
 
   width: 100%;
 
+}
+.footer p{
+  position: absolute;
+  bottom: 0;
+  left: 30rem;
+}
+.hd_pages{
+  position: absolute;
+  left: 2rem;
+}
+.ul_media{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top:2rem;
+
+}
+.li_media{
+  position: relative;
+  left: 0rem;
+  list-style-type: none;
+ text-decoration: none;
+ margin:1px;
+}
+.li_media:hover{
+  padding: 2px;
+  background-color:grey;
+  border-radius: 4px;
 }

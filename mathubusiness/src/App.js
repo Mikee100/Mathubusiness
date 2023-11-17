@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter} from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Routees from "./pages/Routees";
 import products from "./data";
@@ -12,6 +12,7 @@ import shoes from "./shoes";
 import dressesdata from "./dressesdata";
 import Search from "./pages/Search";
 import Liked from "./pages/Liked";
+import Login from "./pages/Login";
 function App() {
   const productItems = products;
   const productShoes = shoes;
@@ -146,6 +147,11 @@ function App() {
          likedItems={likedItems}
 
           />} />
+            <Route path="login" element={
+          <Login
+
+          />} />
+
         </Routes>
 
         <Navbar cartItems={cartItems} />
@@ -153,7 +159,19 @@ function App() {
 
     </BrowserRouter>
     <div  className="footer">
-      <p>&copy; Mathu shoe</p>
+      <p >&copy; Mathu shoe 2023</p>
+<h3 className="hd_pages" >Pages</h3>
+      <ul className="ul_media">
+       {/*  
+     <Link to="/products" style={{ textDecoration: 'none'}}><li className="li_media" >bags</li></Link>     
+    
+     <Link to="./contact" style={{ textDecoration: 'none'}}><li className="li_media" >Dresses</li></Link>     
+     <Link to="./about" style={{ textDecoration: 'none'}}><li className="li_media" >Shoes</li></Link>    
+     <Link to="./liked" style={{ textDecoration: 'none'}}><li className="li_media">Favourites</li></Link>    
+     <Link to="./search" style={{ textDecoration: 'none'}}><li className="li_media">Search</li></Link>    
+*/ }
+      </ul>
+      
 
 
     </div>
