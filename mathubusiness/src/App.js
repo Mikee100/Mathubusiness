@@ -136,7 +136,7 @@ function App() {
                 productItems={productItems}
                 productShoes={productShoes}
                 handleAddProduct={handleAddProduct}
-               
+                cartItems={cartItems}
               />
               
             }
@@ -162,6 +162,9 @@ function App() {
       <p >&copy; Mathu shoe 2023</p>
 <h3 className="hd_pages" >Pages</h3>
       <ul className="ul_media">
+
+     
+        
        {/*  
      <Link to="/products" style={{ textDecoration: 'none'}}><li className="li_media" >bags</li></Link>     
     

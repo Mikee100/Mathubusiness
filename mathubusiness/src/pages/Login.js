@@ -1,33 +1,38 @@
 import React, { useState } from 'react';
 import "./login.css";
-import axios from 'axios';
+
+import {db} from "../Firebase"
+
+import { addDoc, collection } from "firebase/firestore"; 
+
 const Login = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const [username, setUsername] = useState("");
+        const [email, setEmail] = useState("");
+        const [password, setPassword] = useState("");
+       
+        const handleSubmit = async (e) => {
+            e.preventDefault();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('https://your-java-backend-url/register', formData);
-      console.log(response.data); // You can handle the response accordingly
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+            try {
+                const docRef = await addDoc(collection(db, "Account Information"), {
+                  username: username,
+                  email: email,
+                  password: password
+                });
+              
+                alert("Registration was succesfull ", docRef.id);
+              } catch (e) {
+                alert("Error adding document: ", e);
+              }
+
+        };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="Username" required />
-      <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-      <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Password" required />
+      <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value) } placeholder="Username" required />
+      <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
+      <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
       <button type="submit">Register</button>
     </form>
   );
