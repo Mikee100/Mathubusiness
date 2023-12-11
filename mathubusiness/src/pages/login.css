@@ -1,0 +1,10 @@
+form{
+    position: absolute;
+    display: flex;
+    top:9rem;
+    left: 10rem;
+    width: 20rem;
+    background-color: aqua;
+    height: 10rem;
+    flex-direction: column;
+}

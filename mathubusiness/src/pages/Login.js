@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import "./login.css";
 import axios from 'axios';
-
 const Login = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://your-java-backend-url/register', formData);
+      const response = await axios.post('https://your-java-backend-url/register', formData);
       console.log(response.data); // You can handle the response accordingly
     } catch (error) {
       console.error('Error:', error);
