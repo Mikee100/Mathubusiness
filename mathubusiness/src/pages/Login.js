@@ -5,6 +5,7 @@ import {db} from "../Firebase"
 
 import { addDoc, collection } from "firebase/firestore"; 
 
+
 const Login = () => {
 
   const [username, setUsername] = useState("");
@@ -35,6 +36,9 @@ const Login = () => {
       <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
       <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
       <button type="submit" className='registerbtn'>Register</button>
+
+      <p className='haveacc' >Already have an Account?<a className='acc_login' href='./mainlogin'>Sign in</a> </p>
+
     </form>
     </div>
   );

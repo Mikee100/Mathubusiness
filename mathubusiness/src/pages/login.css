@@ -2,27 +2,52 @@
 form{
     position: absolute;
     display: flex;
-    top:9rem;
-    left: 10rem;
+    top:5rem;
+    left: 18rem;
     width: 25rem;
-   
-    height: 12rem;
+   border: 1px solid grey;
+   border-radius: 6px;
+    height: 30rem;
     flex-direction: column;
     padding: 1rem;
 }
 .username, .password, .email{
-    padding: .6rem;
-    margin: .3rem;
+    
+   margin: .6rem;
     position: relative;
-    width: 20rem;
-    height: 3rem;
-    
+    width: 22rem;
+    height: 3rem; 
+   border-top: none;
+   border-left: none;
+   border-right: none;
    
-    
+
 }
 .registerbtn{
     position: relative;
-    width: 21.3rem;
-    height: 4rem;
+    width: 23.5rem;
+    height: 3rem;
+    top:1rem;
+    border-radius: 6px;
+    border: 1px ;
+    font-size: 1rem;
 
+}
+.registerbtn:hover{
+    opacity: .6;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.haveacc{
+    position: absolute;
+    top:20rem;
+    left: 1rem;
+}
+.acc_login{
+    position: relative;
+    top:0rem;
+    left: 0.5rem;
+    width: 5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
 }

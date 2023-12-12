@@ -152,6 +152,10 @@ font-size: 1.4rem;
     font-size: 1rem;
     background-color: rgba(0,0,0,0.1);
 }
+.checkout:hover{
+    opacity: .7;
+    background-color: rgb(165, 174, 182);
+}
 .line-cart{
     position: relative;
     top: 1.8rem;
