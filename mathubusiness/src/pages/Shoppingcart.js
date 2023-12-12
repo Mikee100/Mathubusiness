@@ -49,9 +49,11 @@ export default function ShoppingCart({cartItems,handleAddProduct ,handleRemovePr
 ) )}
 
 <div className='total_container'>
-  <p>Total</p>
-<small>${totalPrice}</small>
-<button className='checkout' >Checkout</button>
+  <hr className='summary_ln' />
+  <p className='sub_total'>Subtotal</p>
+  <p className='cart_summary'>Cart Summary</p>
+<small>KSh {totalPrice}</small>
+<button className='checkout' >Checkout (KSh {totalPrice})</button>
  
       </div>
 

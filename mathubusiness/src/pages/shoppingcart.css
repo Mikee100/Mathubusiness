@@ -77,23 +77,34 @@ display: grid;
 
     position: fixed;
     top: 7rem;
-    height:25rem;
+    height:15rem;
     background-color: rgba(0,0,0,0.1);
     left: 55rem;
     width: 22rem;
 
   
 }
-.total_container p{
-    position: relative;
+.cart_summary{
+    position: absolute;
     top:1rem;
+    left: 1rem;
+    font-weight: 600;
 }
 .total_container small{
     position: absolute;
 font-weight: 500;
 font-size: 1.4rem;
     left: 14rem;
-    top: .7rem;
+    top: 4rem;
+
+}
+.sub_total{
+    position: absolute;
+    font-weight: 600;
+    font-size: 1rem;
+        left: 1rem;
+        top:4rem;
+
 }
 .increase-item{
     position: absolute;
@@ -125,16 +136,21 @@ font-size: 1.4rem;
 .bt_clear:hover{
     background-color: black;
 }
+.summary_ln{
+    position: absolute;
+    top:3rem;
+}
 .checkout{
     position: absolute;
-    left: 7rem;
-    top:4rem;
+    left: 1rem;
+    top:9rem;
     height: 3rem;
-    width: 10rem;
+    width: 90%;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
-    background-color: rgba(0,0,0,0.5);
+    font-size: 1rem;
+    background-color: rgba(0,0,0,0.1);
 }
 .line-cart{
     position: relative;
