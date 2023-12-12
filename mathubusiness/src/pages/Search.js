@@ -4,7 +4,7 @@ import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 
-export default function Search(productItems , handleAddProduct ) {
+export default function Search(productItems , {handleAddProduct}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [modal, setModal] = useState(false);
 
@@ -58,10 +58,7 @@ export default function Search(productItems , handleAddProduct ) {
                 </button>
                 <button
                   className="btn"
-                  onClick={() => {
-                    handleAddProduct(product);
-                  }}
-                >
+                  onClick={() => handleAddProduct(product)}>
                   Add to Cart
                 </button>
               </div>

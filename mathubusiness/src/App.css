@@ -4,11 +4,11 @@
 
 }
 body{
-  height: 70rem;
+  height: 10rem;
 }
 .footer{
-  position: relative;
-  bottom:-80rem;
+  position: fixed;
+  bottom:0rem;
   background-color: aqua;
   height: 12rem;
 

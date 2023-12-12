@@ -29,12 +29,14 @@ const Login = () => {
         };
 
   return (
+    <div className='container'>
     <form onSubmit={handleSubmit}>
-      <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value) } placeholder="Username" required />
-      <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
-      <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
-      <button type="submit">Register</button>
+      <input type="text" className='username' name="username" value={username} onChange={(e) => setUsername(e.target.value) } placeholder="Username" required />
+      <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
+      <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
+      <button type="submit" className='registerbtn'>Register</button>
     </form>
+    </div>
   );
 };
 

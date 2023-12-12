@@ -1,22 +1,20 @@
 
 .container_shopping{
     position: absolute;
-    top:10rem;
-    left: 15rem;
+    top:7rem;
+    left: 3rem;
     width: 50rem;
     height: 50rem;
     border: 1px solid grey;
     border-radius: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
+  
+
 
 border: none;
   
 
 }
-.container_shopping::-webkit-scrollbar{
-    width: 0;
-}
+
 .container_shopping h2{
     position: absolute;
     top:2rem;
@@ -77,12 +75,12 @@ display: grid;
 }
 .total_container{
 
-    position: absolute;
-    bottom: -5rem;
-    height:8rem;
+    position: fixed;
+    top: 7rem;
+    height:25rem;
     background-color: rgba(0,0,0,0.1);
-    left: 0rem;
-    width: 50rem;
+    left: 55rem;
+    width: 22rem;
 
   
 }
@@ -94,7 +92,7 @@ display: grid;
     position: absolute;
 font-weight: 500;
 font-size: 1.4rem;
-    left: 40rem;
+    left: 14rem;
     top: .7rem;
 }
 .increase-item{
@@ -129,7 +127,7 @@ font-size: 1.4rem;
 }
 .checkout{
     position: absolute;
-    left: 35rem;
+    left: 7rem;
     top:4rem;
     height: 3rem;
     width: 10rem;

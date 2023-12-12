@@ -158,6 +158,7 @@ function App() {
       </main>
 
     </BrowserRouter>
+    {/** 
     <div  className="footer">
       <p >&copy; Mathu shoe 2023</p>
 <h3 className="hd_pages" >Pages</h3>
@@ -172,12 +173,13 @@ function App() {
      <Link to="./about" style={{ textDecoration: 'none'}}><li className="li_media" >Shoes</li></Link>    
      <Link to="./liked" style={{ textDecoration: 'none'}}><li className="li_media">Favourites</li></Link>    
      <Link to="./search" style={{ textDecoration: 'none'}}><li className="li_media">Search</li></Link>    
-*/ }
+
       </ul>
       
 
 
     </div>
+*/ }
     </>
   );
 }
