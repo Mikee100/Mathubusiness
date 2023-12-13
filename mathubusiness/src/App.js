@@ -14,6 +14,7 @@ import Search from "./pages/Search";
 import Liked from "./pages/Liked";
 import Login from "./pages/Login";
 import Mainlogin from "./pages/Mainlogin";
+import AuthDetails from "./AuthDetails";
 function App() {
   const productItems = products;
   const productShoes = shoes;
@@ -160,6 +161,7 @@ function App() {
         </Routes>
 
         <Navbar cartItems={cartItems} />
+        <AuthDetails />
       </main>
 
     </BrowserRouter>

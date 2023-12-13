@@ -16,7 +16,7 @@ export default function Mainlogin() {
         e.preventDefault();
 
         try {
-            const docRef = await addDoc(collection(db, "Account Information"), {
+            const docRef = await addDoc(collection(db, "Login Information"), {
         
               email: email,
               password: password
