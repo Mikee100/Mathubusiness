@@ -5,11 +5,13 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './Firebase'
 
 export default function AuthDetails() {
-  const{authUser, setAuthUser} = useState(null);
+
+  const [authUser, setAuthUser] = useState(null);
   
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
-            if(user) {
+            if(user) 
+            {
                 setAuthUser(user);
             }else {
                 setAuthUser(null);
@@ -19,10 +21,10 @@ export default function AuthDetails() {
         return () => {
             listen();
         }
-// eslint-disable-next-line
-    }, [] )
+
+    }, [] );
 
     return (
-    <div>{ authUser ? <p> Signed in</p> : <p>Signed out</p>  }</div>
+    <div>{ authUser ? <p>{`Signed in as ${authUser.name} ` } </p> : <p>Signed out</p>  }</div>
   )
 }

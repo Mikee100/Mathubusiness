@@ -51,3 +51,9 @@ form{
     text-decoration: none;
     font-size: 1.1rem;
 }
+.error_email{
+    position: absolute;
+    top:0rem;
+    font-size: 2rem;
+
+}

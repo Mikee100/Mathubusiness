@@ -2,10 +2,8 @@
 import React, { useState } from 'react';
 import "./login.css";
 
-import {db} from "../Firebase"
 
-import { addDoc, collection } from "firebase/firestore"; 
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default function Mainlogin() {
    
@@ -14,18 +12,18 @@ export default function Mainlogin() {
    
     const handleSubmit = async (e) => {
         e.preventDefault();
+  
 
-        try {
-            const docRef = await addDoc(collection(db, "Login Information"), {
-        
-              email: email,
-              password: password
-            });
-          
-            alert("Registration was succesfull ", docRef.id);
-          } catch (e) {
-            alert("Error adding document: ", e);
-          }
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in 
+            console.log(userCredential)
+            // ...
+          })
+          .catch((error) => {
+          console.log(error);
+          });
 
     };
   return (
