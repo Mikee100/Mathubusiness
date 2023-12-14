@@ -5,6 +5,7 @@ import {  createUserWithEmailAndPassword } from "firebase/auth";
 import {db} from "../Firebase"
 
 import { addDoc, collection } from "firebase/firestore"; 
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -15,6 +16,8 @@ const Login = () => {
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
        
+        const history = useNavigate();
+
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
@@ -34,6 +37,8 @@ const Login = () => {
                   // Signed in 
                   //const user = userCredential.user;
                   console.log(userCredential)
+                  history("/products")
+
                   // ...
                 })
                 .catch((error) => {
@@ -54,6 +59,7 @@ const Login = () => {
   return (
     <div className='container'>
     <form onSubmit={handleSubmit}>
+    <h2>Sign Up</h2>
     <input type="text" className="username" name="full names" value={name} onChange={(e) => setName(e.target.value) } placeholder="Full Names" required />
       <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
       <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />

@@ -27,7 +27,7 @@ function Navbar({cartItems}) {
        <Link to='./contact' style={{ textDecoration: 'none'}}  > <li className='li_nav'>Dresses </li></Link>
      <Link  to="./search" style={{ textDecoration: 'none'}} className='search_icon'>< FaSearch/> </Link>
      <Link  to="./liked" style={{ textDecoration: 'none'}} className='heart_icon' ><AiFillHeart    /> </Link>
-     <Link  to="./login" style={{ textDecoration: 'none'}} className='login_icon' ><LuLogIn    /> </Link>
+     <Link  to="./mainlogin" style={{ textDecoration: 'none'}} className='login_icon' ><LuLogIn    /> </Link>
       </ul>
      <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>
         
