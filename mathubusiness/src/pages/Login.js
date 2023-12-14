@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import "./login.css";
 import { auth } from '../Firebase';
 import {  createUserWithEmailAndPassword } from "firebase/auth";
+import {db} from "../Firebase"
+
+import { addDoc, collection } from "firebase/firestore"; 
+
+
 
 const Login = () => {
 
@@ -10,10 +15,21 @@ const Login = () => {
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
        
-        const handleSubmit =  (e) => {
+        const handleSubmit = async (e) => {
             e.preventDefault();
+            try {
+              const docRef = await addDoc(collection(db, "Account Information"), {
+                name: name,
+                email: email,
+                password: password
+              });
             
-            createUserWithEmailAndPassword(auth,name, email, password)
+              alert("Registration was successfull ", docRef.id);
+            } catch (e) {
+              alert("Error adding document: ", e);
+            }
+            
+            createUserWithEmailAndPassword(auth,email, password)
                 .then((userCredential) => {
                   // Signed in 
                   //const user = userCredential.user;
@@ -21,10 +37,19 @@ const Login = () => {
                   // ...
                 })
                 .catch((error) => {
+                  alert("Issue with creating a new user")
+                  
                   
                 });
 
+
+          
+
         };
+     
+          
+    
+    
 
   return (
     <div className='container'>

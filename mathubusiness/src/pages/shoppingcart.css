@@ -76,7 +76,7 @@ display: grid;
 .total_container{
 
     position: fixed;
-    top: 7rem;
+    top: 8rem;
     height:15rem;
     background-color: rgba(0,0,0,0.1);
     left: 55rem;

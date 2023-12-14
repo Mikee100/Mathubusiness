@@ -1,8 +1,9 @@
 import React ,{useEffect,useState }from 'react'
-
+import "../src/pages/login.css";
 import { onAuthStateChanged } from 'firebase/auth'
 
 import { auth } from './Firebase'
+
 
 export default function AuthDetails() {
 
@@ -25,6 +26,6 @@ export default function AuthDetails() {
     }, [] );
 
     return (
-    <div>{ authUser ? <p>{`Signed in as ${authUser.name} ` } </p> : <p>Signed out</p>  }</div>
+    <div>{ authUser ? <p className='member_name' >{`Welcome,${authUser.email} ` } </p> : <p>Signed out</p>  }</div>
   )
 }
