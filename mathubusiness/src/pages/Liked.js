@@ -3,25 +3,24 @@ import "./liked.css";
 
 export default function Liked({ likedItems }) {
   return (
-    <div className="container">
-      <div className="products">
-        {likedItems.map((product) => (
-          <div className="product" key={product.id}>
-            <img
-              className="product-image"
-              src={product.image}
-              alt={product.image}
-            />
-            <h4 className="product-title">{product.title}</h4>
+    <div className="container_liked">
+      <div className="products_liked">
+      {likedItems.map((item) => (
+  <div key={item.id} className='cart_container'>
+    <div className='single_item_cart'>
+    <img   className='cart_image' 
+    src={item.image}
+    alt={item.image}
 
-            <span className="product-price">{product.price}$</span>
+    />
+    
 
-            <div className="buttons">
-              <button className="btn"> details </button>
-              <button className="btn">Add to Cart</button>
-            </div>
-          </div>
-        ))}
+
+    
+   <hr className='line-cart' />
+</div>
+  </div>
+) )}
       </div>
     </div>
   );

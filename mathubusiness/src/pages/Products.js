@@ -34,7 +34,7 @@ const changecontent = (product) =>{
 {productItems.map((product) => (
 
   <div className="product" 
-   key={product.id}>
+   >
  
     <img  
       className="product-image"

@@ -1,6 +1,6 @@
 const dressesdata = [
     {
-      id: 0,
+      id: 11,
       image: "/images/dress1.jfif",
       title: "H&M",
       about:
@@ -8,7 +8,7 @@ const dressesdata = [
       price: 2500,
     },
     {
-      id: 1,
+      id: 12,
       image: "/images/dress2.jfif",
       title: "ASOS",
       about:
@@ -17,7 +17,7 @@ const dressesdata = [
       price: 10000,
     },
     {
-      id: 2,
+      id: 13,
       image: "/images/dress3.jfif",
       title: "Diane von Furstenberg",
       about:
@@ -26,7 +26,7 @@ const dressesdata = [
       price: 9500,
     },
     {
-      id: 3,
+      id: 14,
       image: "/images/dress4.jfif",
       title: "Kate Spade New York",
       about:
@@ -34,7 +34,7 @@ const dressesdata = [
       price: 6500,
     },
     {
-      id: 4,
+      id: 15,
       image: "/images/dress5.jfif",
       about:
         "This is a very good looking Wedding dressfrom Spain made of pure cotton",
@@ -42,7 +42,7 @@ const dressesdata = [
       price: 5500,
     },
     {
-      id: 5,
+      id: 16,
       image: "/images/dress6.jfif",
       title: "Alice+Olivia",
       about:
@@ -51,7 +51,7 @@ const dressesdata = [
       price: 4500,
     },
     {
-      id: 6,
+      id: 17,
       image: "/images/dress7.jfif",
       title: "Marchesa Notte",
       about:
@@ -60,7 +60,7 @@ const dressesdata = [
       price: 10500,
     },
     {
-      id: 7,
+      id: 18,
       image: "/images/dress7.jfif",
       title: "Self-Portrait",
       about:
@@ -69,7 +69,7 @@ const dressesdata = [
       price: 10500,
     },
     {
-      id: 8,
+      id: 19,
       image: "/images/dress7.jfif",
       title: "Rixo",
       about:
@@ -78,7 +78,7 @@ const dressesdata = [
       price: 10500,
     },
     {
-      id: 9,
+      id: 20,
       image: "/images/dress7.jfif",
       title: "Cinq a Sept",
       about:

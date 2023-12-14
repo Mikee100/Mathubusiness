@@ -1,0 +1,44 @@
+.container_liked{
+    position: absolute;
+    top:7rem;
+    left: 3rem;
+    width: 50rem;
+    height: 50rem;
+    border: 1px solid grey;
+    border-radius: 10px;
+  background-color: aqua;
+
+
+border: none;
+  
+
+}
+
+.container_shopping h2{
+    position: absolute;
+    top:2rem;
+    left:3rem;
+
+}
+.products_liked {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    width: 30rem;
+    top: 5rem;
+    left: 5rem;
+    
+    height: 110rem;
+  
+  }
+  .product_liked {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 13rem;
+  }

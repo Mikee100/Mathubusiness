@@ -54,8 +54,11 @@ function App() {
           item.id === product.id 
             ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
             : item
+          
         )
+        
       );
+     
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
