@@ -24,9 +24,13 @@ const changecontent = (product) =>{
   }
 
   return (
+  
+    
     <div className='container'>
-   
-        <div className="products">
+      <div className="measure_container" >
+
+      </div>
+            <div className="products">
 {productItems.map((product) => (
 
   <div className="product" 
@@ -69,6 +73,10 @@ const changecontent = (product) =>{
      ))}
 
 </div>
+
+    
+   
+  
 
 { modal &&  (
   <div className='modal'  onClick={toggleModal} >

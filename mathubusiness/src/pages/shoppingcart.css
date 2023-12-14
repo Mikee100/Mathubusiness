@@ -28,8 +28,6 @@ hr{
 }
 .cart_container{
     position: relative;
-display: grid;
-
     height:12rem;
     width: 100%;
     top: 5.5rem;

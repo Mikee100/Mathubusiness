@@ -1,10 +1,19 @@
 .container {
   position: relative;
-  top: 10rem;
-  left: 6rem;
-  width: 60rem;
-  height: 40rem;
+  top: 7rem;
+  left: 18rem;
+  width: 40rem;
+  height: 120rem;
 
+
+}
+.measure_container{
+  background-color: aqua;
+  position: relative;
+  top:6rem;
+  left: -17rem;
+  height: 25rem;
+  width: 18rem;
 
 }
 
@@ -39,6 +48,7 @@
   left: 15rem;
   cursor: pointer;
   top: 4rem;
+
 }
 .img2 {
   position: absolute;
@@ -61,10 +71,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
-  width: 40rem;
-
-  top: 0rem;
-  left: 10rem;
+  width: 30rem;
+  top: 5rem;
+  left: 5rem;
+  
+  height: 110rem;
 
 }
 .product {

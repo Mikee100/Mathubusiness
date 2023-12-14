@@ -16,7 +16,7 @@ function Navbar({cartItems}) {
         
     <div className="nav">
     
-       <Link to='./products' > <h1 className=" company_name ">MEZURI SHOPPING WEBSITE </h1></Link>
+       <Link to='./products' > <h1 className=" company_name ">MEZURI SHOPPING </h1></Link>
       
             
        <ul className={Mobile ? "nav-links-mobile":"nav-ul"} onClick={ ()=> setMobile(false)  }>
