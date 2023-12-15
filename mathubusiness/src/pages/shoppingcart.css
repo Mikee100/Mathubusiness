@@ -4,22 +4,15 @@
     top:7rem;
     left: 3rem;
     width: 50rem;
-    height: 50rem;
+    height: 54rem;
     border: 1px solid grey;
     border-radius: 10px;
-  
-
-
-border: none;
-  
-
+    border: none;
 }
-
 .container_shopping h2{
     position: absolute;
     top:2rem;
     left:3rem;
-
 }
 hr{
     position: absolute;
@@ -30,14 +23,14 @@ hr{
     position: relative;
     height:12rem;
     width: 100%;
-    top: 5.5rem;
-  
+    top: 5.5rem; 
+
 }
 .single_item_cart{
     position: absolute;
-
     height: 13rem;
     width: 100%;
+    
 }
 .single_item_cart:hover{
     background-color: rgba(0,0,0,0.1);

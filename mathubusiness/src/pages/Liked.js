@@ -1,27 +1,32 @@
 import React from "react";
 import "./liked.css";
+import "./shoppingcart.css"
 
 export default function Liked({ likedItems }) {
   return (
     <div className="container_liked">
-      <div className="products_liked">
+      <h2 className="mylikes" >My Favourites</h2>
+
+      
       {likedItems.map((item) => (
-  <div key={item.id} className='cart_container'>
-    <div className='single_item_cart'>
+  <div key={item.id} className='liked_container'>
+     <div className='single_item_cart'>
+    
     <img   className='cart_image' 
     src={item.image}
     alt={item.image}
 
     />
     
-
-
-    
-   <hr className='line-cart' />
-</div>
+    </div>
   </div>
 ) )}
-      </div>
-    </div>
+
+
+
+
+</div>
+      
+   
   );
 }

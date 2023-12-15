@@ -25,20 +25,20 @@ function App() {
  
 
 
-  const addLikedProduct = (product) => {
+  const addLikedProduct = (productlike) => {
   
-    const ProductExist = likedItems.find((item) => item.id === product.id);
+    const ProductExistLike = likedItems.find((items) => items.id === productlike.id);
 
-    if (ProductExist) {
+    if (ProductExistLike) {
       setLikedItems(
-        likedItems.map((item) =>
-          item.id === product.id 
-            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
-            : item
+        likedItems.map((items) =>
+        items.id === productlike.id 
+            ? { ...ProductExistLike, quantity: ProductExistLike.quantity + 1 }
+            : items
         )
       );
     } else {
-      setLikedItems([...cartItems, { ...product, quantity: 1 }]);
+      setLikedItems([...cartItems, { ...productlike, quantity: 1 }]);
     }
   };
 
