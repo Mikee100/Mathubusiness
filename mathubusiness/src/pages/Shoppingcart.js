@@ -1,65 +1,67 @@
-import React from 'react'
-import "./shoppingcart.css"
+import React from "react";
+import "./shoppingcart.css";
 
-export default function ShoppingCart({cartItems,handleAddProduct ,handleRemoveProduct, handleCartClearance}) {
+export default function ShoppingCart({
+  cartItems,
+  handleAddProduct,
+  handleRemoveProduct,
+  handleCartClearance,
+}) {
+  const totalPrice = cartItems.reduce(
+    (price, item) => price + item.quantity * item.price,
+    0
+  );
 
-  const totalPrice =cartItems.reduce((price,item) => price+item.quantity * item.price, 0 )
-
- 
   return (
     <>
-    <div className='container_shopping' >
-      <h2>Cart Items</h2>
-      {cartItems.length >=1 && (
-        <button  className="bt_clear" onClick={handleCartClearance}>clear cart </button>
-      )}
-      <hr  className='line' />
+      <div className="container_shopping">
+        <h2>Cart Items</h2>
+        {cartItems.length >= 1 && (
+          <button className="bt_clear" onClick={handleCartClearance}>
+            clear cart{" "}
+          </button>
+        )}
+        <hr className="line" />
 
-      {cartItems.length === 0 && (
-        <p className='cart_empty' > No items are added</p>
-      )}
+        {cartItems.length === 0 && (
+          <p className="cart_empty"> No items are added</p>
+        )}
 
-    
- 
-{cartItems.map((item) => (
-  <div key={item.id} className='cart_container'>
-    <div className='single_item_cart'>
-    <img   className='cart_image' 
-    src={item.image}
-    alt={item.image}
+        {cartItems.map((item) => (
+          <div key={item.id} className="cart_container">
+            <div className="single_item_cart">
+              <img className="cart_image" src={item.image} alt={item.image} />
+              <h4 className="cart-title">{item.title}</h4>
 
-    />
-     <h4 className="cart-title" >
-      {item.title}
+              <span className="cart-price">
+                <p>{item.quantity}</p> ${item.price}
+              </span>
 
-    </h4>
+              <button
+                className="increase-item"
+                onClick={() => handleAddProduct(item)}
+              >
+                +
+              </button>
+              <button
+                className="decrease-item"
+                onClick={() => handleRemoveProduct(item)}
+              >
+                -
+              </button>
+              <hr className="line-cart" />
+            </div>
+          </div>
+        ))}
 
-
-    <span  className="cart-price" >
-
-     
-    <p>{item.quantity}</p>  ${item.price} 
-    </span>
-
-    <button className='increase-item'  onClick={()=> handleAddProduct(item) } >+</button>
-    <button className='decrease-item'  onClick={()=> handleRemoveProduct(item)} >-</button>
-   <hr className='line-cart' />
-</div>
-  </div>
-) )}
-
-<div className='total_container'>
-  <hr className='summary_ln' />
-  <p className='sub_total'>Subtotal</p>
-  <p className='cart_summary'>Cart Summary</p>
-<small>KSh {totalPrice}</small>
-<button className='checkout' >Checkout (KSh {totalPrice})</button>
- 
+        <div className="total_container">
+          <hr className="summary_ln" />
+          <p className="sub_total">Subtotal</p>
+          <p className="cart_summary">Cart Summary</p>
+          <small>KSh {totalPrice}</small>
+          <button className="checkout">Checkout (KSh {totalPrice})</button>
+        </div>
       </div>
-
-
-</div>
-
-      </>
-  )
+    </>
+  );
 }

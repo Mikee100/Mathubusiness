@@ -4,7 +4,7 @@ import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 
-export default function Search( fulldatas ) {
+export default function Search(fulldatas, { handleAddProduct }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [modal, setModal] = useState(false);
 
@@ -18,8 +18,6 @@ export default function Search( fulldatas ) {
     setModal(!modal);
   };
 
- 
-  
   return (
     <div>
       <input
@@ -58,23 +56,16 @@ export default function Search( fulldatas ) {
                   {" "}
                   details{" "}
                 </button>
-               
+                <button
+                  className="btn"
+                  onClick={() => handleAddProduct(product)}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}
       </div>
-     
-
-
-
-
-
-
-
-
-
-
-
 
       {modal && (
         <div className="modal" onClick={toggleModal}>
@@ -91,7 +82,7 @@ export default function Search( fulldatas ) {
 
                 <p className="product_about">{pop.about}</p>
                 <span className="pop_product-price">Ksh.{pop.price}</span>
-              
+
                 {/** 
      <button className="pop_btn_wish" >
     Wish List

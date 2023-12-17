@@ -171,7 +171,7 @@ color: white;
 .search{
   position: fixed;
   top:6.5rem;
-  left: 29rem;
+  left: 2rem;
   width: 20rem;
   height: 2rem;
   border-radius: 6px;
@@ -185,7 +185,7 @@ color: white;
   height: 55rem;
   width: 50rem;
   top:10rem;
-  left: 20rem;
+  left: 25rem;
    display: grid;
   grid-template-columns: repeat(3, 1fr);
 }

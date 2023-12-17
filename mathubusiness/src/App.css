@@ -23,7 +23,7 @@ font-size: .7rem;
   left: 2rem;
 }
 .ul_media{
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   left: 0;

@@ -9,7 +9,10 @@ import {AiFillHeart} from 'react-icons/ai'
 import { LuLogIn } from "react-icons/lu";
 
 function Navbar({cartItems}) {
-  const[Mobile, setMobile] = useState(false)
+  const[Mobile, setMobile] = useState(false);
+
+
+
   return (
 
     <div className='container_navbar'> 
@@ -37,7 +40,7 @@ function Navbar({cartItems}) {
           {Mobile ? <FaTimes/> : <FaBars  />}</button>
        {/* <hr className='nav_line' /> */}
     
-<FaBars className='bars_settings' />
+<FaBars className='bars_settings'   />
 
        <div class="input"  >
   <button class="value">
