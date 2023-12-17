@@ -4,7 +4,7 @@ import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 
-export default function Search(productItems , {handleAddProduct}) {
+export default function Search( fulldatas ) {
   const [searchTerm, setSearchTerm] = useState("");
   const [modal, setModal] = useState(false);
 
@@ -18,6 +18,8 @@ export default function Search(productItems , {handleAddProduct}) {
     setModal(!modal);
   };
 
+ 
+  
   return (
     <div>
       <input
@@ -30,7 +32,7 @@ export default function Search(productItems , {handleAddProduct}) {
       />
 
       <div className="template">
-        {productItems.productItems
+        {fulldatas.fulldatas
           // eslint-disable-next-line
           .filter((product) => {
             if (
@@ -56,17 +58,12 @@ export default function Search(productItems , {handleAddProduct}) {
                   {" "}
                   details{" "}
                 </button>
-                <button
-                  className="btn"
-                  onClick={() => handleAddProduct(product)}>
-                  Add to Cart
-                </button>
+               
               </div>
             </div>
           ))}
       </div>
      
-
 
 
 
@@ -94,12 +91,7 @@ export default function Search(productItems , {handleAddProduct}) {
 
                 <p className="product_about">{pop.about}</p>
                 <span className="pop_product-price">Ksh.{pop.price}</span>
-                <button
-                  className="pop_btn"
-                  onClick={() => handleAddProduct(pop)}
-                >
-                  ADD TO CART
-                </button>
+              
                 {/** 
      <button className="pop_btn_wish" >
     Wish List

@@ -10,15 +10,20 @@ import Shoppingcart from "./pages/Shoppingcart";
 import Contact from "./pages/Contact";
 import shoes from "./shoes";
 import dressesdata from "./dressesdata";
+import fulldata from "./fulldata";
 import Search from "./pages/Search";
 import Liked from "./pages/Liked";
 import Login from "./pages/Login";
 import Mainlogin from "./pages/Mainlogin";
 import AuthDetails from "./AuthDetails";
+
+
+
 function App() {
   const productItems = products;
   const productShoes = shoes;
   const productDresses = dressesdata;
+  const fulldatas = fulldata;
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems ] = useState([]);
@@ -94,7 +99,7 @@ function App() {
         <Routes>
           <Route path="/routees" element={<Routees />} />
           <Route
-            path="products"
+            path="/products"
             element={
               <Products
                 productItems={productItems}
@@ -142,6 +147,7 @@ function App() {
                 productShoes={productShoes}
                 handleAddProduct={handleAddProduct}
                 cartItems={cartItems}
+                fulldatas={fulldatas}
               />
               
             }
@@ -168,28 +174,16 @@ function App() {
       </main>
 
     </BrowserRouter>
-    {/** 
-    <div  className="footer">
-      <p >&copy; Mathu shoe 2023</p>
-<h3 className="hd_pages" >Pages</h3>
-      <ul className="ul_media">
 
      
-        
-       {/*  
-     <Link to="/products" style={{ textDecoration: 'none'}}><li className="li_media" >bags</li></Link>     
-    
-     <Link to="./contact" style={{ textDecoration: 'none'}}><li className="li_media" >Dresses</li></Link>     
-     <Link to="./about" style={{ textDecoration: 'none'}}><li className="li_media" >Shoes</li></Link>    
-     <Link to="./liked" style={{ textDecoration: 'none'}}><li className="li_media">Favourites</li></Link>    
-     <Link to="./search" style={{ textDecoration: 'none'}}><li className="li_media">Search</li></Link>    
-
-      </ul>
-      
-
+   
+    <div  className="footer">
+      <p >&copy; Mezuri Shopping 2023</p>
+<h3 className="hd_pages" >Pages</h3>
+   
 
     </div>
-*/ }
+
     </>
   );
 }

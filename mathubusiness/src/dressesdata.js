@@ -86,6 +86,25 @@ const dressesdata = [
   
       price: 10500,
     },
+    {
+      id: 20,
+      image: "/images/dress7.jfif",
+      title: "Cinq a Sept",
+      about:
+        "This is a very good looking Wedding dress from Spain made of pure cotton",
+  
+      price: 10500,
+    },
+    {
+      id: 20,
+      image: "/images/dress7.jfif",
+      title: "Cinq a Sept",
+      about:
+        "This is a very good looking Wedding dress from Spain made of pure cotton",
+  
+      price: 10500,
+    },
+    
     
   
  

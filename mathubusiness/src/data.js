@@ -96,6 +96,26 @@ const products = [
 
     price: 12500,
   },
+  {
+    id: 10,
+    image: "/images/bag8.jfif",
+    title: "Fendi",
+    about:
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
+
+    price: 12500,
+  },
+  {
+    id: 10,
+    image: "/images/bag8.jfif",
+    title: "Fendi",
+    about:
+      "This is a very good looking Chanel bag from Spain made of pure cotton",
+
+    price: 12500,
+  },
+
+
 ];
 
 export default products;

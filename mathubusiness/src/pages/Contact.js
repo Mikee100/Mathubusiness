@@ -46,7 +46,7 @@ const changecontent = (product) =>{
 
 
     <span  className="product-price" >
-      {product.price}$ 
+      KSh {product.price}
     </span>
 
 
@@ -125,6 +125,20 @@ return(
 
 
 }
+
+<ul className="ul_media">
+
+<li className="li_media" style={{ textDecoration: 'none'}} >bags</li>     
+
+<a href="./contact" style={{ textDecoration: 'none'}} ><li className="li_media" >Dresses</li> </a>   
+<li className="li_media" style={{ textDecoration: 'none'}} >Shoes</li>   
+<li className="li_media" style={{ textDecoration: 'none'}} >Favourites</li>    
+ <li className="li_media" style={{ textDecoration: 'none'}} >Search</li>    
+
+  </ul>
+  
+
+
 
 
 

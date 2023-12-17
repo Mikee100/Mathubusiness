@@ -96,6 +96,24 @@ const shoes = [
   
       price: 12500,
     },
+    {
+      id: 32,
+      image: "/images/shoe8.jfif",
+      title: "Charlotte Olympia",
+      about:
+        "This is a very good looking Kensie Shoe from Spain made of pure cotton",
+  
+      price: 12500,
+    },
+    {
+      id: 33,
+      image: "/images/shoe8.jfif",
+      title: "Charlotte Olympia",
+      about:
+        "This is a very good looking Kensie Shoe from Spain made of pure cotton",
+  
+      price: 12500,
+    },
     
   ];
   

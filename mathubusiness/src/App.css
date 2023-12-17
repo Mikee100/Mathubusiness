@@ -1,35 +1,37 @@
 *{
   margin: 0;
  
+}
 
-}
-body{
-  height: 10rem;
-}
 .footer{
-  position: fixed;
-  bottom:0rem;
+  position: absolute;
+  bottom:-120rem;
   background-color: aqua;
-  height: 12rem;
-
+  height: 16rem;
+font-size: .7rem;
   width: 100%;
 
 }
 .footer p{
-  position: absolute;
-  bottom: 0;
-  left: 30rem;
+  position: relative;
+  bottom: 0rem;
+  left: 40rem;
+
 }
 .hd_pages{
   position: absolute;
   left: 2rem;
 }
 .ul_media{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   left: 0;
   top:2rem;
+  font-size: 1rem;
+  list-style-type: none;
+ text-decoration: none;
+
 
 }
 .li_media{
@@ -37,10 +39,11 @@ body{
   left: 0rem;
   list-style-type: none;
  text-decoration: none;
- margin:1px;
+ margin:5px;
 }
 .li_media:hover{
-  padding: 2px;
+  padding: .2px;
   background-color:grey;
   border-radius: 4px;
+  width: 5rem;
 }
