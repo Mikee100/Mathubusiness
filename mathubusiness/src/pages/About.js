@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./home.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
-
+import LeftNav from "./LeftNav";
 
 
 export default function About({productShoes, handleAddProduct }) {
@@ -132,7 +132,7 @@ return(
 
 
 
-
+<LeftNav  />
 
     </div>
     

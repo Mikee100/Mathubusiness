@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./navbar.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
-
+import LeftNav from "./LeftNav";
 
 
 
@@ -139,7 +139,7 @@ return(
 
 
 
-
+<LeftNav />
     </div>
 
 

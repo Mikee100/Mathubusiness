@@ -28,8 +28,11 @@ top: -10rem;
    text-decoration-line: none;
     border-radius: 5px;
   }
-  .li_nav_left:hover{
-    color: white;
+ 
+  a{
+    color: black;
   }
   
-  
+   .li_nav_left:hover  , a:hover{
+    color: white;
+  }
