@@ -11,8 +11,13 @@ import { LuLogIn } from "react-icons/lu";
 function Navbar({cartItems}) {
   const[Mobile, setMobile] = useState(false);
 
+  const [appear, setAppear] = useState(false);
 
-
+  const togglesettings = () => {
+    setAppear(!appear);
+  }
+ 
+  
   return (
 
     <div className='container_navbar'> 
@@ -40,7 +45,25 @@ function Navbar({cartItems}) {
           {Mobile ? <FaTimes/> : <FaBars  />}</button>
        {/* <hr className='nav_line' /> */}
     
-<FaBars className='bars_settings'   />
+       <button onClick={togglesettings} ><FaBars className='bars_settings'    /></button>
+
+{ appear &&  (
+  <div  className='mysmalllist' > 
+        <li> home </li>
+        <li> home </li>
+        <li> home </li>
+</div>
+
+
+)   }
+
+
+
+
+
+
+
+
 
        <div class="input"  >
   <button class="value">

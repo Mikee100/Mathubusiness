@@ -223,7 +223,7 @@ position: relative;
 }
 .login_icon{
   position: absolute;
-  left: 50rem;
+  left: 47rem;
   color: white;
   top: 2rem;
   font-size: 1.5rem;
@@ -246,6 +246,16 @@ position: relative;
 .heart_icon:hover{
   color:grey;
   padding: 1px;
+}
+
+.mysmalllist{
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  height: 10rem;
+  width:10rem;
+  background-color: green;
+
 }
 
 
