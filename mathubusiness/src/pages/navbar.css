@@ -87,7 +87,14 @@
 
 
 
+.nav_left{
+  position: absolute;
+  width:100%;
+  height: 6rem;
+  top:0rem;
+  left: 0rem;
 
+}
 
 
 .nav{
@@ -97,31 +104,35 @@
     top:0rem;
     left: 0rem;
     background-color: rgba(0,0,0,.7);
+
   }
 
 ul {
     position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
  font-size: 20px;
-  top: 1rem;
-  left:25rem;
+  top: 13rem;
+  left:-2rem;
+color: black;
+
   }
+
+
   .li_nav {
     margin: 1rem;
  list-style-type: none;
  text-decoration: none;
- color: white; 
- padding: 10px;
+ color: black; 
+ padding: 1px;
 text-decoration-line: none;
  border-radius: 5px;
   }
 
   .li_nav:hover{
     color: grey;
-    padding: 15px;
-    transition: 0.9s ease-in-out ;
-    background-color:antiquewhite;
+    transition: 0.1s ease-in-out ;
+    
   }
 
   .company_name{
@@ -212,8 +223,8 @@ position: relative;
   }
 .search_icon{
   position: absolute;
-  left: 41rem;
-  top:2rem;
+  left: 50rem;
+  top:-10rem;
   color: white;
 }
 .search_icon:hover{
@@ -223,9 +234,9 @@ position: relative;
 }
 .login_icon{
   position: absolute;
-  left: 47rem;
+  left:70rem;
   color: white;
-  top: 2rem;
+  top: -10rem;
   font-size: 1.5rem;
 
 }
@@ -236,8 +247,8 @@ position: relative;
 }
 .heart_icon{
   position: absolute;
-  top:1.8rem;
-  left:35rem;
+  top:-10rem;
+  left:65rem;
   font-size: 1.5rem;
   color: white;
  

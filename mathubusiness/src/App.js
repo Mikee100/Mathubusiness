@@ -16,6 +16,7 @@ import Liked from "./pages/Liked";
 import Login from "./pages/Login";
 import Mainlogin from "./pages/Mainlogin";
 import AuthDetails from "./AuthDetails";
+import LeftNav from "./pages/LeftNav";
 
 
 
@@ -169,6 +170,7 @@ function App() {
 
         </Routes>
 
+            <LeftNav />
         <Navbar cartItems={cartItems} />
         <AuthDetails />
       </main>

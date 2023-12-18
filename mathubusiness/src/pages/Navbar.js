@@ -28,11 +28,7 @@ function Navbar({cartItems}) {
       
             
        <ul className={Mobile ? "nav-links-mobile":"nav-ul"} onClick={ ()=> setMobile(false)  }>
-       <Link to='./products'  style={{ textDecoration: 'none'}} > <li className='li_nav' >Bags  </li></Link>
-      
-       <Link to='./about'  style={{ textDecoration: 'none'}} > <li className='li_nav'> Shoes </li></Link>
-  
-       <Link to='./contact' style={{ textDecoration: 'none'}}  > <li className='li_nav'>Dresses </li></Link>
+       
      <Link  to="./search" style={{ textDecoration: 'none'}} className='search_icon'>< FaSearch/> </Link>
      <Link  to="./liked" style={{ textDecoration: 'none'}} className='heart_icon' ><AiFillHeart    /> </Link>
      <Link  to="./mainlogin" style={{ textDecoration: 'none'}} className='login_icon' ><LuLogIn    /> </Link>
@@ -49,7 +45,7 @@ function Navbar({cartItems}) {
 
 { appear &&  (
   <div  className='mysmalllist' > 
-        <li> home </li>
+        <button> Sign </button>
         <li> home </li>
         <li> home </li>
 </div>
