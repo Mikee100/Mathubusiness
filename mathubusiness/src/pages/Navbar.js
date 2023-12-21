@@ -48,8 +48,7 @@ function Navbar({cartItems}) {
           {Mobile ? <FaTimes/> : <FaBars  />}</button>
        {/* <hr className='nav_line' /> */}
     
-       <button onClick={togglesettings} ><FaBars className='bars_settings'    /></button>
-
+       <FaBars className='bars_settings'onClick={togglesettings}    />
 { appear &&  (
 
 
