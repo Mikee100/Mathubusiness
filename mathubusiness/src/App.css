@@ -15,8 +15,9 @@ font-size: .7rem;
 }
 .footer p{
   position: relative;
-  bottom: 0rem;
+
   left: 40rem;
+  width: 10rem;
 
 }
 .hd_pages{
