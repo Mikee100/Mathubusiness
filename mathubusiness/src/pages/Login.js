@@ -42,7 +42,7 @@ const Login = () => {
                   // ...
                 })
                 .catch((error) => {
-                  alert("Issue with creating a new user")
+                  alert(error)
                   
                   
                 });
