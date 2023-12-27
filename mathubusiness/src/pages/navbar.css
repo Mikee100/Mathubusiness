@@ -210,7 +210,7 @@ text-decoration-line: none;
 .cart-icon{
   position: absolute;
   top:3rem;
-  left:53rem;
+  left:68rem;
   font-size: 20px;
   color: white;
 }
@@ -274,7 +274,7 @@ position: relative;
   }
 .search_icon{
   position: absolute;
-  left: 50rem;
+  left: 65rem;
   top:-10rem;
   color: white;
 }

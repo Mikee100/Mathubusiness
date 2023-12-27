@@ -258,7 +258,7 @@ box-shadow: 0px 0px 5px 0px;
   top: 7rem;
   left: 20rem;
   width: 45rem;
-  height: 25rem;
+  height: 70rem;
   background-color: white;
   border-radius: 8px;
 }
@@ -282,7 +282,7 @@ box-shadow: 0px 0px 5px 0px;
 }
 .pop_btn {
   position: absolute;
-  bottom: 2rem;
+  top: 20rem;
   left: 20rem;
   padding: 0.9rem;
   border: none;
@@ -308,11 +308,32 @@ box-shadow: 0px 0px 5px 0px;
 }
 .product_about {
   position: absolute;
-  top: 15rem;
-  left: 20rem;
-  width: 15rem;
+  top: 25rem;
+  left: 1rem;
+  width: 35rem;
+  font-style: italic;
   font-size: 1rem;
+}.small_desc{
+  position: absolute;
+  top:23rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
+.hr_desc{
+  position: absolute;
+  top:23rem;
+  width: 35rem;
+ 
+}
+.small_rate{
+  position: absolute;
+  top:48rem;
+  left: 0rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
 .cross {
   position: absolute;
   top: 1rem;
@@ -347,6 +368,110 @@ box-shadow: 0px 0px 5px 0px;
 .carticon:hover {
   color: white;
 }
+
+
+
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+  position: absolute;
+  top:50rem ;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
