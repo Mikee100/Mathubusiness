@@ -301,7 +301,9 @@ const changecontent = (product) =>{
 </div>
 
 
-    
+<LeftNav />
+
+
 
 
     
@@ -402,6 +404,75 @@ return(
 </div>
 
 
+  <p className="may_like">YOU MAY ALSO LIKE</p>
+  <div className="products_modal">
+{productItems.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+
+{/** items in the modal                  */}
+
+<div className="modal_left_delivery" >
+
+  <p className="delivery_status" >  Delivery & Status</p> 
+  
+  <p className="choosing_location_status" > Choose your location </p>
+
+  <select className="counties"  id="counties">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+
+</div> 
+
+
+
+
+
+
+
 
 </div>
 )
@@ -425,7 +496,7 @@ return(
 
 
 
-<LeftNav />
+
     </div>
 
 

@@ -61,6 +61,7 @@
   color: black;
 }
 
+
 .products {
   position: relative;
   display: flex;
@@ -178,6 +179,7 @@ box-shadow: 0px 0px 5px 0px;
 
 
 
+
 .product {
   position: relative;
   left: 1rem;
@@ -253,12 +255,79 @@ box-shadow: 0px 0px 5px 0px;
   overflow-y: auto;
   scroll-behavior: auto;
 }
+.products_modal{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  top: 70rem;
+  left: .5rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 16rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+
+.products_modal::-webkit-scrollbar {
+  width: 0;
+}
+.modal_left_delivery{
+  position: absolute;
+  height: 25rem;
+  width: 20rem;
+  top: 6rem;
+  right: 5rem;
+  box-shadow: 0px 0px 10px 0px;
+
+}
+.delivery_status{
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+}
+.choosing_location_status{
+  position: absolute;
+  top:2rem;
+  font-weight: 500;
+}
+.counties{
+  position: absolute;
+  top:5rem;
+  width: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .popup_product {
   position: absolute;
   top: 7rem;
-  left: 20rem;
-  width: 45rem;
-  height: 70rem;
+  left: 2rem;
+  width: 70rem;
+  height: 90rem;
   background-color: white;
   border-radius: 8px;
 }
@@ -289,7 +358,7 @@ box-shadow: 0px 0px 5px 0px;
   border-radius: 5px;
   background-color: rgb(128, 101, 66);
   display: flex;
-  width: 12rem;
+  width: 18rem;
   justify-content: center;
 }
 .pop_btn_wish {
@@ -337,7 +406,7 @@ box-shadow: 0px 0px 5px 0px;
 .cross {
   position: absolute;
   top: 1rem;
-  left: 42rem;
+  left: 67rem;
   border: none;
   font-size: 1.1rem;
   border-radius: 6px;
@@ -352,7 +421,7 @@ box-shadow: 0px 0px 5px 0px;
 }
 .icon_heart {
   position: absolute;
-  bottom: 3rem;
+  top: 3rem;
   right: 3rem;
   font-size: 1.7rem;
   color: rgb(128, 101, 66);
@@ -367,6 +436,12 @@ box-shadow: 0px 0px 5px 0px;
 }
 .carticon:hover {
   color: white;
+}
+.may_like{
+  position: absolute;
+  top: 68rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 
