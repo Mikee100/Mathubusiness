@@ -70,6 +70,237 @@ const changecontent = (product) =>{
 
 
 
+<div className="make1_products">
+{productShoes.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+    
+
+
+<div className="make2_products">
+{productShoes.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+<div className="make3_products">
+{productShoes.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+    
+
+
+
+<div className="make4_products">
+{productShoes.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+<div className="make5_products">
+{productShoes.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+
+
+
+
 
 { modal &&  (
   <div className='modal'  onClick={toggleModal} >

@@ -71,6 +71,7 @@
 box-shadow: 0px 0px 5px 0px;
   height: 18rem;
   overflow-x: auto;
+  border-radius: 10px;
   
   
 
@@ -78,6 +79,105 @@ box-shadow: 0px 0px 5px 0px;
 .products::-webkit-scrollbar {
   width: 0;
 }
+
+.make1_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 8rem;
+  left: 0rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make1_products::-webkit-scrollbar {
+  width: 0;
+}
+.make2_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 12rem;
+  left: 0rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make2_products::-webkit-scrollbar {
+  width: 0;
+}
+.make3_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 16rem;
+  left: 0rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make3_products::-webkit-scrollbar {
+  width: 0;
+}
+
+.make4_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 20rem;
+  left: 0rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make4_products::-webkit-scrollbar {
+  width: 0;
+}
+.make5_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 22rem;
+  left: 0rem;
+box-shadow: 0px 0px 5px 0px;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make5_products::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .product {
   position: relative;
   left: 1rem;
