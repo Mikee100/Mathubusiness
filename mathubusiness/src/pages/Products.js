@@ -455,14 +455,42 @@ return(
 <div className="modal_left_delivery" >
 
   <p className="delivery_status" >  Delivery & Status</p> 
-  
+  <hr className="delivery_status_line"  />
+
   <p className="choosing_location_status" > Choose your location </p>
 
   <select className="counties"  id="counties">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
+  <option value="Nakuru">Nakuru</option>
+  <option value="Nairobi">Nairobi</option>
+  <option value="Mombasa">Mombasa</option>
+  <option value="Kisumu">Kisumu</option>
+
+  <option value="Muranga">Muranga</option>
+  <option value="Narok">Narok</option>
+  <option value="Kajiado">Kajiado</option>
+  <option value="Busia">Busia</option>
+
+
+  <option value="Kiambu">Kiambu</option>
+  <option value="Turkana">Turkana</option>
+  <option value="Marsabit">Marsabit</option>
+  <option value="Garissa">Garissa</option>
+
+  <option value="Kiambu">Uasin Gishu</option>
+  <option value="Turkana">West Pokot</option>
+  <option value="Marsabit">Embu</option>
+  <option value="Garissa">Meru</option>
+
+  <option value="Kiambu">Nyeri</option>
+  <option value="Turkana">Nyandarua</option>
+  <option value="Marsabit">Kericho</option>
+  <option value="Garissa">Tana River</option>
+
+
+
+
+
+
 </select>
 
 </div> 
