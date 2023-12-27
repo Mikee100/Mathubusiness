@@ -312,6 +312,16 @@ box-shadow: 0px 0px 5px 0px;
   border: solid 1px orange;
    
 }
+.delivery_truck{
+  position: absolute;
+  top:10rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+border-radius: 6px;
+
+}
 
 
 

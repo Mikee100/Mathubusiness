@@ -3,7 +3,7 @@ import "./navbar.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
 import LeftNav from "./LeftNav";
-
+import { BsTruck } from "react-icons/bs";
 
 
 export default function Products({productItems, handleAddProduct, addLikedProduct }) {
@@ -492,6 +492,8 @@ return(
 
 
 </select>
+< BsTruck  className="delivery_truck" />
+
 
 </div> 
 
