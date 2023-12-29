@@ -245,7 +245,7 @@ box-shadow: 0px 0px 5px 0px;
 
 
 
-.modal {
+.modal, .modal1 {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -312,6 +312,22 @@ box-shadow: 0px 0px 5px 0px;
   border: solid 1px orange;
    
 }
+.template_deliver{
+  position: absolute;
+  top: 9rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+
+}
+.receive_template{
+  position: absolute;
+  top:14rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+  
+}
 .delivery_truck{
   position: absolute;
   top:10rem;
@@ -320,6 +336,86 @@ box-shadow: 0px 0px 5px 0px;
   border: 1px solid grey;
   padding: 8px;
 border-radius: 6px;
+
+}
+.delivery_return{
+  position: absolute;
+  top:20rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+border-radius: 6px;
+
+
+}
+.return_template{
+  position: absolute;
+  top:20rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+  
+
+}
+.delivery_item  {
+  position: absolute;
+  top:15rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+border-radius: 6px;
+
+}
+.p_door_delivery{
+  position: absolute;
+  top:0rem;
+  left: 0rem;
+  font-weight: 500;
+  
+}
+.p_free_delivery{
+position: absolute;
+top:1rem;
+left: .7rem;
+color: green;
+font-size: .8rem;
+width: 15rem;
+}
+.p_deliverby{
+  position: absolute;
+  top:2rem;
+  left: 0rem;
+  font-size: .9rem;
+  width: 15rem;
+}
+.a_details{
+  position: absolute;
+  right: -2rem;
+  font-size: .8rem;
+  cursor: pointer;
+
+}
+.a_details:hover{
+color: #065a82;
+}
+.template_modal1{
+  position: absolute;
+  top:10rem;
+  left: 23rem;
+  height: 20rem;
+  width: 35rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 6px;
+  
+
+}
+.rtn_policy_ln{
+  position: absolute;
+  top: 19rem;
+  width: 20rem;
 
 }
 
@@ -346,12 +442,11 @@ border-radius: 6px;
 
 
 
-
 .popup_product {
   position: absolute;
-  top: 7rem;
-  left: 2rem;
-  width: 70rem;
+  top: 6rem;
+  left: 0rem;
+  width: 75rem;
   height: 90rem;
   background-color: white;
   border-radius: 8px;
@@ -403,36 +498,44 @@ border-radius: 6px;
 }
 .product_about {
   position: absolute;
-  top: 25rem;
-  left: 1rem;
-  width: 35rem;
+  top: 28rem;
+  left: 1.5rem;
+  width: 40rem;
   font-style: italic;
   font-size: 1rem;
-}.small_desc{
+}
+.prdt_details_container{
   position: absolute;
-  top:23rem;
-  width: 10rem;
+ left: 1rem;
+  top: 25rem;
+  height: 24rem;
+  width: 42rem;
+  box-shadow: 0px 0px 8px 0px;
+  border-radius: 6px;
+}
+
+
+
+
+.small_desc{
+  position: absolute;
+  top:0rem;
+  left: 1rem;
+  width: 15rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
 .hr_desc{
   position: absolute;
-  top:23rem;
-  width: 35rem;
+  top:2.9rem;
+  width: 41.9rem;
  
-}
-.small_rate{
-  position: absolute;
-  top:48rem;
-  left: 0rem;
-  font-weight: 500;
-  font-size: 1.2rem;
 }
 
 .cross {
   position: absolute;
   top: 1rem;
-  left: 67rem;
+  left: 72rem;
   border: none;
   font-size: 1.1rem;
   border-radius: 6px;
@@ -447,8 +550,8 @@ border-radius: 6px;
 }
 .icon_heart {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 5rem;
+ left: 40rem;
   font-size: 1.7rem;
   color: rgb(128, 101, 66);
 }
@@ -465,11 +568,27 @@ border-radius: 6px;
 }
 .may_like{
   position: absolute;
-  top: 68rem;
+  top: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
+.rating_container{
+  position: absolute;
+  top: 50rem;
+  left: 1rem;
+  height: 15rem;
+  width: 42rem;
+ box-shadow: 0px 0px 10px 0px; 
+
+}
+.small_rate{
+  position: absolute;
+  top:1rem;
+  left: 0rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
 
 
 
@@ -480,7 +599,7 @@ border-radius: 6px;
   --stroke: #666;
   --fill: #ffc73a;
   position: absolute;
-  top:50rem ;
+  top:3rem ;
 }
 
 .rating input {
