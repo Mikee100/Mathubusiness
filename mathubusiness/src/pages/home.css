@@ -260,7 +260,7 @@ box-shadow: 0px 0px 5px 0px;
   display: flex;
   flex-direction: row;
   width: 98%;
-  top: 70rem;
+  top: 113rem;
   left: .5rem;
 box-shadow: 0px 0px 5px 0px;
   height: 16rem;
@@ -447,7 +447,7 @@ color: #065a82;
   top: 6rem;
   left: 0rem;
   width: 75rem;
-  height: 90rem;
+  height: 130rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 0px 5px 0px;
@@ -568,7 +568,8 @@ color: #065a82;
 }
 .may_like{
   position: absolute;
-  top: 1rem;
+  top: 68rem;
+  left: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -679,7 +680,72 @@ color: #065a82;
   }
 }
 
+.location_of_divs{
+  position: absolute;
+  right: 4.5rem;
+  top:35rem;
+  height: 10rem;
+  width: 20rem;
 
+  display: flex;
+  flex-direction: column;
+  border-radius:6px;
+  
+  box-shadow: 0px 0px 1px 0px;
+
+}
+.location_of_divs small{
+  position: relative;
+  height: 4rem;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+.location_of_divs small:hover{
+  background-color: #dddddd;
+}
+
+.specifications_container{
+  position: absolute;
+
+  height: 20rem;
+  width: 42rem;
+  top:70rem;
+  left: 1rem;
+border-radius: 6px;
+border: 1px solid;
+}
+.specifications_container h4{
+  position: relative;
+  top:1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+}
+.specifications_container hr{
+  position: absolute;
+  top: 3.5rem;
+}
+.key_features{
+  position: absolute;
+  top: 5rem;
+  border: 1px; 
+  height: 12rem;
+  width: 20rem;
+  left: 1rem;
+  border:1px solid;
+  border-radius: 6px;
+}
+.key_features p{
+  position: absolute;
+  left: 1rem;
+  top:.5rem;
+}
+.key_features hr{
+  position: absolute;
+  top:2.5rem;
+}
 
 
 

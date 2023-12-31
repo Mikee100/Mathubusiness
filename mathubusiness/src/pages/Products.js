@@ -6,6 +6,7 @@ import LeftNav from "./LeftNav";
 import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { TbTruckReturn } from "react-icons/tb";
+import { FaFileAlt } from "react-icons/fa";
 
 
 export default function Products({productItems, handleAddProduct, addLikedProduct }) {
@@ -404,9 +405,38 @@ return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path pathLength="360" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
   </label>
 </div>
-
-
  </div>
+
+  <div className="specifications_container">
+    <h4>Specifications</h4>
+    <hr />
+
+    <div className="key_features">
+    <p>KEY FEATURES</p>
+    <p>{productItems.about}</p> 
+    
+    <hr />  
+   </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+ <div className="location_of_divs" >
+<small><FaFileAlt /> Details</small>
+
+<small>Specifications</small>
+
+<small>Customer Feedback</small>
+  </div>
 
 
 
