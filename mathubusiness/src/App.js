@@ -99,6 +99,11 @@ function App() {
       <main>
         <Routes>
           <Route path="/routees" element={<Routees />} />
+          <Route path="/" element={<Products 
+           productItems={productItems}
+           handleAddProduct={handleAddProduct}
+           likedItems={likedItems}
+           addLikedProduct={addLikedProduct} />} />
           <Route
             path="/products"
             element={
@@ -110,6 +115,7 @@ function App() {
               />
             }
           />
+          
           <Route
             path="about"
             element={
