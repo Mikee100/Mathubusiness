@@ -462,6 +462,13 @@ return(
 <small>Customer Feedback</small>
   </div>
 
+<div className="sellers_info" >
+  <p>SELLER INFORMATION</p>
+
+  <hr className="hr_seller_info"/>
+
+
+  </div>
 
 
 
