@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./navbar.css";
+import "./home.css";
+import "./modal.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
 import LeftNav from "./LeftNav";
@@ -27,6 +29,24 @@ const changecontent = (product) =>{
     
   
   }
+
+  
+  const handleClickScroll = () => {
+    const element = document.getElementById("prdt_details_container");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+  const handleClickScrol2= () => {
+    const element = document.getElementById("specifications_container");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
   
@@ -311,32 +331,6 @@ const changecontent = (product) =>{
 
 
 
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-    
-   
-  
-
 { modal &&  (
   <div className='modal'  onClick={toggleModal} >
 
@@ -347,38 +341,59 @@ return(
   <div className="popup_product"
  key={pop.id}>
 
-  <img  
+<div className="pdt_container" >
+<img  
     className="product_image_popup_cart" 
     src={pop.image}
     alt={pop.image}
     
   />
-   
+
   
- <h4 className="pop_product-title" >
+<h4 className="pop_product-title" >
       {pop.title}
 
     </h4>
-  
-    
-    <p className="product_about">{pop.about}</p>
+
     <span  className="pop_product-price" >
       Ksh.{pop.price} 
     </span>
+
     <button className="pop_btn"   onClick={() => handleAddProduct(pop)}  >
    ADD TO CART
   
     </button>
+  </div>
+
+ 
+   
+
+  
+    
+    {/**<p className="product_about">{pop.about}</p> */}
+  
+   
 
 
  <FaRegHeart  className="icon_heart" onClick={() => addLikedProduct(pop)}  /> 
 
  <button onClick={changecontent} className='cross'  ><FaTimes/></button>
 
-<div className="prdt_details_container" >
+<div className="prdt_details_container" id="prdt_details_container" >
  <hr className="hr_desc" />
     <small className="small_desc" >PRODUCT DETAILS</small>
-
+    <small className="about_specs" >
+    Product Details：
+    <br/>
+        1.Material: PU Leather.<br/>
+        2.Type: Solid.<br />
+        3.Dimension: See the Picture.<br />
+        4.Accessories: Removable and adjustable shoulder strap.<br />
+        5.Minimalist style, integrating good design and good functions, the exterior is classic, and the interior is practical.<br />
+        6.The thickened shoulder strap design is not easy to break, has a longer practical life, and relieves the stress on the shoulder at the same time.<br />
+        7.Three-in-one bags, different capacity combinations to meet your diverse storage needs and fashion needs.<br />
+      8.Are you still looking for a classic, versatile, practical and simple bag? Choose this one!
+      </small>
    
 </div>
 <div className="rating_container" >
@@ -407,13 +422,22 @@ return(
 </div>
  </div>
 
-  <div className="specifications_container">
+  <div className="specifications_container" id="specifications_container" >
     <h4>Specifications</h4>
     <hr />
 
     <div className="key_features">
     <p>KEY FEATURES</p>
-    <p>{productItems.about}</p> 
+    
+ 
+      <ul className="list_features" >
+        <li>Mechanical Control</li>
+        <li>Interior LED light</li>
+        <li>Energy-saving and low noise</li>
+        <li>Adjustable front feet</li>
+        <li>Lock&key</li>
+      </ul>
+  
     
     <hr />  
    </div>
@@ -431,9 +455,9 @@ return(
 
 
  <div className="location_of_divs" >
-<small><FaFileAlt /> Details</small>
+<small onClick={handleClickScroll}><FaFileAlt /> Details</small>
 
-<small>Specifications</small>
+<small onClick={handleClickScrol2}>Specifications</small>
 
 <small>Customer Feedback</small>
   </div>

@@ -1,0 +1,598 @@
+
+
+
+.product {
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 20rem;
+    border: none;
+    margin-right: 12px;
+    
+    
+  
+  }
+  .product-image {
+    border-radius: 10px;
+    height: 10rem;
+    width: 10rem;
+  }
+  .product-title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .product-price {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000044;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+  }
+  .product:hover .buttons {
+    opacity: 1;
+  }
+  .buttons .btn {
+    position: relative;
+    left: 3rem;
+    background-color: #dddddd;
+    padding: 5px;
+    width: 50%;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    border: none;
+  }
+  .buttons .btn:hover {
+    background-color: #065a82;
+    color: #fff;
+  }
+  
+  
+  
+  
+  .modal, .modal1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    scroll-behavior: auto;
+  }
+  .products_modal{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    top: 113rem;
+    left: .5rem;
+  box-shadow: 0px 0px 5px 0px;
+    height: 16rem;
+    overflow-x: auto;
+    border-radius: 10px;
+  
+  }
+  
+  .products_modal::-webkit-scrollbar {
+    width: 0;
+  }
+  .modal_left_delivery{
+    position: absolute;
+    height: 25rem;
+    width: 20rem;
+    top: 1.2rem;
+    right: 5rem;
+    
+    background-color: white;
+  }
+  .delivery_status{
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    left: .4rem;
+  
+  }
+  .delivery_status_line{
+    position: absolute;
+    top: 2rem;
+    
+  }
+  .choosing_location_status{
+    position: absolute;
+    top:2rem;
+    font-weight: 500;
+    left: .4rem;
+  
+  }
+  .counties{
+    position: absolute;
+    top:5rem;
+    left: 1rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius:6px;
+  }
+  .counties:hover{
+    border: solid 1px orange;
+     
+  }
+  .template_deliver{
+    position: absolute;
+    top: 9rem;
+    width: 12rem;
+    left: 4rem;
+    height: 6rem;
+  
+  }
+  .receive_template{
+    position: absolute;
+    top:14rem;
+    width: 12rem;
+    left: 4rem;
+    height: 6rem;
+    
+  }
+  .delivery_truck{
+    position: absolute;
+    top:10rem;
+    left: 1rem;
+    font-size: 1.3rem;
+    border: 1px solid grey;
+    padding: 8px;
+  border-radius: 6px;
+  
+  }
+  .delivery_return{
+    position: absolute;
+    top:20rem;
+    left: 1rem;
+    font-size: 1.3rem;
+    border: 1px solid grey;
+    padding: 8px;
+  border-radius: 6px;
+  
+  
+  }
+  .return_template{
+    position: absolute;
+    top:20rem;
+    width: 12rem;
+    left: 4rem;
+    height: 6rem;
+    
+  
+  }
+  .delivery_item  {
+    position: absolute;
+    top:15rem;
+    left: 1rem;
+    font-size: 1.3rem;
+    border: 1px solid grey;
+    padding: 8px;
+  border-radius: 6px;
+  
+  }
+  .p_door_delivery{
+    position: absolute;
+    top:0rem;
+    left: 0rem;
+    font-weight: 500;
+    
+  }
+  .p_free_delivery{
+  position: absolute;
+  top:1rem;
+  left: .7rem;
+  color: green;
+  font-size: .8rem;
+  width: 15rem;
+  }
+  .p_deliverby{
+    position: absolute;
+    top:2rem;
+    left: 0rem;
+    font-size: .9rem;
+    width: 15rem;
+  }
+  .a_details{
+    position: absolute;
+    right: -2rem;
+    font-size: .8rem;
+    cursor: pointer;
+  
+  }
+  .a_details:hover{
+  color: #065a82;
+  }
+  .template_modal1{
+    position: absolute;
+    top:10rem;
+    left: 23rem;
+    height: 20rem;
+    width: 35rem;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px;
+    border-radius: 6px;
+    
+  
+  }
+  .rtn_policy_ln{
+    position: absolute;
+    top: 19rem;
+    width: 20rem;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .popup_product {
+    position: absolute;
+    top: 6rem;
+    left: 0rem;
+    width: 75rem;
+    height: 130rem;
+    background-color: rgb(214, 212, 212);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px;
+  }
+  .pdt_container{
+    position: absolute;
+    background-color: white;
+    height: 23rem;
+    width: 47rem;
+    top:1rem;
+    left: 1rem;
+  }
+  .product_image_popup_cart {
+    position: absolute;
+    height: 22rem;
+    width: 20rem;
+    top: 1rem;
+    left: 1rem;
+  }
+  .pop_product-title {
+    position: absolute;
+    top: 5rem;
+    left: 22rem;
+    font-size: 1.9rem;
+  }
+  .pop_product-price {
+    position: absolute;
+    top: 10rem;
+    font-size: 1.4rem;
+    left: 22rem;
+    color: rgb(128, 101, 66);
+  }
+  .pop_btn {
+    position: absolute;
+    top: 20rem;
+    left: 22rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(128, 101, 66);
+    display: flex;
+    width: 18rem;
+    justify-content: center;
+  }
+  .pop_btn_wish {
+    position: absolute;
+    bottom: 7rem;
+    left: 7rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: grey;
+  }
+  .pop_btn:hover,
+  .pop_btn_wish:hover {
+    opacity: 0.9;
+    color: white;
+  }
+  .product_about {
+    position: absolute;
+    top: 28rem;
+    left: 1.5rem;
+    width: 40rem;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  .prdt_details_container{
+    position: absolute;
+   left: 1rem;
+    top: 25rem;
+    height: 24rem;
+    width: 47rem;
+   
+    border-radius: 6px;
+    background-color: white;
+  }
+  
+  
+  
+  
+  .small_desc{
+    position: absolute;
+    top:0rem;
+    left: 1rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .hr_desc{
+    position: absolute;
+    top:2.9rem;
+    width: 41.9rem;
+   
+  }
+  
+  .cross {
+    position: absolute;
+    top: 1rem;
+    left: 72rem;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cross:hover {
+    background-color: black;
+    color: white;
+  }
+  .icon_heart {
+    position: absolute;
+    top: 5rem;
+   left: 40rem;
+    font-size: 1.7rem;
+    color: rgb(128, 101, 66);
+  }
+  .icon_heart:hover {
+    color: red;
+    cursor: pointer;
+  }
+  .carticon {
+    position: absolute;
+    right: 0.7rem;
+  }
+  .carticon:hover {
+    color: white;
+  }
+  .may_like{
+    position: absolute;
+    top: 68rem;
+    left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .rating_container{
+    position: absolute;
+    top: 50rem;
+    left: 1rem;
+    height: 15rem;
+    width: 42rem;
+   box-shadow: 0px 0px 10px 0px; 
+   background-color: white;
+  
+  }
+  .small_rate{
+    position: absolute;
+    top:1rem;
+    left: 0rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  
+  
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+    position: absolute;
+    top:3rem ;
+  }
+  
+  .rating input {
+    appearance: unset;
+  }
+  
+  .rating label {
+    cursor: pointer;
+  }
+  
+  .rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .rating label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+    0% {
+      transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30% {
+      transform: scale(0);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30.1% {
+      stroke: var(--fill);
+      stroke-dasharray: 0;
+      stroke-linejoin: miter;
+      stroke-width: 8px;
+    }
+  
+    60% {
+      transform: scale(1.2);
+      fill: var(--fill);
+    }
+  }
+  
+  .location_of_divs{
+    position: absolute;
+    right: 4.5rem;
+    top:35rem;
+    height: 10rem;
+    width: 20rem;
+  
+    display: flex;
+    flex-direction: column;
+    border-radius:6px;
+    
+    box-shadow: 0px 0px 1px 0px;
+  
+  }
+  .location_of_divs small{
+    position: relative;
+    height: 4rem;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  
+  }
+  .location_of_divs small:hover{
+    background-color: #dddddd;
+  }
+  
+  .specifications_container{
+    position: absolute;
+    background-color: white;
+    height: 20rem;
+    width: 42rem;
+    top:70rem;
+    left: 1rem;
+  border-radius: 6px;
+  border: 1px solid;
+  }
+  .specifications_container h4{
+    position: relative;
+    top:1rem;
+    left: 1rem;
+    font-size: 1.2rem;
+  }
+  .specifications_container hr{
+    position: absolute;
+    top: 3.5rem;
+  }
+  .key_features{
+    position: absolute;
+    top: 5rem;
+    border: 1px; 
+    height: 12rem;
+    width: 15rem;
+    left: 1rem;
+    border:1px solid;
+    border-radius: 6px;
+   
+  }
+  .key_features p{
+    position: absolute;
+    left: 1rem;
+    top:.5rem;
+  }
+  .key_features hr{
+    position: absolute;
+    top:2.5rem;
+  }
+   .key_features .list_features{
+    position: absolute;
+    width: 9rem;
+    top: 2.8rem;
+    left: -1rem;
+    font-size: .8rem;
+    height: 9rem;
+  
+  
+  }
+  .about_specs{
+    position: absolute;
+    top: 3rem;
+    font-size: 1rem;
+    left: 1rem;
+  }
