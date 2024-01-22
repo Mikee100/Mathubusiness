@@ -333,11 +333,9 @@
   .prdt_details_container{
     position: absolute;
    left: 1rem;
-    top: 45rem;
+    top: 43rem;
     height: 24rem;
-    width: 47rem;
-   
-    border-radius: 6px;
+    width: 52rem;
     background-color: white;
   }
   
@@ -346,16 +344,16 @@
   
   .small_desc{
     position: absolute;
-    top:0rem;
+    top:.5rem;
     left: 1rem;
     width: 15rem;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .hr_desc{
     position: absolute;
     top:2.9rem;
-    width: 41.9rem;
+    width: 52rem;
    
   }
   
@@ -571,12 +569,11 @@
   .specifications_container{
     position: absolute;
     background-color: white;
-    height: 20rem;
-    width: 42rem;
-    top:70rem;
+    height: 25rem;
+    width: 52rem;
+    top:69rem;
     left: 1rem;
-  border-radius: 6px;
-  border: 1px solid;
+ 
   }
   .specifications_container h4{
     position: relative;
