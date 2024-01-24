@@ -8,6 +8,7 @@ import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { TbTruckReturn } from "react-icons/tb";
 import { FaFileAlt } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 export default function ProductDetails({  productdetails,handleAddProduct,addLikedProduct}) {
 
         const  [modal, setModal] = useState(false);
@@ -75,14 +76,28 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
    ADD TO CART
   
     </button>
+
+ <hr  className='line_pdrt_detail' />
+ <p className='p_share_prdt' >SHARE THE PRODUCT</p>
+<div className='facebook_icon' >
+<FaFacebookF className='icon_facebook' />
+</div>
+
+
+
+ <p className='promotions' >PROMOTIONS</p>
+
+
+
+ <p className='reporting_prdt' >Report incorrect product information</p>
   </div>
 
  
-   
+  
 
   
     
-    {/**<p className="product_about">{pop.about}</p> */}
+
   
    
 

@@ -329,6 +329,54 @@
     width: 52rem;
     background-color: white;
   }
+
+  .line_pdrt_detail{
+    position: absolute;
+    top:23rem;
+    width: 100%;
+    opacity: .3;
+  }
+  .p_share_prdt{
+    position: absolute;
+    top: 23rem;
+    left: 1rem;
+    font-weight: 400;
+  }
+  .icon_facebook{
+    position: relative;
+  }
+ 
+.facebook_icon{
+  position: absolute;
+  top: 25rem;
+  left: 1rem;
+  border-radius: 15px;
+  padding: 3.2px;
+  background-color: white;
+  border: .1px solid black;
+}
+.facebook_icon:hover{
+  border: .1px solid orange;
+}
+.icon_facebook:hover{
+  color: orange;
+
+}
+
+
+
+  .promotions{
+    position: absolute;
+    top: 23rem;
+    left: 27rem;
+    font-weight: 400;
+  }
+  .reporting_prdt{
+    position: absolute;
+    top: 38rem;
+    left: 1rem;
+
+  }
   
   
   
