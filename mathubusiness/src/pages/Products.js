@@ -9,9 +9,11 @@ import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { TbTruckReturn } from "react-icons/tb";
 import { FaFileAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
-export default function Products({productItems, handleAddProduct, addLikedProduct }) {
+
+export default function Products({productItems, handleAddProduct, addLikedProduct, handleAddProductDetails  }) {
     const  [modal, setModal] = useState(false);
     const  [modal1, setModal1] = useState(false);
 
@@ -53,7 +55,7 @@ const changecontent = (product) =>{
     
     <div className='container'>
      
-                 <div className="products">
+            <div className="products">
 {productItems.map((product) => (
 
   <div className="product" 
@@ -80,7 +82,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
