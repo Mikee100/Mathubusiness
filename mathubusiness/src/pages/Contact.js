@@ -3,9 +3,9 @@ import "./home.css";
 import {FaTimes} from 'react-icons/fa'
 import {FaRegHeart} from 'react-icons/fa'
 import LeftNav from "./LeftNav";
+import { Link } from "react-router-dom";
 
-
-export default function Contact({productDresses, handleAddProduct }) {
+export default function Contact({productDresses, handleAddProduct, handleAddProductDetails }) {
     const  [modal, setModal] = useState(false);
 
     const toggleModal = () =>{
@@ -51,7 +51,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    

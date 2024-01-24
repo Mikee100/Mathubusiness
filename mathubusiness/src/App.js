@@ -146,6 +146,7 @@ function App() {
                 <About
                   productShoes={productShoes}
                   handleAddProduct={handleAddProduct}
+                  handleAddProductDetails={handleAddProductDetails}
                 />
               }
             />
@@ -166,6 +167,7 @@ function App() {
                 <Contact
                   productDresses={productDresses}
                   handleAddProduct={handleAddProduct}
+                  handleAddProductDetails={handleAddProductDetails}
                 />
               }
             />

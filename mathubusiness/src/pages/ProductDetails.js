@@ -8,8 +8,7 @@ import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { TbTruckReturn } from "react-icons/tb";
 import { FaFileAlt } from "react-icons/fa";
-export default function ProductDetails({  productdetails,
-    handleAddProductDetails,handleAddProduct,addLikedProduct,productItems}) {
+export default function ProductDetails({  productdetails,handleAddProduct,addLikedProduct}) {
 
         const  [modal, setModal] = useState(false);
         const  [modal1, setModal1] = useState(false);
@@ -190,7 +189,7 @@ export default function ProductDetails({  productdetails,
 
   <p className="may_like">YOU MAY ALSO LIKE</p>
   <div className="products_modal">
-{productItems.map((product) => (
+{productdetails.map((product) => (
 
   <div className="product" 
    >
