@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
-import {FaTimes} from 'react-icons/fa'
+
 import {FaRegHeart} from 'react-icons/fa'
 import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
@@ -104,7 +104,7 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
 
  <FaRegHeart  className="icon_heart" onClick={() => addLikedProduct(pop)}  /> 
 
- <button onClick={changecontent} className='cross'  ><FaTimes/></button>
+
 
 <div className="prdt_details_container" id="prdt_details_container" >
  <hr className="hr_desc" />

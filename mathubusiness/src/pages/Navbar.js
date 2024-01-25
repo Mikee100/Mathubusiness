@@ -44,6 +44,8 @@ function Navbar({cartItems}) {
         
  
         </div >
+
+        
         <button className='bars' onClick={() => setMobile(!Mobile)} >
           {Mobile ? <FaTimes/> : <FaBars  />}</button>
        {/* <hr className='nav_line' /> */}

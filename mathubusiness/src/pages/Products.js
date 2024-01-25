@@ -29,7 +29,8 @@ const changecontent = (product) =>{
     
     <div className='container'>
      
-            <div className="products">
+           
+           <div className="products">
 {productItems.map((product) => (
 
   <div className="product" 
