@@ -98,7 +98,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -145,7 +145,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -189,7 +189,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -237,7 +237,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -281,7 +281,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    

@@ -1,66 +1,4 @@
 
-.product {
-    position: relative;
-    left: 1rem;
-    top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 15rem;
-    width: 20rem;
-    border: none;
-    margin-right: 12px;
-   
-  }
-  .product-image {
-    border-radius: 10px;
-    height: 10rem;
-    width: 10rem;
-  }
-  .product-title {
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .product-price {
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .buttons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000044;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    gap: 10px;
-  }
-  .product:hover .buttons {
-    opacity: 1;
-  }
-  .buttons .btn {
-    position: relative;
-    left: 3rem;
-    background-color: #dddddd;
-    padding: 5px;
-    width: 50%;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    border: none;
-  }
-  .buttons .btn:hover {
-    background-color: #065a82;
-    color: #fff;
-  }
-  
-  
-  
   
 
   .products_modal{
@@ -544,6 +482,15 @@
       fill: var(--fill);
     }
   }
+
+.customer_feedback{
+  position: absolute;
+  height: 8rem;
+  width: 15rem;
+  background-color:#065a82;
+  top: 6rem;
+}
+  
   
   .location_of_divs{
     position: absolute;

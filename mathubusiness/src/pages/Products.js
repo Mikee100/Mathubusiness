@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
@@ -10,17 +10,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Products({productItems, handleAddProduct,  handleAddProductDetails  }) {
-    const  [modal, setModal] = useState(false);
-    
 
-    
-const [ setpopupcontent] = useState([]);
-const changecontent = (product) =>{
-    setpopupcontent([product]);
-    setModal(!modal);
-    
-  
-  }
 
  
 
@@ -98,7 +88,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -145,7 +135,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -189,7 +179,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -237,7 +227,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
@@ -281,7 +271,7 @@ const changecontent = (product) =>{
 
 
    <div className="buttons"> 
-   <button className="btn" onClick={() => changecontent(product)} > details </button>
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
    
