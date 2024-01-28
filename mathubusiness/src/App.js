@@ -17,7 +17,14 @@ import Login from "./pages/Login";
 import Mainlogin from "./pages/Mainlogin";
 import AuthDetails from "./AuthDetails";
 import ProductDetails from "./pages/ProductDetails";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
+import rootReducer from "./pages/reducers";
+
+
+// Create Redux store
+const store = createStore(rootReducer);
 function App() {
   const productItems = products;
   const productShoes = shoes;
@@ -28,6 +35,7 @@ function App() {
   const [likedItems, setLikedItems] = useState([]);
 
   const [productdetails, setproductdetails] = useState([]);
+
 
   const handleAddProductDetails = (productdetailss) => {
     const ProductExistDetail = productdetails.find(
@@ -44,6 +52,11 @@ function App() {
       setproductdetails([{ ...productdetailss }]);
     }
   };
+  
+
+
+ 
+
 
   const addLikedProduct = (productlike) => {
     const ProductExistLike = likedItems.find(
@@ -100,7 +113,9 @@ function App() {
   };
 
   return (
+    
     <>
+       <Provider store={store}>
       <BrowserRouter>
         <main>
           <Routes>
@@ -194,7 +209,7 @@ function App() {
           <AuthDetails />
         </main>
       </BrowserRouter>
-
+      </Provider>
       <div className="footer">
         <p>&copy; Mezuri Shopping 2023</p>
         <h3 className="hd_pages">Pages</h3>
@@ -220,5 +235,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

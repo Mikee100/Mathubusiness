@@ -9,7 +9,9 @@
     "mysql": "^2.18.1",
     "nodemon": "^3.0.2",
     "react-icons": "^4.11.0",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.15.0",
-    "react-use-cart": "^1.13.0"
+    "react-use-cart": "^1.13.0",
+    "redux": "^5.0.1"
   }
 }
