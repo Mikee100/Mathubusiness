@@ -27,21 +27,17 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
 
-
   const [productdetails, setproductdetails] = useState([]);
 
-
-
-
   const handleAddProductDetails = (productdetailss) => {
-    const ProductExistDetail = productdetails.find((itemsdetails) => itemsdetails.id === productdetailss.id);
+    const ProductExistDetail = productdetails.find(
+      (itemsdetails) => itemsdetails.id === productdetailss.id
+    );
 
     if (ProductExistDetail) {
       setproductdetails(
         productdetails.map((item) =>
-          item.id === productdetailss.id
-            ? { ...ProductExistDetail }
-            : item
+          item.id === productdetailss.id ? { ...ProductExistDetail } : item
         )
       );
     } else {
@@ -49,11 +45,6 @@ function App() {
     }
   };
 
-
-
-
-
-  
   const addLikedProduct = (productlike) => {
     const ProductExistLike = likedItems.find(
       (items) => items.id === productlike.id
@@ -136,7 +127,6 @@ function App() {
                   addLikedProduct={addLikedProduct}
                   handleAddProductDetails={handleAddProductDetails}
                 />
-                
               }
             />
 
@@ -173,14 +163,15 @@ function App() {
             />
             <Route path="navbar" element={<Navbar />} />
 
-            <Route path="/productdetails" element={<ProductDetails 
-            
-           
-              productdetails={productdetails}
-              
-            
-
-            />} />
+            <Route
+              path="/productdetails"
+              element={
+                <ProductDetails
+                  handleAddProduct={handleAddProduct}
+                  productdetails={productdetails}
+                />
+              }
+            />
 
             <Route
               path="search"

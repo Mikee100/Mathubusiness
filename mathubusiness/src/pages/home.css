@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  top: 8rem;
+  top: 2rem;
   left: 18rem;
   width: 56rem;
   height: 120rem;
@@ -96,27 +96,36 @@ background-color: white;
   border: none;
   margin-right: 12px;
  
+ 
 }
+.product:hover{
+  z-index: 1;
+  transform: translate(0px, 0px );
+  box-shadow: 0px 0px 5px 0px;
+}
+
 .product-image {
-  border-radius: 10px;
-  height: 10rem;
+  position: relative;
+ 
+  top:-2.9rem;
+  height: 9rem;
   width: 10rem;
 }
 .product-title {
   position: absolute;
-  top: 12.4rem;
+  top: 11rem;
   left: .2rem;
   font-weight: 600;
-  font-size: 16px;
-  width: 100%;
+  font-size: 14px;
+  width: 150%;
 
 }
 .product-price {
   position: absolute;
-  top: 13.5rem;
+  top: 13rem;
   left: .2rem;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
 }
 .buttons {
   position: absolute;
@@ -208,7 +217,7 @@ background-color: white;
   display: flex;
   flex-direction: row;
   width: 103%;
-  top: 9 rem;
+  top: 9rem;
   left: -3rem;
 background-color: white;
   height: 18rem;
@@ -224,7 +233,7 @@ background-color: white;
   display: flex;
   flex-direction: row;
   width: 103%;
-  top: 22rem;
+  top: 10rem;
   left: -3rem;
   background-color: white;
   height: 18rem;
@@ -235,6 +244,42 @@ background-color: white;
 .make5_products::-webkit-scrollbar {
   width: 0;
 }
+.make6_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 11rem;
+  left: -3rem;
+  background-color: white;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make6_products::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.make7_products{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 103%;
+  top: 12rem;
+  left: -3rem;
+  background-color: white;
+  height: 18rem;
+  overflow-x: auto;
+  border-radius: 10px;
+
+}
+.make7_products::-webkit-scrollbar {
+  width: 0;
+}
+
+
 
 
 

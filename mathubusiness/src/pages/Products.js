@@ -288,6 +288,95 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
 
 </div>
 
+<div className="make6_products">
+{productItems.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+<div className="make7_products">
+{productItems.map((product) => (
+
+  <div className="product" 
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+     KSh {product.price} 
+    </span>
+
+
+   <div className="buttons"> 
+   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
+   <button className="btn"  onClick={() => handleAddProduct(product)} > 
+    Add to Cart 
+   
+    </button>
+
+
+
+   </div>
+
+
+  </div>
+  
+     ))}
+
+</div>
+
+
 
 <LeftNav />
 

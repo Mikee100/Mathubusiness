@@ -15,6 +15,13 @@ export default function ShoppingCart({
   return (
     <>
       <div className="container_shopping">
+      <div className='small_routes_shopping' >
+      <a href='./products' ><p className='p_home' >Home</p> </a>
+      <p className='this_sign'> &gt; </p>
+      <a href="./productdetails" >  <p className='p_prdt_detail' >Product Details</p></a>
+      <p className='cart_this_sign'> &gt; </p>
+      <p className="route_cart" >Cart</p>
+        </div>
         <h2>Cart Items</h2>
         {cartItems.length >= 1 && (
           <button className="bt_clear" onClick={handleCartClearance}>

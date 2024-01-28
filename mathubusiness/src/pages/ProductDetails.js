@@ -45,15 +45,27 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
           element.scrollIntoView({ behavior: "smooth" });
         }
       };
+      const handleClickScrol3= () => {
+        const element = document.getElementById("rating_container");
+        if (element) {
+          // 👇 Will scroll smoothly to the top of the next section
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
 
   return (
     <>
       <div className='modal'  onClick={toggleModal} >
+    
         {productdetails.map((pop)=> (
             <div >
                          <div className="popup_product"
  key={pop.id}>
-
+  <div className='small_routes' >
+      <a href='./products' ><p className='p_home' >Home</p> </a>
+      <p className='this_sign'> &gt; </p>
+        <p className='p_prdt_detail' >Product Details</p>
+        </div>
 <div className="pdt_container" >
 <img  
     className="product_image_popup_cart" 
@@ -123,7 +135,7 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
       </small>
    
 </div>
-<div className="rating_container" >
+<div className="rating_container" id='rating_container' >
  <small className="small_rate" >CUSTOMER FEEDBACK</small>
    <div class="rating">
   <input type="radio" id="star-1" name="star-radio" value="star-1"  />
@@ -193,7 +205,7 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
 
 <small onClick={handleClickScrol2}>Specifications</small>
 
-<small>Customer Feedback</small>
+<small onClick={handleClickScrol3}>Customer Feedback</small>
   </div>
 
 <div className="sellers_info" >
