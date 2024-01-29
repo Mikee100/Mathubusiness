@@ -17,14 +17,18 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
   return (
   
     
-    <div className='container'>
+    <div className='container' id="container">
      
            
            <div className="products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -37,12 +41,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -50,22 +55,28 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
-
 
 <div className="make1_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -78,16 +89,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -95,24 +103,30 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
-
     
 
 
 <div className="make2_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -125,16 +139,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -142,21 +153,27 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
-
 <div className="make3_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -169,16 +186,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -186,25 +200,30 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
-
-    
 
 
 
 <div className="make4_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -217,16 +236,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -234,21 +250,28 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
 
 <div className="make5_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -261,16 +284,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -278,21 +298,29 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
 
-<div className="make6_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+<div className="make6_products">
+
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -305,16 +333,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -322,21 +347,28 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>
 
 <div className="make7_products">
-{productItems.map((product) => (
 
-  <div className="product" 
-   >
+
+{productItems.map((product) => (
+  
+
+  <Link to="/productdetails"  >
+     <div className="product"  
+  onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -349,16 +381,13 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
       {product.title}
 
     </h4>
-
-
-
-
-    <span  className="product-price" >
+    <span  className="product-price"   >
      KSh {product.price} 
     </span>
 
 
-   <div className="buttons"> 
+{/** 
+    <div className="buttons"> 
    <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
    <button className="btn"  onClick={() => handleAddProduct(product)} > 
     Add to Cart 
@@ -366,12 +395,15 @@ export default function Products({productItems, handleAddProduct,  handleAddProd
     </button>
 
 
-
    </div>
-
+*/}
 
   </div>
   
+
+
+</Link> 
+
      ))}
 
 </div>

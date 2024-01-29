@@ -5,11 +5,7 @@
   width: 56rem;
   height: 120rem;
 
-  
- 
   border: none;
-
-
 }
 
 .bag_pad {
@@ -43,7 +39,6 @@
   left: 15rem;
   cursor: pointer;
   top: 4rem;
-
 }
 .img2 {
   position: absolute;
@@ -61,7 +56,6 @@
   color: black;
 }
 
-
 .products {
   position: relative;
   display: flex;
@@ -69,19 +63,14 @@
   width: 109%;
   top: 5rem;
   left: -3rem;
-background-color: white;
+  background-color: white;
   height: 18rem;
   overflow-x: auto;
- 
-  
-  
-  
-
 }
+
 .products::-webkit-scrollbar {
   width: 0;
 }
-
 
 .product {
   position: relative;
@@ -92,40 +81,41 @@ background-color: white;
   justify-content: center;
   align-items: center;
   height: 15rem;
-  width: 20rem;
-  border: none;
+  width: 10rem;
+
   margin-right: 12px;
- 
- 
 }
-.product:hover{
+.product:hover {
   z-index: 1;
-  transform: translate(0px, 0px );
-  box-shadow: 0px 0px 5px 0px;
+  transform: translate(0px, 0px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+ 
+  
 }
 
 .product-image {
   position: relative;
- 
-  top:-2.9rem;
+
+  top: -2.98rem;
   height: 9rem;
   width: 10rem;
 }
 .product-title {
   position: absolute;
   top: 11rem;
-  left: .2rem;
+  left: 0.2rem;
   font-weight: 600;
   font-size: 14px;
   width: 150%;
-
+  color: black;
 }
 .product-price {
   position: absolute;
   top: 13rem;
-  left: .2rem;
+  left: 0.2rem;
   font-weight: 500;
   font-size: 18px;
+  color: black;
 }
 .buttons {
   position: absolute;
@@ -160,10 +150,7 @@ background-color: white;
   color: #fff;
 }
 
-
-
-
-.make1_products{
+.make1_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -174,12 +161,11 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make1_products::-webkit-scrollbar {
   width: 0;
 }
-.make2_products{
+.make2_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -190,12 +176,11 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make2_products::-webkit-scrollbar {
   width: 0;
 }
-.make3_products{
+.make3_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -206,29 +191,27 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make3_products::-webkit-scrollbar {
   width: 0;
 }
 
-.make4_products{
+.make4_products {
   position: relative;
   display: flex;
   flex-direction: row;
   width: 103%;
   top: 9rem;
   left: -3rem;
-background-color: white;
+  background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make4_products::-webkit-scrollbar {
   width: 0;
 }
-.make5_products{
+.make5_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -239,12 +222,11 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make5_products::-webkit-scrollbar {
   width: 0;
 }
-.make6_products{
+.make6_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -255,14 +237,12 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make6_products::-webkit-scrollbar {
   width: 0;
 }
 
-
-.make7_products{
+.make7_products {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -273,92 +253,51 @@ background-color: white;
   height: 18rem;
   overflow-x: auto;
   border-radius: 10px;
-
 }
 .make7_products::-webkit-scrollbar {
   width: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:700px){
-  .container{
+@media (max-width: 700px) {
+  .container {
     position: absolute;
     left: 0rem;
     width: 100%;
-  
-
   }
-  .products{
-    
+  .products {
     left: 0rem;
     display: grid;
     grid-gap: 5px;
     width: 100%;
-    top:1rem;
+    top: 1rem;
   }
 
-  .modal{
+  .modal {
     width: 100%;
-
   }
-  .popup_product{
+  .popup_product {
     left: 0rem;
     width: 100%;
-    top:15rem;
+    top: 15rem;
   }
-  .product_image_popup_cart{
+  .product_image_popup_cart {
     width: 15rem;
     height: 15rem;
-
   }
-  .product_about{
+  .product_about {
     left: 0rem;
     color: black;
-   
   }
-  .pop_btn{
+  .pop_btn {
     left: 0rem;
   }
-  .pop_product-price{
-    left:15rem;
-  }
-  .pop_product-title{
+  .pop_product-price {
     left: 15rem;
   }
-  .cross{
-    left:23rem;
-    
+  .pop_product-title {
+    left: 15rem;
+  }
+  .cross {
+    left: 23rem;
   }
 }

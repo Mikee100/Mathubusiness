@@ -55,7 +55,7 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
 
   return (
     <>
-      <div className='modal'  onClick={toggleModal} >
+      <div className='modal'id='modal'  onClick={toggleModal} >
     
         {productdetails.map((pop)=> (
             <div >
