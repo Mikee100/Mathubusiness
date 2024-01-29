@@ -53,6 +53,16 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
         }
       };
 
+     
+        // State to track the currently selected big image
+        const [selectedImage, setSelectedImage] = useState(null);
+      
+        // Function to handle click on a smaller image
+        
+        const handleImageClick = (image) => {
+          setSelectedImage(image);
+        }
+
   return (
     <>
       <div className='modal'id='modal'  onClick={toggleModal} >
@@ -73,7 +83,27 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
     alt={pop.image}
     
   />
+ <div className="image-gallery">
+      <div className="big-image">
+        {selectedImage && <img src={selectedImage} alt="Big" />}
+      </div>
 
+      <div className="thumbnails">
+        <img
+          src="/images/bag1.jfif"
+          alt="Small 1"
+          onClick={() => handleImageClick("/images/bag2.jfif")}
+        />
+        <img
+          src="/images/bag3.jfif"
+          alt="Small 2"
+          onClick={() => handleImageClick("/images/bag4.jfif")}
+        />
+        {/* Add more images as needed */}
+      </div>
+    </div>
+
+  
   
 <h4 className="pop_product-title" >
       {pop.title}
@@ -105,9 +135,7 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
   </div>
 
  
-  
-
-  
+ 
     
 
   

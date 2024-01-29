@@ -200,9 +200,11 @@ function App() {
             <Route path="mainlogin" element={<Mainlogin />} />
           </Routes>
 
-          <Navbar cartItems={cartItems} />
+          
           <AuthDetails />
+           <Navbar cartItems={cartItems} />
         </main>
+       
       </BrowserRouter>
 
       <div className="footer">
