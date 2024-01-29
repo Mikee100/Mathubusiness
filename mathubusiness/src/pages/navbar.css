@@ -247,9 +247,11 @@ color: black;
   height: 55rem;
   width: 50rem;
   top:10rem;
-  left: 25rem;
+  left: 22rem;
    display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 
 .template2{
@@ -262,6 +264,27 @@ color: black;
   grid-template-columns: repeat(3, 1fr);
 
 }
+.product_search {
+  position: relative;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 10rem;
+  border: none;
+  margin-right: 12px;
+ 
+ 
+}
+.product_search:hover{
+  z-index: 1;
+  transform: translate(0px, 0px );
+  box-shadow: 0px 0px 5px 0px;
+}
+
 
 
 

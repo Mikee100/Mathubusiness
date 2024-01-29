@@ -41,7 +41,7 @@ export default function Search(fulldatas, { handleAddProduct }) {
           })
 
           .map((product) => (
-            <div className="product" key={product.id}>
+            <div className="product_search" key={product.id}>
               <img
                 className="product-image"
                 src={product.image}
