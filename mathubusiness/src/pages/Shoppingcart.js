@@ -45,7 +45,7 @@ export default function ShoppingCart({
               <h4 className="cart-title">{item.title}</h4>
 
               <span className="cart-price">
-                <p>{item.quantity}</p> ${item.price}
+                <p className="p_count" >{item.quantity}</p> KSh {item.price}
               </span>
 
               <button

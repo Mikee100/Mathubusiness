@@ -8,6 +8,7 @@
     border: 1px solid grey;
     border-radius: 10px;
     border: none;
+    background-color: white;
 }
 .container_shopping h2{
     position: absolute;
@@ -16,7 +17,7 @@
 }
 .small_routes_shopping{
     position: absolute;
-    top: 0rem;
+    top: -2rem;
     width: 20rem;
     font-size: 14px;
   }
@@ -51,6 +52,7 @@ hr{
     position: absolute;
     top:5rem;
     width: 100%;
+    opacity: .2;
 }
 .cart_container{
     position: relative;
@@ -75,18 +77,22 @@ hr{
 }
 .cart-title{
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     left: 10rem;
 
 }
 .cart-price{
     position: absolute;
-    top: 4rem;
-    left: 40rem;
+    top: 3rem;
+    left: 44rem;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
-.cart-price p{
+.p_count{
     position: absolute;
-    left: -7rem;
+    left: -1rem;
+    top: 4.2rem;
+    font-size: 1rem;
 }
 .cart_empty{
     position: absolute;
@@ -131,19 +137,25 @@ font-size: 1.4rem;
 .increase-item{
     position: absolute;
     top:7rem;
-    left: 40rem;
+    left: 45rem;
     border: none;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 6px;
 
 }
 .decrease-item{
     position: absolute;
     top:7rem;
-    left: 45rem;
+    left: 40rem;
     border: none;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 6px;
     
 }
 .increase-item:hover ,.decrease-item:hover{
-    background-color: grey;
+    background-color: rgb(88, 87, 87);
 }
 .bt_clear{
     position: absolute;
@@ -181,9 +193,11 @@ font-size: 1.4rem;
 .line-cart{
     position: relative;
     top: 4.6rem;
+    left: 1.5rem;
+    width: 47rem;
+    opacity: .2;
 
-    background-color: red;
-
+    
 }
 .modal1 {
     background-color: rgba(0, 0, 0, 0.5);
