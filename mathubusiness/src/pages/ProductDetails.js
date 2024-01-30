@@ -77,27 +77,28 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
         <p className='p_prdt_detail' >Product Details</p>
         </div>
 <div className="pdt_container" >
+{/**
 <img  
     className="product_image_popup_cart" 
     src={pop.image}
     alt={pop.image}
     
-  />
+  /> */}
  <div className="image-gallery">
       <div className="big-image">
-        {selectedImage && <img src={selectedImage} alt="Big" />}
+        {selectedImage && <img src={pop.image} alt="Big" />}
       </div>
 
       <div className="thumbnails">
         <img
-          src="/images/bag1.jfif"
+          src={pop.image1}
           alt="Small 1"
-          onClick={() => handleImageClick("/images/bag2.jfif")}
+          onClick={() => handleImageClick(pop.image1)}
         />
         <img
-          src="/images/bag3.jfif"
+          src={pop.image2}
           alt="Small 2"
-          onClick={() => handleImageClick("/images/bag4.jfif")}
+          onClick={() => handleImageClick(pop.image2)}
         />
         {/* Add more images as needed */}
       </div>

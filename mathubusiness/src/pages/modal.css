@@ -643,10 +643,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #065a82;
+
     position: absolute;
-    top:25rem;
-    left: 20rem;
+    top:1rem;
+    left: 3rem;
     height: 20rem;
   }
   
@@ -658,7 +658,7 @@
   .thumbnails {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .thumbnails img {
