@@ -1,11 +1,13 @@
 import React from "react";
 import "./shoppingcart.css";
+import { Link } from "react-router-dom";
 
 export default function ShoppingCart({
   cartItems,
   handleAddProduct,
   handleRemoveProduct,
   handleCartClearance,
+  handleAddProductDetails
 }) {
   const totalPrice = cartItems.reduce(
     (price, item) => price + item.quantity * item.price,
@@ -36,7 +38,9 @@ export default function ShoppingCart({
 
         {cartItems.map((item) => (
           <div key={item.id} className="cart_container">
-            <div className="single_item_cart">
+           <Link to="/productdetails" >
+
+             <div className="single_item_cart"  onClick={() => handleAddProductDetails(item)} >
               <img className="cart_image" src={item.image} alt={item.image} />
               <h4 className="cart-title">{item.title}</h4>
 
@@ -58,6 +62,9 @@ export default function ShoppingCart({
               </button>
               <hr className="line-cart" />
             </div>
+            </Link> 
+           
+          
           </div>
         ))}
 

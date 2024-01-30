@@ -61,24 +61,22 @@ hr{
 }
 .single_item_cart{
     position: absolute;
-    height: 13rem;
+    height: 10rem;
     width: 100%;
-    
+   
 }
-.single_item_cart:hover{
-    background-color: rgba(0,0,0,0.1);
-}
+
 .cart_image{
     position: relative;
-    max-height: 10rem;
-    min-width: 10rem;
-    left: 3rem;
+    max-height: 5rem;
+    min-width: 5rem;
+    left: 1rem;
     top:1rem;
 }
 .cart-title{
     position: absolute;
-    top: 4rem;
-    left: 20rem;
+    top: 2rem;
+    left: 10rem;
 
 }
 .cart-price{
@@ -132,15 +130,15 @@ font-size: 1.4rem;
 }
 .increase-item{
     position: absolute;
-    top:4rem;
-    left: 30rem;
+    top:7rem;
+    left: 40rem;
     border: none;
 
 }
 .decrease-item{
     position: absolute;
-    top:4rem;
-    left: 35rem;
+    top:7rem;
+    left: 45rem;
     border: none;
     
 }
@@ -182,7 +180,7 @@ font-size: 1.4rem;
 }
 .line-cart{
     position: relative;
-    top: 1.8rem;
+    top: 4.6rem;
 
     background-color: red;
 
