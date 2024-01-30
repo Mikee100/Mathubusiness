@@ -86,7 +86,8 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
   /> */}
  <div className="image-gallery">
       <div className="big-image">
-        {selectedImage && <img src={pop.image} alt="Big" />}
+      
+        {selectedImage && <img src={selectedImage} alt="Big" />}
       </div>
 
       <div className="thumbnails">
@@ -99,6 +100,21 @@ export default function ProductDetails({  productdetails,handleAddProduct,addLik
           src={pop.image2}
           alt="Small 2"
           onClick={() => handleImageClick(pop.image2)}
+        />
+          <img
+          src={pop.image3}
+          alt="Small 3"
+          onClick={() => handleImageClick(pop.image3)}
+        />
+           <img
+          src={pop.image4}
+          alt="Small 3"
+          onClick={() => handleImageClick(pop.image4)}
+        />
+         <img
+          src={pop.image5}
+          alt="Small 3"
+          onClick={() => handleImageClick(pop.image5)}
         />
         {/* Add more images as needed */}
       </div>
