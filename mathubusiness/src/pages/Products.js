@@ -28,7 +28,7 @@ export default function Products({productItems,   handleAddProductDetails  }) {
 
   <Link to="/productdetails"  >
      <div className="product"  
-  onClick={() => handleAddProductDetails(product)}>
+  onClick={() => handleAddProductDetails(product)} key={product.id}>
  
     <img  
       className="product-image"
@@ -37,10 +37,10 @@ export default function Products({productItems,   handleAddProductDetails  }) {
      
    
     />
-    <h4 className="product-title" >
+    <p className="product-title" >
       {product.title}
 
-    </h4>
+    </p>
     <span  className="product-price"   >
      KSh {product.price} 
     </span>

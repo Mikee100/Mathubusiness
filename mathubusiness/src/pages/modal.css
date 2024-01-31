@@ -1,677 +1,593 @@
-
-  
-
-  .products_modal{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 98%;
-    top: 113rem;
-    left: .5rem;
+.products_modal {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  top: 113rem;
+  left: 0.5rem;
   box-shadow: 0px 0px 5px 0px;
-    height: 16rem;
-    overflow-x: auto;
-    border-radius: 10px;
-  
-  }
-  
-  .products_modal::-webkit-scrollbar {
-    width: 0;
-  }
-  .modal_left_delivery{
-    position: absolute;
-    height: 25rem;
-    width: 18rem;
-    top: 1.2rem;
-    right: 2rem;
-    background-color: white;
-  }
-  .delivery_status{
-    position: absolute;
-    font-size: 1.2rem;
-    font-weight: 500;
-    left: .4rem;
-  
-  }
-  .delivery_status_line{
-    position: absolute;
-    top: 2rem;
-    
-  }
-  .choosing_location_status{
-    position: absolute;
-    top:2rem;
-    font-weight: 500;
-    left: .4rem;
-  
-  }
-  .counties{
-    position: absolute;
-    top:5rem;
-    left: 1rem;
-    width: 15rem;
-    height: 3rem;
-    border-radius:6px;
-  }
-  .counties:hover{
-    border: solid 1px orange;
-     
-  }
-  .template_deliver{
-    position: absolute;
-    top: 9rem;
-    width: 12rem;
-    left: 4rem;
-    height: 6rem;
-  
-  }
-  .receive_template{
-    position: absolute;
-    top:14rem;
-    width: 12rem;
-    left: 4rem;
-    height: 6rem;
-    
-  }
-  .delivery_truck{
-    position: absolute;
-    top:10rem;
-    left: 1rem;
-    font-size: 1.3rem;
-    border: 1px solid grey;
-    padding: 8px;
-  border-radius: 6px;
-  
-  }
-  .delivery_return{
-    position: absolute;
-    top:20rem;
-    left: 1rem;
-    font-size: 1.3rem;
-    border: 1px solid grey;
-    padding: 8px;
-  border-radius: 6px;
-  
-  
-  }
-  .return_template{
-    position: absolute;
-    top:20rem;
-    width: 12rem;
-    left: 4rem;
-    height: 6rem;
-    
-  
-  }
-  .delivery_item  {
-    position: absolute;
-    top:15rem;
-    left: 1rem;
-    font-size: 1.3rem;
-    border: 1px solid grey;
-    padding: 8px;
-  border-radius: 6px;
-  
-  }
-  .p_door_delivery{
-    position: absolute;
-    top:0rem;
-    left: 0rem;
-    font-weight: 500;
-    
-  }
-  .p_free_delivery{
+  height: 16rem;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.products_modal::-webkit-scrollbar {
+  width: 0;
+}
+.modal_left_delivery {
   position: absolute;
-  top:1rem;
-  left: .7rem;
-  color: green;
-  font-size: .8rem;
+  height: 25rem;
+  width: 18rem;
+  top: 1.2rem;
+  right: 2rem;
+  background-color: white;
+}
+.delivery_status {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  left: 0.4rem;
+}
+.delivery_status_line {
+  position: absolute;
+  top: 2rem;
+}
+.choosing_location_status {
+  position: absolute;
+  top: 2rem;
+  font-weight: 500;
+  left: 0.4rem;
+}
+.counties {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
   width: 15rem;
-  }
-  .p_deliverby{
-    position: absolute;
-    top:2rem;
-    left: 0rem;
-    font-size: .9rem;
-    width: 15rem;
-  }
-  .a_details{
-    position: absolute;
-    right: -1rem;
-    font-size: .8rem;
-    cursor: pointer;
-  
-  }
-  .a_details:hover{
+  height: 3rem;
+  border-radius: 6px;
+}
+.counties:hover {
+  border: solid 1px orange;
+}
+.template_deliver {
+  position: absolute;
+  top: 9rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+}
+.receive_template {
+  position: absolute;
+  top: 14rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+}
+.delivery_truck {
+  position: absolute;
+  top: 10rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 6px;
+}
+.delivery_return {
+  position: absolute;
+  top: 20rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 6px;
+}
+.return_template {
+  position: absolute;
+  top: 20rem;
+  width: 12rem;
+  left: 4rem;
+  height: 6rem;
+}
+.delivery_item {
+  position: absolute;
+  top: 15rem;
+  left: 1rem;
+  font-size: 1.3rem;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 6px;
+}
+.p_door_delivery {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  font-weight: 500;
+}
+.p_free_delivery {
+  position: absolute;
+  top: 1rem;
+  left: 0.7rem;
+  color: green;
+  font-size: 0.8rem;
+  width: 15rem;
+}
+.p_deliverby {
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  font-size: 0.9rem;
+  width: 15rem;
+}
+.a_details {
+  position: absolute;
+  right: -1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.a_details:hover {
   color: #065a82;
-  }
-  .template_modal1{
-    position: absolute;
-    top:10rem;
-    left: 23rem;
-    height: 20rem;
-    width: 35rem;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px;
-    border-radius: 6px;
-    
-  
-  }
-  .rtn_policy_ln{
-    position: absolute;
-    top: 19rem;
-    width: 20rem;
-  
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .popup_product {
-    position: absolute;
-    top: 4rem;
-    left: 0rem;
-    width: 100%;
-    height: 140rem;
-    background-color: rgb(214, 212, 212);
-    
-    
-  }
-  .small_routes{
-    position: absolute;
-    top: .5rem;
-    width: 20rem;
-    font-size: 14px;
-  }
-  .p_home{
-    position: absolute;
+}
+.template_modal1 {
+  position: absolute;
+  top: 10rem;
+  left: 23rem;
+  height: 20rem;
+  width: 35rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 6px;
+}
+.rtn_policy_ln {
+  position: absolute;
+  top: 19rem;
+  width: 20rem;
+}
 
-    left: 1rem;
-  }
-  .p_prdt_detail{
-    position: absolute;
-    top: 0rem;
-    left: 5rem;
-  }
-  .this_sign{
-    position: absolute;
-    top: 0rem;
-    left: 4rem;
+.popup_product {
+  position: absolute;
+  top: 4rem;
+  left: 0rem;
+  width: 100%;
+  height: 140rem;
+  background-color: rgb(214, 212, 212);
+}
+.small_routes {
+  position: absolute;
+  top: 0.5rem;
+  width: 20rem;
+  font-size: 14px;
+}
+.p_home {
+  position: absolute;
 
-  }
-  .pdt_container{
-    position: absolute;
-    background-color: white;
-    height: 40rem;
-    width: 52rem;
-    top:3rem;
-    left: 1rem;
-  }
-  .product_image_popup_cart {
-    position: absolute;
-    height: 20rem;
-    width: 20rem;
-    top: 1rem;
-    left: 1rem;
-  }
-  .pop_product-title {
-    position: absolute;
-    top: 5rem;
-    left: 22rem;
-    font-size: 1.9rem;
-  }
-  .pop_product-price {
-    position: absolute;
-    top: 10rem;
-    font-size: 1.4rem;
-    left: 22rem;
-    color: rgb(128, 101, 66);
-  }
-  .pop_btn {
-    position: absolute;
-    top: 20rem;
-    left: 22rem;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(128, 101, 66);
-    display: flex;
-    width: 24rem;
-    justify-content: center;
-  }
-  .pop_btn_wish {
-    position: absolute;
-    bottom: 7rem;
-    left: 7rem;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 5px;
-    background-color: grey;
-  }
-  .pop_btn:hover,
-  .pop_btn_wish:hover {
-    opacity: 0.9;
-    color: white;
-  }
-  .product_about {
-    position: absolute;
-    top: 28rem;
-    left: 1.5rem;
-    width: 40rem;
-    font-style: italic;
-    font-size: 1rem;
-  }
-  .prdt_details_container{
-    position: absolute;
-   left: 1rem;
-    top: 43rem;
-    height: 24rem;
-    width: 52rem;
-    background-color: white;
-  }
+  left: 1rem;
+}
+.p_prdt_detail {
+  position: absolute;
+  top: 0rem;
+  left: 5rem;
+}
+.this_sign {
+  position: absolute;
+  top: 0rem;
+  left: 4rem;
+}
+.pdt_container {
+  position: absolute;
+  background-color: white;
+  height: 40rem;
+  width: 52rem;
+  top: 3rem;
+  left: 1rem;
+}
+.product_image_popup_cart {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  top: 1rem;
+  left: 1rem;
+}
+.pop_product-title {
+  position: absolute;
+  top: 5rem;
+  left: 22rem;
+  font-size: 1.1rem;
+}
+.pop_product-price {
+  position: absolute;
+  top: 10rem;
+  font-size: 1.4rem;
+  left: 22rem;
+  color: rgb(128, 101, 66);
+}
+.pop_btn {
+  position: absolute;
+  top: 20rem;
+  left: 22rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(128, 101, 66);
+  display: flex;
+  width: 24rem;
+  justify-content: center;
+}
+.pop_btn_wish {
+  position: absolute;
+  bottom: 7rem;
+  left: 7rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+}
+.pop_btn:hover,
+.pop_btn_wish:hover {
+  opacity: 0.9;
+  color: white;
+}
+.product_about {
+  position: absolute;
+  top: 28rem;
+  left: 1.5rem;
+  width: 40rem;
+  font-style: italic;
+  font-size: 1rem;
+}
+.prdt_details_container {
+  position: absolute;
+  left: 1rem;
+  top: 43rem;
+  height: 24rem;
+  width: 52rem;
+  background-color: white;
+}
 
-  .line_pdrt_detail{
-    position: absolute;
-    top:23rem;
-    width: 100%;
-    opacity: .3;
-  }
-  .p_share_prdt{
-    position: absolute;
-    top: 23rem;
-    left: 1rem;
-    font-weight: 400;
-  }
-  .icon_facebook{
-    position: relative;
-  }
- 
-.facebook_icon{
+.line_pdrt_detail {
+  position: absolute;
+  top: 23rem;
+  width: 100%;
+  opacity: 0.3;
+}
+.p_share_prdt {
+  position: absolute;
+  top: 23rem;
+  left: 1rem;
+  font-weight: 400;
+}
+.icon_facebook {
+  position: relative;
+}
+
+.facebook_icon {
   position: absolute;
   top: 25rem;
   left: 1rem;
   border-radius: 15px;
   padding: 3.2px;
   background-color: white;
-  border: .1px solid black;
+  border: 0.1px solid black;
 }
-.facebook_icon:hover{
-  border: .1px solid orange;
+.facebook_icon:hover {
+  border: 0.1px solid orange;
 }
-.icon_facebook:hover{
+.icon_facebook:hover {
   color: orange;
-
 }
 
+.promotions {
+  position: absolute;
+  top: 23rem;
+  left: 27rem;
+  font-weight: 400;
+}
+.reporting_prdt {
+  position: absolute;
+  top: 38rem;
+  left: 1rem;
+}
 
+.small_desc {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  width: 15rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hr_desc {
+  position: absolute;
+  top: 2.9rem;
+  width: 52rem;
+}
 
-  .promotions{
-    position: absolute;
-    top: 23rem;
-    left: 27rem;
-    font-weight: 400;
-  }
-  .reporting_prdt{
-    position: absolute;
-    top: 38rem;
-    left: 1rem;
+.cross {
+  position: absolute;
+  top: 0.1rem;
+  left: 73rem;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cross:hover {
+  background-color: black;
+  color: white;
+}
+.icon_heart {
+  position: absolute;
+  top: 1.5rem;
+  left: 46rem;
+  font-size: 1.3rem;
+  color: rgb(128, 101, 66);
+}
+.icon_heart:hover {
+  color: red;
+  cursor: pointer;
+}
+.carticon {
+  position: absolute;
+  right: 0.7rem;
+}
+.carticon:hover {
+  color: white;
+}
+.may_like {
+  position: absolute;
+  top: 111rem;
+  left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
+.rating_container {
+  position: absolute;
+  top: 95rem;
+  left: 1rem;
+  height: 15rem;
+  width: 42rem;
+  box-shadow: 0px 0px 10px 0px;
+  background-color: white;
+}
+.small_rate {
+  position: absolute;
+  top: 1rem;
+  left: 0rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+  position: absolute;
+  top: 3rem;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
   }
-  
-  
-  
-  
-  .small_desc{
-    position: absolute;
-    top:.5rem;
-    left: 1rem;
-    width: 15rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .hr_desc{
-    position: absolute;
-    top:2.9rem;
-    width: 52rem;
-   
-  }
-  
-  .cross {
-    position: absolute;
-    top: .1rem;
-    left: 73rem;
-    border: none;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .cross:hover {
-    background-color: black;
-    color: white;
-  }
-  .icon_heart {
-    position: absolute;
-    top: 1.5rem;
-   left: 46rem;
-    font-size: 1.3rem;
-    color: rgb(128, 101, 66);
-  }
-  .icon_heart:hover {
-    color: red;
-    cursor: pointer;
-  }
-  .carticon {
-    position: absolute;
-    right: 0.7rem;
-  }
-  .carticon:hover {
-    color: white;
-  }
-  .may_like{
-    position: absolute;
-    top: 111rem;
-    left: 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  
-  .rating_container{
-    position: absolute;
-    top:95rem;
-    left: 1rem;
-    height: 15rem;
-    width: 42rem;
-   box-shadow: 0px 0px 10px 0px; 
-   background-color: white;
-  
-  }
-  .small_rate{
-    position: absolute;
-    top:1rem;
-    left: 0rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-  }
-  
-  
-  
-  .rating {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 0.3rem;
-    --stroke: #666;
-    --fill: #ffc73a;
-    position: absolute;
-    top:3rem ;
-  }
-  
-  .rating input {
-    appearance: unset;
-  }
-  
-  .rating label {
-    cursor: pointer;
-  }
-  
-  .rating svg {
-    width: 2rem;
-    height: 2rem;
-    overflow: visible;
-    fill: transparent;
-    stroke: var(--stroke);
-    stroke-linejoin: bevel;
-    stroke-dasharray: 12;
-    animation: idle 4s linear infinite;
-    transition: stroke 0.2s, fill 0.5s;
-  }
-  
-  @keyframes idle {
-    from {
-      stroke-dashoffset: 24;
-    }
-  }
-  
-  .rating label:hover svg {
-    stroke: var(--fill);
-  }
-  
-  .rating input:checked ~ label svg {
-    transition: 0s;
-    animation: idle 4s linear infinite, yippee 0.75s backwards;
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
     fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
     stroke: var(--fill);
-    stroke-opacity: 0;
     stroke-dasharray: 0;
     stroke-linejoin: miter;
     stroke-width: 8px;
   }
-  
-  @keyframes yippee {
-    0% {
-      transform: scale(1);
-      fill: var(--fill);
-      fill-opacity: 0;
-      stroke-opacity: 1;
-      stroke: var(--stroke);
-      stroke-dasharray: 10;
-      stroke-width: 1px;
-      stroke-linejoin: bevel;
-    }
-  
-    30% {
-      transform: scale(0);
-      fill: var(--fill);
-      fill-opacity: 0;
-      stroke-opacity: 1;
-      stroke: var(--stroke);
-      stroke-dasharray: 10;
-      stroke-width: 1px;
-      stroke-linejoin: bevel;
-    }
-  
-    30.1% {
-      stroke: var(--fill);
-      stroke-dasharray: 0;
-      stroke-linejoin: miter;
-      stroke-width: 8px;
-    }
-  
-    60% {
-      transform: scale(1.2);
-      fill: var(--fill);
-    }
-  }
 
-.customer_feedback{
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+
+.customer_feedback {
   position: absolute;
   height: 8rem;
   width: 15rem;
-  background-color:#065a82;
+  background-color: #065a82;
   top: 6rem;
 }
-  
-  
-  .location_of_divs{
-    position: absolute;
-    right: 2rem;
-    top:50rem;
-    height: 10rem;
-    width: 18rem;
-  
-    display: flex;
-    flex-direction: column;
-    border-radius:6px;
-    
-    box-shadow: 0px 0px 1px 0px;
-  
-  }
-  .location_of_divs small{
-    position: relative;
-    height: 4rem;
-    background-color: white;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  
-  }
-  .location_of_divs small:hover{
-    background-color: #dddddd;
-  }
-  .sellers_info{
-    position: absolute;
-    height: 20rem;
-    right: 1.9rem;
-    top:28rem;
-    height: 20rem;
-    width: 18rem;
-  
-    display: flex;
-    flex-direction: column;
-    
+
+.location_of_divs {
+  position: absolute;
+  right: 2rem;
+  top: 50rem;
+  height: 10rem;
+  width: 18rem;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+
+  box-shadow: 0px 0px 1px 0px;
+}
+.location_of_divs small {
+  position: relative;
+  height: 4rem;
   background-color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.location_of_divs small:hover {
+  background-color: #dddddd;
+}
+.sellers_info {
+  position: absolute;
+  height: 20rem;
+  right: 1.9rem;
+  top: 28rem;
+  height: 20rem;
+  width: 18rem;
 
-  }
-  .sellers_info p{
-    position: absolute;
-    top:1rem;
-    left: 1rem;
-    font-weight: 500;
+  display: flex;
+  flex-direction: column;
 
-  }
-  .hr_seller_info{
-    position: absolute;
-    top:3rem;
-    color: grey;
-    
+  background-color: white;
+}
+.sellers_info p {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-weight: 500;
+}
+.hr_seller_info {
+  position: absolute;
+  top: 3rem;
+  color: grey;
 }
 
+.specifications_container {
+  position: absolute;
+  background-color: white;
+  height: 25rem;
+  width: 52rem;
+  top: 69rem;
+  left: 1rem;
+}
+.specifications_container h4 {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+}
+.specifications_container hr {
+  position: absolute;
+  top: 3.5rem;
+}
+.key_features {
+  position: absolute;
+  top: 5rem;
+  border: 1px;
+  height: 12rem;
+  width: 15rem;
+  left: 1rem;
+  border: 1px solid;
+  border-radius: 6px;
+}
+.key_features p {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+}
+.key_features hr {
+  position: absolute;
+  top: 2.5rem;
+}
+.key_features .list_features {
+  position: absolute;
+  width: 9rem;
+  top: 2.8rem;
+  left: -1rem;
+  font-size: 0.8rem;
+  height: 9rem;
+}
+.about_specs {
+  position: absolute;
+  top: 3rem;
+  font-size: 1rem;
+  left: 1rem;
+}
 
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  position: absolute;
+  top: 1rem;
+  left: 0rem;
+  height: 20rem;
+}
 
+.big-image img {
+  max-width: 400px;
+  max-height: 250px;
+  margin-left: 15px;
+}
 
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 
-  
-  .specifications_container{
-    position: absolute;
-    background-color: white;
-    height: 25rem;
-    width: 52rem;
-    top:69rem;
-    left: 1rem;
- 
-  }
-  .specifications_container h4{
-    position: relative;
-    top:1rem;
-    left: 1rem;
-    font-size: 1.2rem;
-  }
-  .specifications_container hr{
-    position: absolute;
-    top: 3.5rem;
-  }
-  .key_features{
-    position: absolute;
-    top: 5rem;
-    border: 1px; 
-    height: 12rem;
-    width: 15rem;
-    left: 1rem;
-    border:1px solid;
-    border-radius: 6px;
-   
-  }
-  .key_features p{
-    position: absolute;
-    left: 1rem;
-    top:.5rem;
-  }
-  .key_features hr{
-    position: absolute;
-    top:2.5rem;
-  }
-   .key_features .list_features{
-    position: absolute;
-    width: 9rem;
-    top: 2.8rem;
-    left: -1rem;
-    font-size: .8rem;
-    height: 9rem;
-  
-  
-  }
-  .about_specs{
-    position: absolute;
-    top: 3rem;
-    font-size: 1rem;
-    left: 1rem;
-  }
+  width: 100%;
+}
 
+.thumbnails img {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+}
 
-
-
-
-
-
-
-
-
-  .image-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: absolute;
-    top:1rem;
-    left: 0rem;
-    height: 20rem;
-  }
-  
-  .big-image img {
-    max-width: 400px;
-    max-height: 250px;
-    margin-left: 15px;
-  }
-  
-  .thumbnails {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    
-    width: 100%;
-  }
-  
-  .thumbnails img {
-    width: 50px;
-    height: 50px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .thumbnails img:hover {
-    border: 1px solid grey;
-  }
-  
+.thumbnails img:hover {
+  border: 1px solid grey;
+}
