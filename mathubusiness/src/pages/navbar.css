@@ -342,6 +342,72 @@ position: relative;
   background-color: green;
 
 }
+.welcome_container{
+  position: absolute;
+  width: 8rem;
+ visibility: visible;
+  height: 2.5rem;
+  top: 1rem;
+  left: 50rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.welcome_container:hover{
+  background-color: rgb(224, 219, 219);
+}
+.welcome_container p{
+  position: relative;
+  top: .5rem;
+}
+.welcome_container small{
+  position: relative;
+  top: -.85rem;
+  left: 1.5rem;
+  font-size: 1rem;
+}
+.welcome_container .arrow_down{
+  position: relative;
+  top: -.75rem;
+  left: 3rem;
+}
+.mysmallest_list{
+  position: absolute;
+  top: 3.2rem;
+  height: 11rem;
+  left: -2rem;
+  width: 14rem;
+  background-color: white;
+  border-radius: 6px;
+}
+.mysmallest_list ol {
+  position: relative;
+  margin-top: 15px;
+  left: 1rem;
+  width: 10rem;
+  height: 1.5rem;
+}
+.mysmallest_list ol:hover{
+  background-color: rgb(175, 172, 172);
+
+}
+
+.mysmallest_list hr{
+  position: absolute;
+  top: 7.5rem;
+
+
+}
+.icons{
+  position: relative;
+  left: -2rem;
+}
+.mysmallest_list .logout{
+  position: relative;
+  left: 2rem;
+  top: .5rem;
+  width: 9rem;
+}
+
 
 
 

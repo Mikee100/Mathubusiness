@@ -17,6 +17,8 @@ import Login from "./pages/Login";
 import Mainlogin from "./pages/Mainlogin";
 import AuthDetails from "./AuthDetails";
 import ProductDetails from "./pages/ProductDetails";
+import Myaccount from "./pages/Myaccount";
+
 
 function App() {
   const productItems = products;
@@ -199,6 +201,8 @@ function App() {
             <Route path="liked" element={<Liked likedItems={likedItems} />} />
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
+            <Route path="myaccount" element={<Myaccount />}   />
+
           </Routes>
 
           

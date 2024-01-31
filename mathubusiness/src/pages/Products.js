@@ -3,6 +3,7 @@ import "./navbar.css";
 import "./home.css";
 import "./modal.css";
 
+
 import LeftNav from "./LeftNav";
 
 import { Link } from "react-router-dom";

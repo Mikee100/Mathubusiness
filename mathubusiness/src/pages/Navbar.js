@@ -7,6 +7,10 @@ import {FaTimes} from "react-icons/fa"
 import {FaSearch} from "react-icons/fa"
 import {AiFillHeart} from 'react-icons/ai'
 import { LuLogIn } from "react-icons/lu";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { VscAccount } from "react-icons/vsc";
+import { FaRegHeart } from "react-icons/fa";
+import { MdMarkEmailUnread } from "react-icons/md";
 
 function Navbar({cartItems}) {
   const[Mobile, setMobile] = useState(false);
@@ -18,12 +22,15 @@ function Navbar({cartItems}) {
     setAppear(!appear);
   }
 
-
-
   const changecontent = () =>{
       
       setAppear(!appear);
     
+    }
+const[view, setview] = useState(false);
+
+    const mydisappear = () => {
+      setview(!view);
     }
   
   return (
@@ -42,6 +49,20 @@ function Navbar({cartItems}) {
       </ul>
      <Link to="./shoppingcart" style={{color:"black"}} ><span className='count' > {cartItems.length === 0 ? "" : cartItems.length } </span> <FaShoppingCart  className='cart-icon'  /></Link>
         
+        <div className='welcome_container'onClick={mydisappear} >
+          <p className=''>Hi, </p>
+          <small >Michael</small>
+          <MdOutlineKeyboardArrowDown className='arrow_down'/>
+{view  &&  (
+          <div className='mysmallest_list'  >
+           <Link to='myaccount' ><ol><VscAccount className='icons'  />My Account</ol></Link> 
+            <ol><MdMarkEmailUnread className='icons' />Orders</ol>
+            <ol><FaRegHeart className='icons'  />Saved Items</ol>
+            <hr/>
+            <ol className='logout' >LOGOUT</ol>
+          </div>
+)}
+        </div>
  
         </div >
 
