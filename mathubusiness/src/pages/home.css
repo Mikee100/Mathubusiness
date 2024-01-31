@@ -260,6 +260,36 @@
 .make7_products::-webkit-scrollbar {
   width: 0;
 }
+.mymostdata{
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 30rem;
+  width: 50rem;
+  background-color: #065a82;
+}
+.mymostdata p{
+  position: relative;
+  top: 10rem;
+}
+h1{
+  position: relative;
+  top: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 700px) {
   .container {
