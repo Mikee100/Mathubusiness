@@ -57,7 +57,7 @@ const[view, setview] = useState(false);
           <div className='mysmallest_list'  >
            <Link to='myaccount' ><ol><VscAccount className='icons'  />My Account</ol></Link> 
             <ol><MdMarkEmailUnread className='icons' />Orders</ol>
-            <ol><FaRegHeart className='icons'  />Saved Items</ol>
+            <Link to='shoppingcart' ><ol><FaRegHeart className='icons'  />Saved Items</ol></Link> 
             <hr/>
             <ol className='logout' >LOGOUT</ol>
           </div>

@@ -1,9 +1,7 @@
 import React from 'react'
 
-export default function Myaccount() {
+export default function myAccount() {
   return (
-    <div>
-      <h1>Michael</h1>
-    </div>
+    <div>myAccount</div>
   )
 }
