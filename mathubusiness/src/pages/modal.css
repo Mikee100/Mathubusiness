@@ -591,3 +591,12 @@
 .thumbnails img:hover {
   border: 1px solid grey;
 }
+
+.prdt_cart{
+  position: absolute;
+  height: 10rem;
+  width: 18rem;
+  top: 61rem;
+  right: 2rem;
+  background-color: #065a82;
+}
