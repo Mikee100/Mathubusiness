@@ -293,15 +293,13 @@ export default function ProductDetails({
               </div>
 
                     <div className="prdt_cart" >
-                        
-                    {productdetails.map((pop) => (
-         <p className="big-image" >{pop.image}</p>
-       
-    
-                   
+                      {productdetails.map((product)=> (
 
-))};
-                      </div>
+
+                          <p>{product.title}</p>
+                      ) )};
+                        
+                                  </div>
 
 
               <p className="may_like">YOU MAY ALSO LIKE</p>
