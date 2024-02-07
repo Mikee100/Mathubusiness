@@ -6,7 +6,7 @@ import LeftNav from "./LeftNav";
 import { BsTruck } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export default function About({productShoes, handleAddProduct,handleAddProductDetails }) {
+export default function About({productShoes, handleAddProduct,handleAddProductDetails,productshoessandals }) {
     const  [modal, setModal] = useState(false);
 
     const toggleModal = () =>{
@@ -63,7 +63,7 @@ onClick={() => handleAddProductDetails(product)}
 
 
 <div className="make1_products">
-{productShoes.map((product) => (
+{productshoessandals.map((product) => (
 
   <div className="product" 
    >

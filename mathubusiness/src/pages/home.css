@@ -288,10 +288,10 @@ h1{
 }
 .products:hover .div_arrow_right{
   visibility: visible;
-
+ 
 }
 .arrow_right{
-  position: relative;
+  
  color: white;
   cursor: pointer;
   border: none;

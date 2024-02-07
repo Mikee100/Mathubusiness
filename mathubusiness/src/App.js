@@ -20,6 +20,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Myaccount from "./pages/Myaccount";
 import Bags from "./pages/Bags";
 import Footer from "./pages/Footer";
+import shoessandals from "./shoessandals";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
   const productShoes = shoes;
   const productDresses = dressesdata;
   const fulldatas = fulldata;
+  const productshoessandals = shoessandals;
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -152,6 +154,7 @@ function App() {
                   productShoes={productShoes}
                   handleAddProduct={handleAddProduct}
                   handleAddProductDetails={handleAddProductDetails}
+                  productshoessandals={productshoessandals}
                 />
               }
             />
