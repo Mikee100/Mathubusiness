@@ -182,6 +182,7 @@ function App() {
                 <ProductDetails
                   handleAddProduct={handleAddProduct}
                   productdetails={productdetails}
+                  productItems={productItems}
                 />
               }
             />

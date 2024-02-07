@@ -13,6 +13,7 @@ export default function ProductDetails({
   productdetails,
   handleAddProduct,
   addLikedProduct,
+  productItems
 }) {
   const [modal, setModal] = useState(false);
   const [modal1, setModal1] = useState(false);
@@ -61,7 +62,7 @@ export default function ProductDetails({
 
   return (
     <>
-      <div className="modal" id="modal" onClick={toggleModal}>
+      <div className="modal" id="modal" key={1} onClick={toggleModal}>
         {productdetails.map((pop) => (
           <div>
             <div className="popup_product" key={pop.id}>
@@ -292,48 +293,19 @@ export default function ProductDetails({
                 <hr className="hr_seller_info" />
               </div>
 
-                    <div className="prdt_cart" >
-                      {productdetails.map((product)=> (
-
-
-                          <p>{product.title}</p>
-                      ) )};
-                        
-                                  </div>
-
-
-              <p className="may_like">YOU MAY ALSO LIKE</p>
-              <div className="products_modal">
+              <div className="prdt_cart">
                 {productdetails.map((product) => (
-                  <div className="product">
-                    <img
-                      className="product-image"
-                      src={product.image}
-                      alt={product.image}
-                    />
-                    <h4 className="product-title">{product.title}</h4>
-
-                    <span className="product-price">KSh {product.price}</span>
-
-                    <div className="buttons">
-                      <button
-                        className="btn"
-                        onClick={() => changecontent(product)}
-                      >
-                        {" "}
-                        details{" "}
-                      </button>
-                      <button
-                        className="btn"
-                        onClick={() => handleAddProduct(product)}
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt={product.image}
+                  />
                 ))}
+                ;
               </div>
 
+              <p className="may_like">YOU MAY ALSO LIKE</p>
+            
               {/** items in the modal                  */}
 
               <div className="modal_left_delivery">
@@ -441,6 +413,37 @@ export default function ProductDetails({
           </div>
         ))}
       </div>
+      <div className="products_modal" key={1}>
+                {productItems.map((product) => (
+                  <div className="product">
+                    <img
+                      className="product-image"
+                      src={product.image}
+                      alt={product.image}
+                    />
+                    <h4 className="product-title">{product.title}</h4>
+
+                    <span className="product-price">KSh {product.price}</span>
+
+                    <div className="buttons">
+                      <button
+                        className="btn"
+                        onClick={() => changecontent(product)}
+                      >
+                        {" "}
+                        details{" "}
+                      </button>
+                      <button
+                        className="btn"
+                        onClick={() => handleAddProduct(product)}
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function Products({productItems,   handleAddProductDetails  }) {
   return (
   
     
-    <div className='container' id="container">
+    <div className='container' id="container" key={1} >
      
            
            <div className="products">
