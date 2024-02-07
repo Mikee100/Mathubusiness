@@ -18,6 +18,8 @@ import Mainlogin from "./pages/Mainlogin";
 import AuthDetails from "./AuthDetails";
 import ProductDetails from "./pages/ProductDetails";
 import Myaccount from "./pages/Myaccount";
+import Bags from "./pages/Bags";
+import Footer from "./pages/Footer";
 
 
 function App() {
@@ -203,6 +205,8 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />}   />
+            <Route path="bags" element={<Bags  />}   />
+            <Route path="" element={<Footer  />} />
 
           </Routes>
 
@@ -213,28 +217,7 @@ function App() {
        
       </BrowserRouter>
 
-      <div className="footer">
-        <p>&copy; Mezuri Shopping 2023</p>
-        <h3 className="hd_pages">Pages</h3>
-        <ul className="ul_media">
-          <li className="li_media" style={{ textDecoration: "none" }}>
-            bags
-          </li>
-
-          <a href="./contact" style={{ textDecoration: "none" }}>
-            <li className="li_media">Dresses</li>{" "}
-          </a>
-          <li className="li_media" style={{ textDecoration: "none" }}>
-            Shoes
-          </li>
-          <li className="li_media" style={{ textDecoration: "none" }}>
-            Favourites
-          </li>
-          <li className="li_media" style={{ textDecoration: "none" }}>
-            Search
-          </li>
-        </ul>
-      </div>
+     
     </>
   );
 }

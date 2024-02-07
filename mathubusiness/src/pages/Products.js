@@ -7,6 +7,7 @@ import "./modal.css";
 import LeftNav from "./LeftNav";
 
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 
 
@@ -412,7 +413,7 @@ export default function Products({productItems,   handleAddProductDetails  }) {
 
 
 <LeftNav />
-
+<Footer />
 
 
 

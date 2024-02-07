@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
-
+import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { BsTruck } from "react-icons/bs";
 import { SlEnvolopeLetter } from "react-icons/sl";
@@ -15,18 +15,14 @@ export default function ProductDetails({
   addLikedProduct,
   productItems
 }) {
-  const [modal, setModal] = useState(false);
+  
   const [modal1, setModal1] = useState(false);
 
   const toggleModal = () => {
     setModal1(modal1);
   };
 
-  const [setpopupcontent] = useState([]);
-  const changecontent = (product) => {
-    setpopupcontent([product]);
-    setModal(!modal);
-  };
+ 
 
   const handleClickScroll = () => {
     const element = document.getElementById("prdt_details_container");
@@ -413,9 +409,9 @@ export default function ProductDetails({
           </div>
         ))}
       </div>
-      <div className="products_modal" key={1}>
+      <div className="products_modal" key={2}>
                 {productItems.map((product) => (
-                  <div className="product">
+                  <Link to="/productdetails"  > <div className="product" key={1}>
                     <img
                       className="product-image"
                       src={product.image}
@@ -425,22 +421,7 @@ export default function ProductDetails({
 
                     <span className="product-price">KSh {product.price}</span>
 
-                    <div className="buttons">
-                      <button
-                        className="btn"
-                        onClick={() => changecontent(product)}
-                      >
-                        {" "}
-                        details{" "}
-                      </button>
-                      <button
-                        className="btn"
-                        onClick={() => handleAddProduct(product)}
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
+                  </div></Link> 
                 ))}
               </div>
 

@@ -21,7 +21,7 @@ export default function LeftNav(cartItems) {
 <div className="nav_left">
     
     <ul className={Mobile ? "nav-links-mobile":"nav-ul"} onClick={ ()=> setMobile(false)  }>
-     <li className='li_nav_left'   ><FaBagShopping   /> <a href='./products'  style={{ textDecoration: 'none'}}>  Bags   </a>  </li>
+     <li className='li_nav_left'   ><FaBagShopping   /> <a href='./bags'  style={{ textDecoration: 'none'}}>  Bags   </a>  </li>
    
      <li className='li_nav_left'  ><GiConverseShoe  /> <a href='./about' style={{ textDecoration: 'none'}}>Shoes  </a> </li>
 

@@ -254,6 +254,7 @@ const changecontent = (product) =>{
 
 </div>
 <LeftNav  />
+
 <div className="make5_products">
 {productShoes.map((product) => (
 
