@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef,useState} from "react";
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
@@ -8,30 +8,36 @@ import LeftNav from "./LeftNav";
 
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export default function Products({productItems,   handleAddProductDetails, productShoes  }) {
 
 
- 
+  const scrollableDivRef = useRef(null);
+  const [arrowPosition, setArrowPosition] = useState(0);
+
+  const handleScroll = () => {
+    const { scrollTop, scrollHeight, clientHeight } = scrollableDivRef.current;
+    const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    setArrowPosition(scrollPercentage);
+  };
 
   return (
   
     
     <div className='container' id="container" key={1} >
-     
+    
            
-           <div className="products">
-
-
-{productItems.map((product) => (
+           <div className="products"    ref={scrollableDivRef} onScroll={handleScroll}>
+        
+{productItems.map((product,index) => (
   
 
   <Link to="/productdetails"  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
- 
+ key={index}
     <img  
       className="product-image"
       src={product.image}
@@ -67,6 +73,10 @@ export default function Products({productItems,   handleAddProductDetails, produ
 </Link> 
 
      ))}
+<div className="div_arrow_right" >
+
+<MdKeyboardArrowRight  className="arrow_right" style={{ top: `${arrowPosition}%` }} onScroll={handleScroll} />
+</div>
 
 </div>
 
