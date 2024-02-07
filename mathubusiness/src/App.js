@@ -140,6 +140,7 @@ function App() {
                   likedItems={likedItems}
                   addLikedProduct={addLikedProduct}
                   handleAddProductDetails={handleAddProductDetails}
+                  productShoes={productShoes}
                 />
               }
             />

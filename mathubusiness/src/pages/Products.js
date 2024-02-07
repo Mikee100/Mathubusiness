@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 
 
-export default function Products({productItems,   handleAddProductDetails  }) {
+export default function Products({productItems,   handleAddProductDetails, productShoes  }) {
 
 
  
@@ -118,6 +118,36 @@ export default function Products({productItems,   handleAddProductDetails  }) {
 
 </div>
     
+<div className="products">
+{productShoes.map((product) => (
+
+<Link to="/productdetails" ><div className="product" 
+onClick={() => handleAddProductDetails(product)}
+   >
+ 
+    <img  
+      className="product-image"
+      src={product.image}
+      alt={product.image}
+     
+   
+    />
+    <h4 className="product-title" >
+      {product.title}
+
+    </h4>
+
+
+
+
+    <span  className="product-price" >
+      KSh {product.price}
+    </span>
+  </div></Link> 
+  
+     ))}
+
+</div>
 
 
 <div className="make2_products">

@@ -28,7 +28,8 @@ const changecontent = (product) =>{
         <div className="products">
 {productShoes.map((product) => (
 
-  <div className="product" 
+<Link to="/productdetails"  > <div className="product" 
+onClick={() => handleAddProductDetails(product)}
    >
  
     <img  
@@ -51,19 +52,9 @@ const changecontent = (product) =>{
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link> 
   
      ))}
 
