@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
-export default function Products({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals  }) {
+export default function Mainpage({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals  }) {
 
 
 

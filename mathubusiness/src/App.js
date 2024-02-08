@@ -4,10 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Routees from "./pages/Routees";
 import products from "./data";
-import Products from "./pages/Products";
-
 import Shoppingcart from "./pages/Shoppingcart";
-
 import shoes from "./shoes";
 import dressesdata from "./dressesdata";
 import fulldata from "./fulldata";
@@ -25,6 +22,7 @@ import womenboots from "./db/womenboots";
 import Shoes from "./pages/Shoes";
 import Dresses from "./pages/Dresses";
 import Sandals from "./pages/womenshoescategories/Sandals";
+import Mainpage from "./pages/Mainpage";
 
 function App() {
   const productItems = products;
@@ -118,7 +116,7 @@ function App() {
             <Route
               path="/"
               element={
-                <Products
+                <Mainpage
                   productItems={productItems}
                   handleAddProduct={handleAddProduct}
                   likedItems={likedItems}
@@ -131,22 +129,7 @@ function App() {
                 />
               }
             />
-            <Route
-              path="/products"
-              element={
-                <Products
-                  productItems={productItems}
-                  handleAddProduct={handleAddProduct}
-                  likedItems={likedItems}
-                  addLikedProduct={addLikedProduct}
-                  handleAddProductDetails={handleAddProductDetails}
-                  productShoes={productShoes}
-                  productshoessandals={productshoessandals}
-                  fashionwomenboot={fashionwomenboot}
-                  productDresses={productDresses}
-                />
-              }
-            />
+
             <Route
               path="bags"
               element={

@@ -19,7 +19,7 @@ export default function Myaccount() {
   }
   useEffect(()=>{
     fetchPost();
-  }, [])
+  })
   return (
     <div className='mymostdata' >{
       todos.map((todo,i)=>(

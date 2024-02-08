@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
 export default function Bags({productItems,handleAddProductDetails, productShoes}) {
+
+  
   return (
        
     <div className='container' id="container" key={1} >
@@ -21,7 +23,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product,index) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
  key={index}
@@ -74,7 +78,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -125,7 +131,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -172,7 +180,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -222,7 +232,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -270,7 +282,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -319,7 +333,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -367,7 +383,9 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link  key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
