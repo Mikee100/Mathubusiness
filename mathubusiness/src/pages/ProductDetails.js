@@ -13,7 +13,8 @@ export default function ProductDetails({
   productdetails,
   handleAddProduct,
   addLikedProduct,
-  productItems
+  productItems,
+ 
 }) {
   
   const [modal1, setModal1] = useState(false);

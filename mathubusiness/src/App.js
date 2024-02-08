@@ -213,6 +213,7 @@ function App() {
                   handleAddProduct={handleAddProduct}
                   productdetails={productdetails}
                   productItems={productItems}
+                  addLikedProduct={addLikedProduct}
                 />
               }
             />
