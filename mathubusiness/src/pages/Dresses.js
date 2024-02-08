@@ -5,7 +5,7 @@ import {FaRegHeart} from 'react-icons/fa'
 import LeftNav from "./LeftNav";
 import { Link } from "react-router-dom";
 
-export default function Contact({productDresses, handleAddProduct, handleAddProductDetails }) {
+export default function Dresses({productDresses, handleAddProduct, handleAddProductDetails }) {
     const  [modal, setModal] = useState(false);
 
     const toggleModal = () =>{

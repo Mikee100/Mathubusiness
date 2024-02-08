@@ -71,11 +71,15 @@
 .products::-webkit-scrollbar {
   width: 0;
 }
+ h3{
+  position: absolute;
+  left: 1rem;
+}
 
 .product {
   position: relative;
   left: 1rem;
-  top: 1rem;
+  top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

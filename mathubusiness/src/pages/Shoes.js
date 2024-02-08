@@ -6,7 +6,7 @@ import LeftNav from "./LeftNav";
 import { BsTruck } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export default function About({productShoes, handleAddProduct,handleAddProductDetails,productshoessandals }) {
+export default function Shoes({productShoes, handleAddProduct,handleAddProductDetails,productshoessandals,fashionwomenboot }) {
     const  [modal, setModal] = useState(false);
 
     const toggleModal = () =>{
@@ -26,6 +26,7 @@ const changecontent = (product) =>{
   return (
     <div className='container'>
         <div className="products">
+        <h3>Sandals</h3>
 {productShoes.map((product) => (
 
 <Link to="/productdetails"  > <div className="product" 
@@ -63,9 +64,12 @@ onClick={() => handleAddProductDetails(product)}
 
 
 <div className="make1_products">
+  <h3>Sandals</h3>
 {productshoessandals.map((product) => (
 
-  <div className="product" 
+ 
+<Link to="/productdetails"  > <div className="product" 
+onClick={() => handleAddProductDetails(product)}
    >
  
     <img  
@@ -88,19 +92,9 @@ onClick={() => handleAddProductDetails(product)}
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 
@@ -110,7 +104,8 @@ onClick={() => handleAddProductDetails(product)}
 
 
 <div className="make2_products">
-{productShoes.map((product) => (
+<h3>Boots</h3>
+{fashionwomenboot.map((product) => (
 
   <div className="product" 
    >

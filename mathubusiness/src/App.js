@@ -5,9 +5,9 @@ import Navbar from "./pages/Navbar";
 import Routees from "./pages/Routees";
 import products from "./data";
 import Products from "./pages/Products";
-import About from "./pages/About";
+
 import Shoppingcart from "./pages/Shoppingcart";
-import Contact from "./pages/Contact";
+
 import shoes from "./shoes";
 import dressesdata from "./dressesdata";
 import fulldata from "./fulldata";
@@ -21,6 +21,9 @@ import Myaccount from "./pages/Myaccount";
 import Bags from "./pages/Bags";
 import Footer from "./pages/Footer";
 import shoessandals from "./shoessandals";
+import womenboots from "./db/womenboots";
+import Shoes from "./pages/Shoes";
+import Dresses from "./pages/Dresses";
 
 
 function App() {
@@ -29,6 +32,7 @@ function App() {
   const productDresses = dressesdata;
   const fulldatas = fulldata;
   const productshoessandals = shoessandals;
+  const fashionwomenboot = womenboots;
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -130,6 +134,10 @@ function App() {
                   likedItems={likedItems}
                   addLikedProduct={addLikedProduct}
                   handleAddProductDetails={handleAddProductDetails}
+                  productShoes={productShoes}
+                  productshoessandals={productshoessandals}
+                  fashionwomenboot={fashionwomenboot}
+                  productDresses={productDresses}
                 />
               }
             />
@@ -143,18 +151,31 @@ function App() {
                   addLikedProduct={addLikedProduct}
                   handleAddProductDetails={handleAddProductDetails}
                   productShoes={productShoes}
+                  productshoessandals={productshoessandals}
+                  fashionwomenboot={fashionwomenboot}
+                  productDresses={productDresses}
                 />
               }
             />
-
+   <Route path="bags" element={<Bags 
+                 productItems={productItems}
+                 handleAddProduct={handleAddProduct}
+                 likedItems={likedItems}
+                 addLikedProduct={addLikedProduct}
+                 handleAddProductDetails={handleAddProductDetails}
+                 productShoes={productShoes}
+             />
+             } 
+               />
             <Route
-              path="about"
+              path="shoes"
               element={
-                <About
+                <Shoes
                   productShoes={productShoes}
                   handleAddProduct={handleAddProduct}
                   handleAddProductDetails={handleAddProductDetails}
                   productshoessandals={productshoessandals}
+                  fashionwomenboot={fashionwomenboot}
                 />
               }
             />
@@ -171,9 +192,9 @@ function App() {
               }
             />
             <Route
-              path="contact"
+              path="dresses"
               element={
-                <Contact
+                <Dresses
                   productDresses={productDresses}
                   handleAddProduct={handleAddProduct}
                   handleAddProductDetails={handleAddProductDetails}
@@ -209,7 +230,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />}   />
-            <Route path="bags" element={<Bags  />}   />
+         
             <Route path="" element={<Footer  />} />
 
           </Routes>

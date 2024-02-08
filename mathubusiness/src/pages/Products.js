@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
-export default function Products({productItems,   handleAddProductDetails, productShoes  }) {
+export default function Products({productItems,   handleAddProductDetails, productShoes,fashionwomenboot,productshoessandals  }) {
 
 
 
@@ -76,7 +76,7 @@ export default function Products({productItems,   handleAddProductDetails, produ
 <div className="make1_products">
 
 
-{productItems.map((product) => (
+{productShoes.map((product) => (
   
 
   <Link to="/productdetails"  >
@@ -121,36 +121,7 @@ export default function Products({productItems,   handleAddProductDetails, produ
 
 </div>
     
-<div className="products">
-{productShoes.map((product) => (
 
-<Link to="/productdetails" ><div className="product" 
-onClick={() => handleAddProductDetails(product)}
-   >
- 
-    <img  
-      className="product-image"
-      src={product.image}
-      alt={product.image}
-     
-   
-    />
-    <h4 className="product-title" >
-      {product.title}
-
-    </h4>
-
-
-
-
-    <span  className="product-price" >
-      KSh {product.price}
-    </span>
-  </div></Link> 
-  
-     ))}
-
-</div>
 
 
 <div className="make2_products">
@@ -203,7 +174,7 @@ onClick={() => handleAddProductDetails(product)}
 <div className="make3_products">
 
 
-{productItems.map((product) => (
+{fashionwomenboot.map((product) => (
   
 
   <Link to="/productdetails"  >
@@ -301,7 +272,7 @@ onClick={() => handleAddProductDetails(product)}
 <div className="make5_products">
 
 
-{productItems.map((product) => (
+{productshoessandals.map((product) => (
   
 
   <Link to="/productdetails"  >
