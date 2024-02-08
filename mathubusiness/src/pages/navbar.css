@@ -198,7 +198,7 @@ text-decoration-line: none;
 }
 .company_name:hover{
   color: grey;
-  padding: 1px;
+ 
 }
 .nav_line{
     position: absolute;
