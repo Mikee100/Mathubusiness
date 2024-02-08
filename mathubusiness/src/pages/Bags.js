@@ -71,7 +71,7 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
 <div className="make1_products">
 
 
-{productShoes.map((product) => (
+{productItems.map((product) => (
   
 
   <Link to="/productdetails"  >

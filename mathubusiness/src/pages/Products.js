@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
-export default function Products({productItems,   handleAddProductDetails, productShoes,fashionwomenboot,productshoessandals  }) {
+export default function Products({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals  }) {
 
 
 
@@ -22,7 +22,7 @@ export default function Products({productItems,   handleAddProductDetails, produ
     
            
            <div className="products"    >
-        
+           <h3><a href="./bags" style={{textDecoration:"none"}} >Bags</a></h3>
 {productItems.map((product,index) => (
   
 
@@ -75,7 +75,7 @@ export default function Products({productItems,   handleAddProductDetails, produ
 
 <div className="make1_products">
 
-
+<h3><a href="./shoes" style={{textDecoration:"none"}} >Shoes</a></h3>
 {productShoes.map((product) => (
   
 
@@ -369,7 +369,7 @@ export default function Products({productItems,   handleAddProductDetails, produ
 <div className="make7_products">
 
 
-{productItems.map((product) => (
+{productDresses.map((product) => (
   
 
   <Link to="/productdetails"  >

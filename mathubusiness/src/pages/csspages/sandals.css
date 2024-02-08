@@ -1,0 +1,21 @@
+.container_sandals{
+    position: absolute;
+    top: 10rem;
+    left: 18rem;
+    width: 56rem;
+    height: 120rem;
+  background-color: aqua;
+    border: none;
+  }
+
+.products_sandals {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 103%;
+    top: 5rem;
+    left: -3rem;
+    background-color: white;
+    height: 18rem;
+    overflow-x: auto;
+  }

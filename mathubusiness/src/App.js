@@ -24,7 +24,7 @@ import shoessandals from "./shoessandals";
 import womenboots from "./db/womenboots";
 import Shoes from "./pages/Shoes";
 import Dresses from "./pages/Dresses";
-
+import Sandals from "./pages/womenshoescategories/Sandals";
 
 function App() {
   const productItems = products;
@@ -38,7 +38,6 @@ function App() {
   const [likedItems, setLikedItems] = useState([]);
 
   const [productdetails, setproductdetails] = useState([]);
-
 
   const handleAddProductDetails = (productdetailss) => {
     const ProductExistDetail = productdetails.find(
@@ -55,11 +54,6 @@ function App() {
       setproductdetails([{ ...productdetailss }]);
     }
   };
-  
-
-
- 
-
 
   const addLikedProduct = (productlike) => {
     const ProductExistLike = likedItems.find(
@@ -115,12 +109,8 @@ function App() {
     setCartItems([]);
   };
 
-  
-
   return (
-    
     <>
-     
       <BrowserRouter>
         <main>
           <Routes>
@@ -157,16 +147,19 @@ function App() {
                 />
               }
             />
-   <Route path="bags" element={<Bags 
-                 productItems={productItems}
-                 handleAddProduct={handleAddProduct}
-                 likedItems={likedItems}
-                 addLikedProduct={addLikedProduct}
-                 handleAddProductDetails={handleAddProductDetails}
-                 productShoes={productShoes}
-             />
-             } 
-               />
+            <Route
+              path="bags"
+              element={
+                <Bags
+                  productItems={productItems}
+                  handleAddProduct={handleAddProduct}
+                  likedItems={likedItems}
+                  addLikedProduct={addLikedProduct}
+                  handleAddProductDetails={handleAddProductDetails}
+                  productShoes={productShoes}
+                />
+              }
+            />
             <Route
               path="shoes"
               element={
@@ -201,6 +194,16 @@ function App() {
                 />
               }
             />
+            <Route
+              path="sandals"
+              element={
+                <Sandals
+                  productshoessandals={productshoessandals}
+                  handleAddProduct={handleAddProduct}
+                  handleAddProductDetails={handleAddProductDetails}
+                />
+              }
+            />
             <Route path="navbar" element={<Navbar />} />
 
             <Route
@@ -229,23 +232,17 @@ function App() {
             <Route path="liked" element={<Liked likedItems={likedItems} />} />
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
-            <Route path="myaccount" element={<Myaccount />}   />
-         
-            <Route path="" element={<Footer  />} />
+            <Route path="myaccount" element={<Myaccount />} />
 
+            <Route path="" element={<Footer />} />
           </Routes>
 
-          
           <AuthDetails />
-           <Navbar cartItems={cartItems} />
+          <Navbar cartItems={cartItems} />
         </main>
-       
       </BrowserRouter>
-
-     
     </>
   );
 }
-
 
 export default App;
