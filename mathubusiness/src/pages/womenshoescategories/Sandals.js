@@ -7,11 +7,11 @@ export default function Sandals({productshoessandals,handleAddProduct,handleAddP
               <div className="products_sandals">
 {productshoessandals.map((product) => (
 
-  <div className="product" 
+  <div className="product_sandals" 
    >
  
     <img  
-      className="product-image"
+      className="product-image_sandals"
       src={product.image}
       alt={product.image}
      
