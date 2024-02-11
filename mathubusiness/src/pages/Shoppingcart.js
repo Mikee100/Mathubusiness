@@ -18,13 +18,13 @@ export default function ShoppingCart({
     <>
       <div className="container_shopping">
         <div className="small_routes_shopping">
-          <a href="./products">
+          <a href="./">
             <p className="p_home">Home</p>{" "}
           </a>
           <p className="this_sign"> &gt; </p>
           <a href="./productdetails">
             {" "}
-            <p className="p_prdt_detail">Product Details</p>
+           <Link to={`/productdetails?name=${cartItems.title}?id=${cartItems.id}`}> <p className="p_prdt_detail">Product Detail</p></Link>
           </a>
           <p className="cart_this_sign"> &gt; </p>
           <p className="route_cart">Cart</p>
@@ -49,7 +49,7 @@ export default function ShoppingCart({
                 
               >
                 <img className="cart_image" src={item.image} alt={item.image} />
-                <Link to="/productdetails">  <h4 className="cart-title" onClick={() => handleAddProductDetails(item)} >{item.title}</h4></Link>
+                <Link  to={`/productdetails?name=${item.title}?id=${item.id}`}    onClick={() => handleAddProductDetails(item)}>  <h4 className="cart-title" onClick={() => handleAddProductDetails(item)} >{item.title}</h4></Link>
 
                 <span className="cart-price">
                   <p className="p_count">{item.quantity}</p> KSh {item.price}

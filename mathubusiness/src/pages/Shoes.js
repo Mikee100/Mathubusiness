@@ -29,7 +29,10 @@ const changecontent = (product) =>{
         <h3>Sandals</h3>
 {productShoes.map((product) => (
 
-<Link to="/productdetails"  > <div className="product" 
+
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  > <div className="product" 
 onClick={() => handleAddProductDetails(product)}
    >
  
@@ -68,7 +71,10 @@ onClick={() => handleAddProductDetails(product)}
 {productshoessandals.map((product) => (
 
  
-<Link to="/productdetails"  > <div className="product" 
+
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  > <div className="product" 
 onClick={() => handleAddProductDetails(product)}
    >
  
@@ -107,8 +113,12 @@ onClick={() => handleAddProductDetails(product)}
 <h3>Boots</h3>
 {fashionwomenboot.map((product) => (
 
-  <div className="product" 
-   >
+ 
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  >
+   <div className="product" 
+   onClick={() => handleAddProductDetails(product)}>
  
     <img  
       className="product-image"
@@ -130,19 +140,9 @@ onClick={() => handleAddProductDetails(product)}
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 
@@ -151,8 +151,11 @@ onClick={() => handleAddProductDetails(product)}
 <div className="make3_products">
 {productShoes.map((product) => (
 
-  <div className="product" 
-   >
+ 
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  > <div className="product" 
+onClick={() => handleAddProductDetails(product)}   >
  
     <img  
       className="product-image"
@@ -174,19 +177,9 @@ onClick={() => handleAddProductDetails(product)}
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 
@@ -199,8 +192,11 @@ onClick={() => handleAddProductDetails(product)}
 <div className="make4_products">
 {productShoes.map((product) => (
 
-  <div className="product" 
-   >
+  
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  ><div className="product" 
+onClick={() => handleAddProductDetails(product)}  >
  
     <img  
       className="product-image"
@@ -222,19 +218,9 @@ onClick={() => handleAddProductDetails(product)}
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
+ 
 
-
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 
@@ -244,8 +230,11 @@ onClick={() => handleAddProductDetails(product)}
 <div className="make5_products">
 {productShoes.map((product) => (
 
-  <div className="product" 
-   >
+  
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  ><div className="product" 
+onClick={() => handleAddProductDetails(product)}  >
  
     <img  
       className="product-image"
@@ -267,19 +256,10 @@ onClick={() => handleAddProductDetails(product)}
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
    
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 

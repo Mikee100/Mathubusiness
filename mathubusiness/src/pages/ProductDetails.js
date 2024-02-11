@@ -64,7 +64,7 @@ export default function ProductDetails({
           <div>
             <div className="popup_product" key={pop.id}>
               <div className="small_routes">
-                <a href="./products">
+                <a href="./">
                   <p className="p_home">Home</p>{" "}
                 </a>
                 <p className="this_sign"> &gt; </p>
