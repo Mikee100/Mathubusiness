@@ -4,11 +4,28 @@ import "../csspages/sandals.css"
 export default function Sandals({productshoessandals,handleAddProduct,handleAddProductDetails}) {
   return (
     <div className='container_sandals'>
+
+<div className='routes_sandals'>
+<a href='./home' style={{textDecoration:"none"}}>Home </a> &gt; 
+<a href='./shoes'style={{textDecoration:"none"}} >Shoes</a> &gt; 
+<a href='./sandals'style={{textDecoration:"none"}} >Sandals</a>
+</div>
+
+<div className='container_functionalities' >
+  <h3>Category</h3>
+</div>
+
+
               <div className="products_sandals">
+                <p>Womens Sandals</p>
+                <hr className='line' />
+                
 {productshoessandals.map((product) => (
 
-  <div className="product_sandals" 
-   >
+<Link  key={product.id}
+// Moving to the product page
+to={`/productdetails?name=${product.title}?id=${product.id}`}  ><div className="product_sandals" 
+onClick={() => handleAddProductDetails(product)}>   
  
     <img  
       className="product-image_sandals"
@@ -30,19 +47,9 @@ export default function Sandals({productshoessandals,handleAddProduct,handleAddP
     </span>
 
 
-   <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
 
 
-
-   </div>
-
-
-  </div>
+  </div></Link>
   
      ))}
 

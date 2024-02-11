@@ -26,6 +26,8 @@ export default function AuthDetails() {
     }, [] );
 
     return (
-    <div>{ authUser ? <p className='member_name' >{`Welcome,${authUser.email} ` } </p> : <p></p>  }</div>
+    <div>
+        { authUser ? <p className='member_name' >{`Welcome,${authUser.email} ` } </p> : <p></p>  }
+        </div>
   )
 }
