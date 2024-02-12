@@ -176,18 +176,18 @@ form{
     width: 50rem;
    border: 1px solid grey;
    border-radius: 6px;
-    height: 30rem;
+    height: 45rem;
     flex-direction: column;
     padding: 1rem;
 }
-.username, .password, .email{
+ .password, .email{
     
    margin: .6rem;
     position: relative;
-    width: 22rem;
+    width: 92%;
 
 
-
+top: 0rem;
    border: 1.5px solid #ecedec;
    border-radius: 10px;
    height: 50px;
@@ -274,11 +274,44 @@ top: -2rem;
 
  color: black;
 }
+.options{
+  margin: .6rem;
+  position: relative;
+  width: 40%;
+top: 0rem;
 
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
 
-.username:focus-within, .password:focus-within, .email:focus-within {
-  border: 1.5px solid #2d79f3;
+ color: black;
 }
+
+.diffoptions{
+  margin: .6rem;
+  position: relative;
+  width: 50%;
+top: -3.7rem;
+left: 22rem;
+
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
+
+ color: black;
+}
+
+
 
 
 .registerbtn{
@@ -293,6 +326,7 @@ top: -2rem;
     height: 50px;
     width: 100%;
     cursor: pointer;
+    top: 2rem;
 
 }
 .registerbtn:hover{
@@ -301,7 +335,7 @@ top: -2rem;
 }
 .haveacc{
     position: absolute;
-    top:22rem;
+    top:43rem;
     left: 1rem;
     font-size: 14px;
     margin-left: 5px;
@@ -322,4 +356,10 @@ top: -2rem;
     top:0rem;
     font-size: 2rem;
 
+}
+.fname:focus-within, .sname:focus-within, .email:focus-within,.password:focus-within,.address:focus-within,.diffoptions:focus-within,.options:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+fieldset{
+  height: 5rem;
 }

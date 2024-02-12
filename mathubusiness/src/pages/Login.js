@@ -53,7 +53,23 @@ const Login = () => {
         };
      
           
-    
+        const [selectedCity, setSelectedCity] = useState('');
+        const [selectedLocation, setSelectedLocation] = useState('');
+        
+        // Define your option lists
+        const options = {
+          Nairobi: ['Westlands', 'Kayole', 'Kahawa','Dagoretti','Kasarani','Roysambu','Parklands'],
+          Nakuru: ['Nakuru Town', 'Section 58']
+        };
+      
+        const handleCityChange = (event) => {
+          setSelectedCity(event.target.value);
+          setSelectedLocation('');
+        };
+      
+        const handleLocationChange = (event) => {
+          setSelectedLocation(event.target.value);
+        };
     
 
   return (
@@ -65,6 +81,28 @@ const Login = () => {
     <input type="text" className="sname" name="Second name" value={name} onChange={(e) => setName(e.target.value) } placeholder="Second Name" required />
     <input type="number" className="pnumber" name="pnumber" value={name} onChange={(e) => setName(e.target.value) } placeholder="Phone Number" required />
     <input type="text" className="address" name="address" value={name} onChange={(e) => setName(e.target.value) } placeholder="Address" required />
+    <div>
+      
+      <label htmlFor="city">Select City:</label>
+      <select id="city" value={selectedCity} onChange={handleCityChange} className='options' >
+        <option value="">Select City</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Nakuru">Nakuru</option>
+      </select>
+
+      {selectedCity && (
+        <div>
+
+          <select id="location" value={selectedLocation} onChange={handleLocationChange} className='diffoptions' >
+      
+            {options[selectedCity].map((location, index) => (
+              <option key={index} value={location}>{location}</option>
+            ))}
+          </select>
+        </div>
+      )}
+    </div>
+      
       <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
       <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
       <button type="submit" className='registerbtn'>Register</button>
