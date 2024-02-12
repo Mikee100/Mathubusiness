@@ -8,7 +8,7 @@ export default function Myaccount() {
   const [userData, setUserData] = useState(null);
 
   const show = async () => {
-    const docRef = doc(db, "Account Information", "Bs801HKy3gTM6mKld6up");
+    const docRef = doc(db, "Account Information", "Sr6tuipU2R8uOA3M7dOi");
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {

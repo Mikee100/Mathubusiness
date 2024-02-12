@@ -22,7 +22,7 @@ export default function Mainlogin() {
             // Signed in 
             console.log(userCredential)
             alert("Logged in Successfully")
-            history("/products");
+            history("/");
             // ...
           })
           .catch((error) => {
