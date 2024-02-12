@@ -58,9 +58,13 @@ const Login = () => {
 
   return (
     <div className='container'>
+
     <form onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
-    <input type="text" className="username" name="full names" value={name} onChange={(e) => setName(e.target.value) } placeholder="Full Names" required />
+    <input type="text" className="fname" name="first name" value={name} onChange={(e) => setName(e.target.value) } placeholder="First Name" required />
+    <input type="text" className="sname" name="Second name" value={name} onChange={(e) => setName(e.target.value) } placeholder="Second Name" required />
+    <input type="number" className="pnumber" name="pnumber" value={name} onChange={(e) => setName(e.target.value) } placeholder="Phone Number" required />
+    <input type="text" className="address" name="address" value={name} onChange={(e) => setName(e.target.value) } placeholder="Address" required />
       <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
       <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />
       <button type="submit" className='registerbtn'>Register</button>
@@ -73,3 +77,6 @@ const Login = () => {
 };
 
 export default Login;
+
+
+

@@ -61,7 +61,7 @@ export default function Mainlogin() {
     <button type='submit' className="button-submit">Sign In</button>
     <p className="p">Don't have an account?<a className='acc_login' href='./login'>
  <span class="span">Sign Up</span></a>
-    </p><p className="p line">Or With</p>
+    </p>
 
     <div className="flex-row">
       <button className="btn google">

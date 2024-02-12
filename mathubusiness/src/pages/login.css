@@ -128,6 +128,10 @@
   border: 1px solid #2d79f3;
   ;
 }
+.p line{
+  position: relative;
+  top: 10rem;
+}
 
     
 
@@ -168,8 +172,8 @@ form{
     position: absolute;
     display: flex;
     top:5rem;
-    left: 10rem;
-    width: 25rem;
+    left: -10rem;
+    width: 50rem;
    border: 1px solid grey;
    border-radius: 6px;
     height: 30rem;
@@ -181,7 +185,7 @@ form{
    margin: .6rem;
     position: relative;
     width: 22rem;
-  
+
 
 
    border: 1.5px solid #ecedec;
@@ -197,6 +201,81 @@ form{
    
 
 }
+.fname{
+  margin: .6rem;
+  position: relative;
+  width: 22rem;
+
+
+
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
+
+ color: black;
+ 
+}
+.sname{
+  margin: .6rem;
+  position: relative;
+  width: 22rem;
+top: -4rem;
+left: 24rem;
+
+
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
+
+ color: black;
+ 
+}
+.pnumber{
+  margin: .6rem;
+  position: relative;
+  width: 92%;
+top: -3rem;
+
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
+
+ color: black;
+}
+.address{
+  margin: .6rem;
+  position: relative;
+  width: 92%;
+top: -2rem;
+
+ border: 1.5px solid #ecedec;
+ border-radius: 10px;
+ height: 50px;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ transition: 0.2s ease-in-out;
+ cursor:pointer;
+
+ color: black;
+}
+
+
 .username:focus-within, .password:focus-within, .email:focus-within {
   border: 1.5px solid #2d79f3;
 }
