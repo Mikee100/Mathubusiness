@@ -26,9 +26,12 @@ export default function Myaccount() {
         <div>
           <p>First Name: {userData.fname}</p>
           <p>Second Name: {userData.sname}</p>
-          
+          <p>Phone Number: {userData.number}</p>
+          <p>Address: {userData.address}</p>
+          <p>City: {userData.city}</p>
+          <p>Region: {userData.region}</p>
           <p>Email: {userData.email}</p>
-          {/* Show other data properties as needed */}
+       
         </div>
       )}
     </div>
