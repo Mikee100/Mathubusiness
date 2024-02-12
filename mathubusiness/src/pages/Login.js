@@ -12,19 +12,30 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
 
-        const [name, setName] = useState("");
+        const [fname, setFName] = useState("");
+        const [sname, setSName] = useState("");
+        const [number, setNumber] = useState("");
+        const [address, setAddress] = useState("");
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
-       
+        const [city, setCity] = useState("");
+        const [region, setRegion] = useState("");
+
         const history = useNavigate();
 
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
               const docRef = await addDoc(collection(db, "Account Information"), {
-                name: name,
+                fname: fname,
+                sname: sname,
+                number: number,
+                address: address,
+                selectedCity:selectedCity,
                 email: email,
-                password: password
+                password: password,
+                city:city,
+                region:region
               });
             
               alert("Registration was successfull ", docRef.id);
@@ -37,7 +48,7 @@ const Login = () => {
                   // Signed in 
                   //const user = userCredential.user;
                   console.log(userCredential)
-                  history("/products")
+                  history("/")
 
                   // ...
                 })
@@ -65,10 +76,13 @@ const Login = () => {
         const handleCityChange = (event) => {
           setSelectedCity(event.target.value);
           setSelectedLocation('');
+          setCity(event.target.value)
+        
         };
       
         const handleLocationChange = (event) => {
           setSelectedLocation(event.target.value);
+          setRegion(event.target.value)
         };
     
 
@@ -77,14 +91,14 @@ const Login = () => {
 
     <form onSubmit={handleSubmit}>
     <h2>Sign Up</h2>
-    <input type="text" className="fname" name="first name" value={name} onChange={(e) => setName(e.target.value) } placeholder="First Name" required />
-    <input type="text" className="sname" name="Second name" value={name} onChange={(e) => setName(e.target.value) } placeholder="Second Name" required />
-    <input type="number" className="pnumber" name="pnumber" value={name} onChange={(e) => setName(e.target.value) } placeholder="Phone Number" required />
-    <input type="text" className="address" name="address" value={name} onChange={(e) => setName(e.target.value) } placeholder="Address" required />
+    <input type="text" className="fname" name="first name" value={fname} onChange={(e) => setFName(e.target.value) } placeholder="First Name" required />
+    <input type="text" className="sname" name="Second name" value={sname} onChange={(e) => setSName(e.target.value) } placeholder="Second Name" required />
+    <input type="number" className="pnumber" name="pnumber" value={number} onChange={(e) => setNumber(e.target.value) } placeholder="Phone Number" required />
+    <input type="text" className="address" name="address" value={address} onChange={(e) => setAddress(e.target.value) } placeholder="Address" required />
     <div>
       
       <label htmlFor="city">Select City:</label>
-      <select id="city" value={selectedCity} onChange={handleCityChange} className='options' >
+      <select id="city" value={selectedCity} onChange={handleCityChange} className='options'  >
         <option value="">Select City</option>
         <option value="Nairobi">Nairobi</option>
         <option value="Nakuru">Nakuru</option>

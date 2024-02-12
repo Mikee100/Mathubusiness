@@ -326,7 +326,7 @@ left: 22rem;
     height: 50px;
     width: 100%;
     cursor: pointer;
-    top: 2rem;
+    top: -1rem;
 
 }
 .registerbtn:hover{
@@ -335,7 +335,7 @@ left: 22rem;
 }
 .haveacc{
     position: absolute;
-    top:43rem;
+    top:44rem;
     left: 1rem;
     font-size: 14px;
     margin-left: 5px;
@@ -360,6 +360,4 @@ left: 22rem;
 .fname:focus-within, .sname:focus-within, .email:focus-within,.password:focus-within,.address:focus-within,.diffoptions:focus-within,.options:focus-within {
   border: 1.5px solid #2d79f3;
 }
-fieldset{
-  height: 5rem;
-}
+

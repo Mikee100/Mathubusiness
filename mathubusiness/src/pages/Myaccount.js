@@ -1,34 +1,36 @@
-import { useState, useEffect } from 'react';
+
+import {useState} from 'react'
 import "./home.css";
-import { collection, getDocs } from "firebase/firestore";
-import {db} from "../Firebase"
+import { db } from "../Firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Myaccount() {
- 
+  const [userData, setUserData] = useState(null);
 
-  const [todos, setTodos] = useState([]);
+  const show = async () => {
+    const docRef = doc(db, "Account Information", "Bs801HKy3gTM6mKld6up");
+    const docSnap = await getDoc(docRef);
 
-  const fetchPost = async () => {
-    await getDocs(collection(db, "Account Information"))
-      .then((querySnapshot)=>{
-          const newData = querySnapshot.docs
-              .map((doc) => ({...doc.data(), id:doc.id }));
-          setTodos(newData);
-          console.log(todos, newData);
-      })
-  }
-  useEffect(()=>{
-    fetchPost();
-  })
-  return (
-    <div className='mymostdata' >{
-      todos.map((todo,i)=>(
-          <p key={i}>
-              {todo.todo}
-          </p>
-      ))
+    if (docSnap.exists()) {
+      setUserData(docSnap.data());
+    } else {
+      console.log("No such document!");
     }
-    <h1>Waweru</h1>
+  };
+
+  return (
+    <div className="mymostdata">
+      <h1>Waweru</h1>
+      <button onClick={show}>Show</button>
+      {userData && (
+        <div>
+          <p>First Name: {userData.fname}</p>
+          <p>Second Name: {userData.sname}</p>
+          
+          <p>Email: {userData.email}</p>
+          {/* Show other data properties as needed */}
+        </div>
+      )}
     </div>
-  )
+  );
 }
