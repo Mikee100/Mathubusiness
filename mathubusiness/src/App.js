@@ -24,6 +24,8 @@ import Dresses from "./pages/Dresses";
 import Sandals from "./pages/womenshoescategories/Sandals";
 import Mainpage from "./pages/Mainpage";
 import Womenboots from "./pages/womenshoescategories/Womenboots";
+import heels from "./db/heels";
+import Heels from "./pages/womenshoescategories/Heels";
 
 function App() {
   const productItems = products;
@@ -32,6 +34,7 @@ function App() {
   const fulldatas = fulldata;
   const productshoessandals = shoessandals;
   const fashionwomenboot = womenboots;
+  const womenheels = heels;
   
 
   const [cartItems, setCartItems] = useState([]);
@@ -194,9 +197,17 @@ function App() {
             element={
               <Womenboots
               fashionwomenboot={fashionwomenboot}
-              
+             
               />
             } 
+            
+            
+            />
+              <Route  
+            path="heels"
+          element={<Heels
+            womenheels={womenheels}
+            />}
             
             
             />

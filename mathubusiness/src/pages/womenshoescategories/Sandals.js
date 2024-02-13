@@ -6,7 +6,7 @@ export default function Sandals({productshoessandals,handleAddProduct,handleAddP
     <div className='container_sandals'>
 
 <div className='routes_sandals'>
-<a href='./home' style={{textDecoration:"none"}}>Home </a> &gt; 
+<a href='./' style={{textDecoration:"none"}}>Home </a> &gt; 
 <a href='./shoes'style={{textDecoration:"none"}} >Shoes</a> &gt; 
 <a href='./sandals'style={{textDecoration:"none"}} >Sandals</a>
 </div>

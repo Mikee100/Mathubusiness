@@ -26,7 +26,7 @@ const changecontent = (product) =>{
   return (
     <div className='container'>
         <div className="products">
-        <h3>Heels</h3>
+        <a href="./heels"  ><h3>Heels</h3> </a>  
 {productShoes.map((product) => (
 
 
@@ -110,7 +110,7 @@ onClick={() => handleAddProductDetails(product)}
 
 
 <div className="make2_products">
-<h3>Boots</h3>
+<a href="./womenboots"  ><h3>Boots</h3> </a> 
 {fashionwomenboot.map((product) => (
 
  

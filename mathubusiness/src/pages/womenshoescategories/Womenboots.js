@@ -7,9 +7,9 @@ export default function Womenboots({fashionwomenboot,handleAddProductDetails}) {
     <div className='container_sandals'>
 
     <div className='routes_sandals'>
-    <a href='./home' style={{textDecoration:"none"}}>Home </a> &gt; 
+    <a href='./' style={{textDecoration:"none"}}>Home </a> &gt; 
     <a href='./shoes'style={{textDecoration:"none"}} >Shoes</a> &gt; 
-    <a href='./sandals'style={{textDecoration:"none"}} >Sandals</a>
+    <a href='./womenboots'style={{textDecoration:"none"}} >Boots</a>
     </div>
     
     <div className='container_functionalities' >
@@ -18,7 +18,7 @@ export default function Womenboots({fashionwomenboot,handleAddProductDetails}) {
     
     
                   <div className="products_sandals">
-                    <p>Womens Sandals</p>
+                    <p>Womens Boots</p>
                     <hr className='line' />
                     
     {fashionwomenboot.map((product) => (
