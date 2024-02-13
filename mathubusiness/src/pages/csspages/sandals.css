@@ -23,7 +23,7 @@
     top: 7rem;
     left: 20rem;
     background-color: white;
-    height: 60rem;
+    height: 160rem;
     grid-template-columns: repeat(4, 200px);
     grid-gap:8px;
 

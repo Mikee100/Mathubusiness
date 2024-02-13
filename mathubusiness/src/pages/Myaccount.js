@@ -24,7 +24,10 @@ export default function Myaccount() {
       <button onClick={show}>Show</button>
       {userData && (
         <div>
-          <p>First Name: {userData.fname}</p>
+
+
+
+          <p>First Name: <small>{userData.fname}</small></p>
           <p>Second Name: {userData.sname}</p>
           <p>Phone Number: {userData.number}</p>
           <p>Address: {userData.address}</p>

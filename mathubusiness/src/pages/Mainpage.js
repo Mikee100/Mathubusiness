@@ -26,7 +26,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productItems.map((product,index) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
  key={index}
@@ -79,7 +81,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productShoes.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}   >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -130,7 +134,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -177,7 +183,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {fashionwomenboot.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -227,7 +235,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -275,7 +285,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productshoessandals.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -324,7 +336,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productItems.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`} >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  
@@ -372,7 +386,9 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 {productDresses.map((product) => (
   
 
-  <Link to="/productdetails"  >
+  <Link key={product.id}
+  // Moving to the product page
+  to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product"  
   onClick={() => handleAddProductDetails(product)}>
  

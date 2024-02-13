@@ -23,6 +23,7 @@ import Shoes from "./pages/Shoes";
 import Dresses from "./pages/Dresses";
 import Sandals from "./pages/womenshoescategories/Sandals";
 import Mainpage from "./pages/Mainpage";
+import Womenboots from "./pages/womenshoescategories/Womenboots";
 
 function App() {
   const productItems = products;
@@ -31,6 +32,7 @@ function App() {
   const fulldatas = fulldata;
   const productshoessandals = shoessandals;
   const fashionwomenboot = womenboots;
+  
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -187,6 +189,18 @@ function App() {
                 />
               }
             />
+            <Route  
+            path="womenboots"
+            element={
+              <Womenboots
+              fashionwomenboot={fashionwomenboot}
+              
+              />
+            } 
+            
+            
+            />
+
             <Route path="navbar" element={<Navbar />} />
 
             <Route
