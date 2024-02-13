@@ -1,7 +1,7 @@
 import React from "react";
 import "./shoppingcart.css";
 import { Link } from "react-router-dom";
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 export default function ShoppingCart({
   cartItems,
   handleAddProduct,
@@ -13,6 +13,18 @@ export default function ShoppingCart({
     (price, item) => price + item.quantity * item.price,
     0
   );
+  const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
 
   return (
     <>
@@ -22,10 +34,12 @@ export default function ShoppingCart({
             <p className="p_home">Home</p>{" "}
           </a>
           <p className="this_sign"> &gt; </p>
-          <a href="./productdetails">
+          <Link  key={handleAddProductDetails.id}
+// Moving to the product page
+to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProductDetails.id}`}  >
             {" "}
             <p className="p_prdt_detail">Product Details</p>
-          </a>
+          </Link>
           <p className="cart_this_sign"> &gt; </p>
           <p className="route_cart">Cart</p>
         </div>

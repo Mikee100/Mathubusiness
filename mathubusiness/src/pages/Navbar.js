@@ -11,12 +11,21 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
+import { onAuthStateChanged } from 'firebase/auth'
+
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Navbar({cartItems}) {
   const[Mobile, setMobile] = useState(false);
 
 
   const [appear, setAppear] = useState(false);
+
+
+  const history = useNavigate();
+
 
   const togglesettings = () => {
     setAppear(!appear);
@@ -33,10 +42,28 @@ const[view, setview] = useState(false);
       setview(!view);
     }
   
+    const [ authUser,setAuthUser] = useState(null);
+  
+    const handlelogout = () =>() => {
+        const listen = onAuthStateChanged( (user) => {
+            if(!user) 
+            {
+                setAuthUser(!user);
+                history('./mainlogin');
+            }
+        });
+
+        return () => {
+            listen();
+        }
+
+    };
+
+
   return (
 
     <div className='container_navbar'> 
-        
+         { authUser ? <p >{`Log out,${authUser.email} ` } </p> : <p></p>  }
     <div className="nav">
     
        <Link to='./' > <h1 className=" company_name ">MEZURI SHOPPING </h1></Link>
@@ -59,7 +86,7 @@ const[view, setview] = useState(false);
             <ol><MdMarkEmailUnread className='icons' />Orders</ol>
             <Link to='shoppingcart' ><ol><FaRegHeart className='icons'  />Saved Items</ol></Link> 
             <hr/>
-            <ol className='logout' >LOGOUT</ol>
+            <ol className='logout' onClick={handlelogout} >LOGOUT</ol>
           </div>
 )}
         </div>
