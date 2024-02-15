@@ -407,7 +407,29 @@ position: relative;
   top: .5rem;
   width: 9rem;
 }
+.search_nav{
+  position: absolute;
+  top: 1rem;
+  left: 25rem;
+}
+.search_nav input{
+  width: 13rem;
+  height: 2rem;
+}
 
+.form_search{
+  position: absolute;
+  height: 3rem;
+  width: 20rem;
+  top: 1rem;
+  left: 20rem;
+  border: none;
+}
+.btn_search{
+  position: absolute;
+  top: 1rem;
+  left: 22rem;
+}
 
 
 

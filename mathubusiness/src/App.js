@@ -26,6 +26,7 @@ import Mainpage from "./pages/Mainpage";
 import Womenboots from "./pages/womenshoescategories/Womenboots";
 import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
+import SearchBox from "./pages/SearchBox";
 
 function App() {
   const productItems = products;
@@ -243,12 +244,14 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />} />
+           
 
             <Route path="" element={<Footer />} />
           </Routes>
-
+            <SearchBox  />
           <AuthDetails />
-          <Navbar cartItems={cartItems} />
+          <Navbar cartItems={cartItems}
+           fulldatas={fulldatas} />
         </main>
       </BrowserRouter>
     </>
