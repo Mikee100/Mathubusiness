@@ -28,6 +28,7 @@ import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
 import SearchBox from "./pages/SearchBox";
 import Catalog from "./pages/Catalog";
+import Pagination from "./pages/Pagination";
 
 function App() {
   const productItems = products;
@@ -255,6 +256,7 @@ function App() {
 
             <Route path="" element={<Footer />} />
           </Routes>
+          <Pagination />
             <SearchBox  />
           <AuthDetails />
           <Navbar cartItems={cartItems}

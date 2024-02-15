@@ -245,13 +245,14 @@ color: black;
 .template{
   position: relative;
   height: 55rem;
-  width: 50rem;
-  top:10rem;
-  left: 22rem;
+  width: 52rem;
+  top:3rem;
+  left: 0rem;
    display: grid;
 
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  
 }
 
 .template2{

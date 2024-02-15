@@ -40,7 +40,11 @@ function Navbar({ cartItems,fulldatas }) {
   const handleSearch = () => {
     navigate(`/catalog?query=${searchTerm}`);
   };
-
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div className="container_navbar">
@@ -205,6 +209,7 @@ function Navbar({ cartItems,fulldatas }) {
          
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Search..."
         />
 
