@@ -27,6 +27,7 @@ import Womenboots from "./pages/womenshoescategories/Womenboots";
 import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
 import SearchBox from "./pages/SearchBox";
+import Catalog from "./pages/Catalog";
 
 function App() {
   const productItems = products;
@@ -240,6 +241,12 @@ function App() {
                 />
               }
             />
+            <Route
+            path="catalog"
+            element={<Catalog  fulldatas={fulldatas} />}
+            
+            />
+
             <Route path="liked" element={<Liked likedItems={likedItems} />} />
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />

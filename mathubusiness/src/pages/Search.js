@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useLocation } from "react";
 import "./home.css";
 import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
+
 
 export default function Search(fulldatas, { handleAddProduct }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,6 +18,9 @@ export default function Search(fulldatas, { handleAddProduct }) {
     setpopupcontent([product]);
     setModal(!modal);
   };
+  const location = useLocation();
+  const searchQuery = new URLSearchParams(location.search).get('q');
+
 
   return (
     <div>
@@ -28,7 +32,10 @@ export default function Search(fulldatas, { handleAddProduct }) {
         }}
         placeholder="Search..."
       />
+  <h2>Search Results for: {searchQuery}</h2>
 
+
+   
       <div className="template">
         {fulldatas.fulldatas
           // eslint-disable-next-line

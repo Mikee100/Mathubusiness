@@ -1,24 +1,28 @@
-import { useState } from "react";
-import "./navbar.css";
-const SearchBox = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+// SearchBox.js
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    onSearch(searchTerm);
+function SearchBox() {
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const searchQuery = e.target.value;
+    setQuery(searchQuery);
+    // Navigate to search page when user starts typing
+    navigate(`/catalog?q=${searchQuery}`);
   };
 
   return (
-    <form className="form_search" onSubmit={handleSearch}>
+    <div>
       <input
         type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search..."
+        value={query}
+        onChange={handleChange}
       />
-      <button type="submit" className="btn_search" >Search</button>
-    </form>
+    </div>
   );
-};
+}
 
 export default SearchBox;

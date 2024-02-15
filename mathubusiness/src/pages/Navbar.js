@@ -11,7 +11,8 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-import SearchBox from "./SearchBox";
+import { useNavigate } from "react-router-dom";
+
 
 function Navbar({ cartItems,fulldatas }) {
   const [Mobile, setMobile] = useState(false);
@@ -33,11 +34,16 @@ function Navbar({ cartItems,fulldatas }) {
 
 
   
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate(`/catalog?query=${searchTerm}`);
+  };
 
 
   return (
     <div className="container_navbar">
-    
       <div className="nav">
         <Link to="./">
           {" "}
@@ -193,8 +199,18 @@ function Navbar({ cartItems,fulldatas }) {
         </div>
       )}
 
-    
-<SearchBox onSearch={() => console.log("Searching...")} />
+      <div className="search_nav">
+        <input
+          type="text"
+         
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search..."
+        />
+
+        
+      </div>
+      <button onClick={handleSearch} className="btn_search" >Search</button>
     </div>
   );
 }
