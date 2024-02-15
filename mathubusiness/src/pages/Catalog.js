@@ -1,13 +1,13 @@
 
 import React, { useState,useEffect} from "react";
 import { useLocation } from 'react-router-dom';
-import Pagination from "./Pagination";
+// import Pagination from "./Pagination";
 
 import "./csspages/sandals.css"
 export default function Catalog({fulldatas,handleAddProduct,handleAddProductDetails}) {
     
     const location = useLocation();
-    const [query] = useState('');
+    const [query,setQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
@@ -15,22 +15,22 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
         const query = searchParams.get('query');
     
         // Perform search with your data from the database
-        
+        setQuery(query || '');
         const filteredResults = fulldatas.filter(item =>
             item.title?.toLowerCase().includes(query.toLowerCase())
           );
     
         setSearchResults(filteredResults);
-      }, [location.search,fulldatas]);
-      const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10); // Number of items per page
+      }, [location.search,fulldatas,query]);
+     // const [currentPage, setCurrentPage] = useState(1);
+  //const [itemsPerPage] = useState(10); // Number of items per page
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = searchResults.slice(indexOfFirstItem, indexOfLastItem);
+  //const indexOfLastItem = currentPage * itemsPerPage;
+  //const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  //const currentItems = searchResults.slice(indexOfFirstItem, indexOfLastItem);
 
   // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+ // const paginate = pageNumber => setCurrentPage(pageNumber);
 
 
   return (
@@ -38,8 +38,8 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
 
 <div className='routes_sandals'>
 <a href='./' style={{textDecoration:"none"}}>Home </a> &gt; 
-<a href='./shoes'style={{textDecoration:"none"}} >Shoes</a> &gt; 
-<a href='./sandals'style={{textDecoration:"none"}} >Sandals</a>
+<a href='./shoes'style={{textDecoration:"none"}} >{query}</a> 
+
 </div>
 
 
@@ -55,9 +55,8 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
 
                 <hr className='line' />
                <div className="template">    
-                {query === '' ? (
-          // Render all items when there is no search query
-          fulldatas.map(product => (
+      
+          {searchResults.map(product => (
             <div className="product_search" key={product.id}>
             <img
               className="product-image"
@@ -70,36 +69,22 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
   
           
           </div>
-          ))
-        ) : (
-          // Render search results when there is a search query
-          searchResults.map(product => (
-            <div className="product_search" key={product.id}>
-            <img
-              className="product-image"
-              src={product.image}
-              alt={product.image}
-            />
-            <h4 className="product-title">{product.title}</h4>
-  
-            <span className="product-price">{product.price}$</span>
-  
+          ))}
+       
+        
+           {/**  <ul>
           
-          </div>
-          ))
-        )}
-          <ul>
         {currentItems.map(item => (
           <li key={item.id}>{item.name}</li>
         ))}
-      </ul>
-  
+      </ul>*/}
+  {/** 
   <Pagination
         itemsPerPage={itemsPerPage}
         totalItems={searchResults.length}
         paginate={paginate}
       />     
-     
+     */}
      
       </div>
 </div>

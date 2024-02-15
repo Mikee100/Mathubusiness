@@ -409,7 +409,7 @@ position: relative;
   width: 9rem;
 }
 .search_nav{
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 25rem;
 }
@@ -427,7 +427,7 @@ position: relative;
   border: none;
 }
 .btn_search{
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   left: 40rem;
 }
