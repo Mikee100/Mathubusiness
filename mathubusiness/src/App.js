@@ -207,6 +207,7 @@ function App() {
             path="heels"
           element={<Heels
             womenheels={womenheels}
+            handleAddProductDetails={handleAddProductDetails}
             />}
             
             
@@ -215,7 +216,7 @@ function App() {
             <Route path="navbar" element={<Navbar />} />
 
             <Route
-              path="/productdetails"
+              path="/productdetails" handleAddProductDetails={handleAddProductDetails}
               element={
                 <ProductDetails
                   handleAddProduct={handleAddProduct}
