@@ -5,6 +5,7 @@ import {FaRegHeart} from 'react-icons/fa'
 import LeftNav from "./LeftNav";
 import { BsTruck } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export default function Shoes({productShoes, handleAddProduct,handleAddProductDetails,productshoessandals,fashionwomenboot }) {
     const  [modal, setModal] = useState(false);
@@ -26,7 +27,8 @@ const changecontent = (product) =>{
   return (
     <div className='container'>
         <div className="products">
-        <a href="./heels"  ><h3>Heels</h3> </a>  
+        <h3 className="heels_h3">Heels</h3> 
+        <a href="./heels" className="heels_route" ><p>See all </p><MdOutlineKeyboardArrowRight className="arrow_right"  /></a>
 {productShoes.map((product) => (
 
 

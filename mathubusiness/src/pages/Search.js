@@ -1,9 +1,9 @@
-import React, { useState,useLocation } from "react";
+import React, { useState } from "react";
 import "./home.css";
 import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
-
+import { useLocation } from 'react-router-dom';
 
 export default function Search(fulldatas, { handleAddProduct }) {
   const [searchTerm, setSearchTerm] = useState("");

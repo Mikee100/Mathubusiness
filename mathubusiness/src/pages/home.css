@@ -64,7 +64,7 @@
   top: 5rem;
   left: -3rem;
   background-color: white;
-  height: 18rem;
+  height: 20rem;
   overflow-x: auto;
 }
 
@@ -79,7 +79,7 @@
 .product {
   position: relative;
   left: 1rem;
-  top: 2rem;
+  top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,6 +300,25 @@ h1{
   cursor: pointer;
   border: none;
 
+}
+.heels_h3{
+  position: absolute;
+  top: 1rem;
+  
+}
+
+.heels_route{
+  position: absolute;
+  text-decoration: none;
+  top: 1rem;
+  right: 2rem;
+  width: 5rem;
+}
+  .arrow_right{
+  position: absolute;
+  top: 1rem;
+  right: 10rem;
+  
 }
 
 
