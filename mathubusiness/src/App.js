@@ -29,6 +29,7 @@ import Heels from "./pages/womenshoescategories/Heels";
 import SearchBox from "./pages/SearchBox";
 import Catalog from "./pages/Catalog";
 import Pagination from "./pages/Pagination";
+import Sellers from "./pages/Sellers/Sellers";
 
 function App() {
   const productItems = products;
@@ -252,7 +253,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />} />
-           
+            <Route path="sellers" element={<Sellers  />} />
 
             <Route path="" element={<Footer />} />
           </Routes>

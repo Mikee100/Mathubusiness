@@ -28,7 +28,7 @@ const changecontent = (product) =>{
     <div className='container'>
         <div className="products">
         <h3 className="heels_h3">Heels</h3> 
-        <a href="./heels" className="heels_route" ><p>See all </p><MdOutlineKeyboardArrowRight className="arrow_right"  /></a>
+        <a href="./heels" className="heels_route" ><p>See all <MdOutlineKeyboardArrowRight className=""  /></p></a>
 {productShoes.map((product) => (
 
 

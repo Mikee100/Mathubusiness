@@ -20,6 +20,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
     
     <div className='container' id="container" key={1} >
     
+  
            
            <div className="products"    >
            <h3><a href="./bags" style={{textDecoration:"none"}} >Bags</a></h3>
@@ -430,7 +431,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 </div>
 
-
+<a href="./sellers" target="blank"  className="sellers_link" >Sell on Mezuri</a>
 
 <LeftNav />
 <Footer />
