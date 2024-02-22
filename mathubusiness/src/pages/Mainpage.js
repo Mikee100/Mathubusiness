@@ -431,7 +431,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 </div>
 
-<a href="./sellers" target="blank"  className="sellers_link" >Sell on Mezuri</a>
+<Link to='./sellers' className="sellers_link" >Sell on Mezuri</Link>
 
 <LeftNav />
 <Footer />
