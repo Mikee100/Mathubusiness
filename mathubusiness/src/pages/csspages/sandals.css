@@ -3,8 +3,6 @@
     top: 1rem;
     left: 0rem;
     width: 100%;
-    height: 120rem;
-
     border: none;
   }
 .routes_sandals{
@@ -74,4 +72,25 @@
     height: 20rem;
     background-color: white;
     left: 1rem;
+   
+  }
+  .p_query{
+    position: absolute;
+    top: 0rem;
+    left: 4rem;
+  }
+  .catalog_template{
+    position: relative;
+
+    width: 52rem;
+    top:3rem;
+    left: 0rem;
+     display: grid;
+    
+     z-index: 0;
+   
+     display: grid;
+     grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+     grid-gap: 20px; /* Adjust gap between items */ 
+    
   }

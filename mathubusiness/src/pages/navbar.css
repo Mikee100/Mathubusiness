@@ -151,7 +151,7 @@
 .nav{
     position: fixed;
     width:100%;
-    height: 4rem;
+    height: 4.5rem;
     top:0rem;
     left: 0rem;
     background-color: white;
@@ -209,7 +209,7 @@ text-decoration-line: none;
 }
 .cart-icon{
   position: absolute;
-  top:2rem;
+  top:1.5rem;
   left:68rem;
   font-size: 20px;
   color: black;
@@ -349,7 +349,7 @@ position: relative;
  visibility: visible;
   height: 2.5rem;
   top: 1rem;
-  left: 50rem;
+  left: 58rem;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -411,11 +411,27 @@ position: relative;
 .search_nav{
   position: fixed;
   top: 1rem;
-  left: 25rem;
+  left: 18rem;
+  border: 1px solid #a3a3a6;
+  
+  width: 31rem;
 }
+
 .search_nav input{
-  width: 13rem;
+  position: relative;
+  left: 1rem;
+  width: 28rem;
   height: 2rem;
+  border: none;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: none;
+  flex-grow: 1;
+  overflow: hidden;
+  outline: 0;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .form_search{
@@ -428,8 +444,23 @@ position: relative;
 }
 .btn_search{
   position: fixed;
-  top: 1.5rem;
-  left: 40rem;
+  top: 1rem;
+  left: 50rem;
+  width: 5rem;
+  padding: 10px;
+  display: flex;
+  border: none;
+  justify-content: center;
+  background-color: rgb(201, 198, 198);
+  cursor: pointer;
+}
+.btn_search:hover{
+  background-color: rgb(167, 166, 166);
+}
+.fasearch_icon{
+  position: relative;
+  top: .2rem;
+  left: .5rem;
 }
 
 

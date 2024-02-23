@@ -31,14 +31,17 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
 
   // Change page
  // const paginate = pageNumber => setCurrentPage(pageNumber);
+ const containerHeight = {
+  height: `${searchResults.length * 90}px` // Adjust the height based on your item height
+};
 
 
   return (
-    <div className='container_sandals'>
+    <div className='container_sandals' >
 
 <div className='routes_sandals'>
 <a href='./' style={{textDecoration:"none"}}>Home </a> &gt; 
-<a href='./shoes'style={{textDecoration:"none"}} >{query}</a> 
+<p className="p_query" >{query}</p> 
 
 </div>
 
@@ -50,11 +53,11 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
 </div>
 
 
-              <div className="products_sandals">
+              <div className="products_sandals"style={containerHeight} >
               <p> {searchResults.length} products found</p>
 
                 <hr className='line' />
-               <div className="template">    
+               <div className="catalog_template" >    
       
           {searchResults.map(product => (
             <div className="product_search" key={product.id}>

@@ -51,20 +51,14 @@ function Navbar({ cartItems,fulldatas }) {
       <div className="nav">
         <Link to="./">
           {" "}
-          <h1 className=" company_name ">MEZURI SHOPPING </h1>
+          <h1 className=" company_name ">MEZURI </h1>
         </Link>
 
         <ul
           className={Mobile ? "nav-links-mobile" : "nav-ul"}
           onClick={() => setMobile(false)}
         >
-          <Link
-            to="./search"
-            style={{ textDecoration: "none" }}
-            className="search_icon"
-          >
-            <FaSearch />{" "}
-          </Link>
+         
         </ul>
         <Link to="./shoppingcart" style={{ color: "black" }}>
           <span className="count">
@@ -204,13 +198,15 @@ function Navbar({ cartItems,fulldatas }) {
       )}
 
       <div className="search_nav">
+      <FaSearch className="fasearch_icon" />
         <input
           type="text"
          
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Search..."
+          placeholder="Search products, brands and categories"
+          
         />
 
         

@@ -23,7 +23,11 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
   
            
            <div className="products"    >
-           <h3><a href="./bags" style={{textDecoration:"none"}} >Bags</a></h3>
+            <div className="prdt_category" >
+                 <h3>Bags</h3>
+                 <a href="./bags" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
+        
 {productItems.map((product,index) => (
   
 

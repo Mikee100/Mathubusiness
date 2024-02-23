@@ -64,7 +64,7 @@
   top: 5rem;
   left: -3rem;
   background-color: white;
-  height: 20rem;
+  height: 17rem;
   overflow-x: auto;
 }
 
@@ -84,7 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 15rem;
+  height: 13rem;
   width: 10rem;
 
   margin-right: 12px;
@@ -93,6 +93,28 @@
   z-index: 0;
   transform: translate(0px, 0px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.prdt_category{
+  position: absolute;
+  background-color: grey;
+  top: 0rem;
+  width: 100%;
+  height: 2rem;
+}
+.a_bags_see_all{
+  position: absolute;
+  right: 2rem;
+  top: .2rem;
+  text-decoration: none;
+}
+.right_see_all{
+  position: absolute;
+  right: -1.2rem;
+  top: .2rem;
+
+}
+.a_bags_see_all:hover, .right_see_all:hover{
+  color: white;
 }
 
 .product-image {
@@ -118,7 +140,7 @@
 }
 .product-price {
   position: absolute;
-  top: 13rem;
+  top: 10rem;
   left: 0.2rem;
   font-weight: 500;
   font-size: 18px;
