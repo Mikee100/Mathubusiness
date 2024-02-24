@@ -94,3 +94,41 @@
      grid-gap: 20px; /* Adjust gap between items */ 
     
   }
+  .category_line{
+    position: absolute;
+    top:2rem;
+
+  }
+  .btm_categoty_line{
+    position: absolute;
+    top:8rem;
+
+  }
+  .price_ranges{
+    position: absolute;
+    
+    height: 6rem;
+    width: 100%;
+    top: 2rem;
+  }
+  .min-value_input{
+    position: relative;
+    width: 6rem;
+    top: 2rem;
+    left: 1rem;
+    padding: 4px;
+  }
+  .max-value_input{
+    position: relative;
+    width: 6rem;
+    top: 2rem;
+    left: 4rem;
+    padding: 4px;
+  }
+  .price_ranges button{
+    border:none;
+    cursor: pointer;
+  }
+  .price_ranges button:hover{
+    background-color: rgb(196, 193, 193);
+  }

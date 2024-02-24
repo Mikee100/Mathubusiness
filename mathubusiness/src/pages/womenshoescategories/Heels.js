@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "../csspages/sandals.css";
 
 export default function Heels({ womenheels, handleAddProductDetails }) {
-  const [minPrice, setMinPrice] = useState();
-  const [maxPrice, setMaxPrice] = useState();
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
   const [filteredProducts, setFilteredProducts] = useState(womenheels);
 
   // Filter products based on price range
@@ -25,21 +25,28 @@ export default function Heels({ womenheels, handleAddProductDetails }) {
       </div>
 
       <div className='container_functionalities'>
-        
-          
+        <h3>Category</h3>
+        <hr className='category_line' />
+       
+          <div className='price_ranges' >
+             <h4>Price Kshs</h4>
           <input
             type="number"
             value={minPrice}
+            className='min-value_input'
             onChange={e => setMinPrice(Number(e.target.value))}
           />
       
           <input
             type="number"
             value={maxPrice}
+            className='max-value_input'
             onChange={e => setMaxPrice(Number(e.target.value))}
           />
         
-        <button onClick={filterProducts}>Filter</button>
+        <button onClick={filterProducts}>Apply</button>
+        </div>
+        < hr className='btm_categoty_line' />  
       </div>
 
       <div className="products_sandals">
