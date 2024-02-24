@@ -34,7 +34,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
   <Link key={product.id}
   // Moving to the product page
   to={`/productdetails?name=${product.title}?id=${product.id}`}  >
-     <div className="product"  
+     <div className="product_firstmainpage"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
  key={index}
     <img  
@@ -73,10 +73,6 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
      ))}
 
-<div className="div_arrow_right" >
-
-<MdKeyboardArrowRight  className="arrow_right"/>
-</div>
 
 </div>
 
@@ -137,7 +133,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 
 <div className="make2_products">
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 
 {productItems.map((product) => (
   
@@ -186,8 +185,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 </div>
 <div className="make3_products">
-
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 {fashionwomenboot.map((product) => (
   
 
@@ -238,7 +239,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 
 <div className="make4_products">
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 
 {productItems.map((product) => (
   
@@ -288,7 +292,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 </div>
 
 <div className="make5_products">
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 
 {productshoessandals.map((product) => (
   
@@ -339,7 +346,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 
 <div className="make6_products">
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 
 {productItems.map((product) => (
   
@@ -389,7 +399,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 </div>
 
 <div className="make7_products">
-
+<div className="prdt_category" >
+                 <h3>Shoes</h3>
+                 <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
+            </div>
 
 {productDresses.map((product) => (
   
