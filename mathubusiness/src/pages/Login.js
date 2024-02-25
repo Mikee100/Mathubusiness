@@ -1,7 +1,7 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState} from 'react';
 import "./login.css";
 import { auth } from '../Firebase';
-import {  createUserWithEmailAndPassword, onAuthStateChanged  } from "firebase/auth";
+import {  createUserWithEmailAndPassword } from "firebase/auth";
 import {db} from "../Firebase"
 
 import { addDoc, collection } from "firebase/firestore"; 
@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
-  const [user, setUser] = useState(null);
+ 
         const [fname, setFName] = useState("");
         const [sname, setSName] = useState("");
         const [number, setNumber] = useState("");
@@ -84,20 +84,7 @@ const Login = () => {
           setSelectedLocation(event.target.value);
           setRegion(event.target.value)
         };
-        useEffect(() => {
-          const unsubscribe = onAuthStateChanged(auth, (user) => {
-              if (user) {
-                  // User is signed in.
-                  setUser(user);
-              } else {
-                  // No user is signed in.
-                  setUser(null);
-              }
-          });
-  
-          // Cleanup subscription
-          return () => unsubscribe();
-      }, []);
+       
 
   return (
     <div className='container'>
@@ -135,9 +122,9 @@ const Login = () => {
       <button type="submit" className='registerbtn'>Register</button>
 
       <p className='haveacc' >Already have an Account?<a className='acc_login' href='./mainlogin'>Sign in</a> </p>
-
+      
     </form>
-    {user && <p>Welcome, {user.email}</p>}
+  
     </div>
   );
 };
