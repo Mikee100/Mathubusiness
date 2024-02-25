@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import "./shoppingcart.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import { auth } from '../Firebase' 
 
 export default function ShoppingCart({
   cartItems,
@@ -13,10 +14,36 @@ export default function ShoppingCart({
     (price, item) => price + item.quantity * item.price,
     0
   );
+  const [user, setUser] = useState(null);
+ 
+  const history = useNavigate();
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+
+  const handleCheckout = () => {
+    if (user) {
+      // User is logged in, proceed with checkout
+     
+      console.log("Proceeding with checkout...");
+      // You can add your checkout logic here
+    } else {
+      // User is not logged in, redirect to login page
+      history("/mainlogin"); // Assuming you have a route for the login page
+    }
+  };
   return (
     <>
       <div className="container_shopping">
+      
         <div className="small_routes_shopping">
           <a href="./products">
             <p className="p_home">Home</p>{" "}
@@ -80,7 +107,7 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
           <p className="sub_total">Subtotal</p>
           <p className="cart_summary">Cart Summary</p>
           <small>KSh {totalPrice}</small>
-          <button className="checkout">Checkout (KSh {totalPrice})</button>
+          <button className="checkout" onClick={handleCheckout} >Checkout (KSh {totalPrice})</button>
         </div>
       </div>
     </>

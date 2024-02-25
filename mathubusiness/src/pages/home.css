@@ -101,7 +101,7 @@
 
   margin-right: 12px;
 }
-.product:hover {
+.product:hover, .product_firstmainpage:hover{
   z-index: 0;
   transform: translate(0px, 0px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
