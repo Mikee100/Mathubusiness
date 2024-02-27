@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useRef} from "react";
+import React,{useEffect,useState} from "react";
 import "./shoppingcart.css";
 import { Link,useNavigate } from "react-router-dom";
 import { auth } from '../Firebase' 
@@ -30,43 +30,36 @@ export default function ShoppingCart({
     };
   }, []);
 
-
-  const handleCheckout = () => {
-    if (user) {
-      // User is logged in, proceed with checkout
-     
-      console.log("Proceeding with checkout...");
-      // You can add your checkout logic here
-    } else {
+  const sendEmail = () => {
+    if (!user) {
       // User is not logged in, redirect to login page
       history("/mainlogin"); // Assuming you have a route for the login page
+      return;
     }
-   
-  
-      
-      emailjs
-        .sendForm(
-          "service_a911eb5",
-          "template_ye9c297",
-          form.current,
-          "KeePPXIGkpTcoiTBJ"
-        )
-        .then(
-          (result) => {
-            window.location.reload(); 
-            //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
-          
-          },
-          (error) => {
-            console.log(error.text);
-            
-          }
-        );
-    
-    
+    const templateParams = {
+      to_name: "mICHAEL", // Replace with actual recipient name
+      from_name: "mEZURI", // Replace with your app name or sender name
+      image: handleAddProductDetails.image, // Replace with the URL of the product image
+      price:  handleAddProductDetails.price, // Replace with the actual product price
+     
+    };
+    // Proceed with sending email
+    emailjs.send(
+      "service_bmvwx28",
+      "template_zsdszy8",
+      templateParams,
+      "KeePPXIGkpTcoiTBJ"
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response.status, response.text);
+      // Handle success, maybe show a success message to the user
+    })
+    .catch((error) => {
+      console.error('Email sending failed:', error);
+      // Handle error, show an error message to the user
+    });
   };
 
-  const form = useRef();
   
 
   return (
@@ -100,16 +93,17 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
         )}
 
         {cartItems.map((item) => (
+         
           <div key={item.id} className="cart_container">
            
               <div
                 className="single_item_cart"
                 
               >
-                <img className="cart_image" src={item.image} alt={item.image} />
+                <img className="cart_image" src={item.image} alt={item.image} name="image" />
                 <Link to="/productdetails">  <h4 className="cart-title" onClick={() => handleAddProductDetails(item)} >{item.title}</h4></Link>
 
-                <span className="cart-price">
+                <span className="cart-price" name="price">
                   <p className="p_count">{item.quantity}</p> KSh {item.price}
                 </span>
 
@@ -136,7 +130,7 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
           <p className="sub_total">Subtotal</p>
           <p className="cart_summary">Cart Summary</p>
           <small>KSh {totalPrice}</small>
-          <button className="checkout" onClick={handleCheckout} >Checkout (KSh {totalPrice})</button>
+          <button className="checkout" onClick={sendEmail} >Checkout (KSh {totalPrice})</button>
         </div>
       </div>
     </>
