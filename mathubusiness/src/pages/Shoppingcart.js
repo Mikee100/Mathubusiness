@@ -1,7 +1,9 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState,useRef} from "react";
 import "./shoppingcart.css";
 import { Link,useNavigate } from "react-router-dom";
 import { auth } from '../Firebase' 
+import emailjs from "emailjs-com"
+
 
 export default function ShoppingCart({
   cartItems,
@@ -39,7 +41,34 @@ export default function ShoppingCart({
       // User is not logged in, redirect to login page
       history("/mainlogin"); // Assuming you have a route for the login page
     }
+   
+  
+      
+      emailjs
+        .sendForm(
+          "service_a911eb5",
+          "template_ye9c297",
+          form.current,
+          "KeePPXIGkpTcoiTBJ"
+        )
+        .then(
+          (result) => {
+            window.location.reload(); 
+            //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+          
+          },
+          (error) => {
+            console.log(error.text);
+            
+          }
+        );
+    
+    
   };
+
+  const form = useRef();
+  
+
   return (
     <>
       <div className="container_shopping">
