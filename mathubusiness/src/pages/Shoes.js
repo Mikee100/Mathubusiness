@@ -34,7 +34,7 @@ const changecontent = (product) =>{
 
 <Link  key={product.id}
 // Moving to the product page
-to={`/productdetails?name=${product.title}?id=${product.id}`}  > <div className="product" 
+to={`/productdetails?name=${product.title}?id=${product.id}`}  > <div className="product_firstmainpage" 
 onClick={() => handleAddProductDetails(product)}
    >
  

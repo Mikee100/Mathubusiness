@@ -13,6 +13,9 @@ export default function ShoppingCart({
   handleAddProductDetails,
 }) {
   
+  const [src] = useState();
+
+ 
   const totalPrice = cartItems.reduce(
     (price, item) => price + item.quantity * item.price,
     0
@@ -37,24 +40,22 @@ export default function ShoppingCart({
       history("/mainlogin"); // Assuming you have a route for the login page
       return;
     }
-    let emailBody = "Here are the details of your order:\n\n";
-    cartItems.forEach((item) => {
-      emailBody += `Product Name: ${item.title}\n`;
-      emailBody += `Quantity: ${item.quantity}\n`;
-      emailBody += `Price: KSh ${item.price}\n\n`;
-    });
-    emailBody += `Total Price: KSh ${totalPrice}`;
+    const templateParams = {
+      to_name: "mICHAEL", // Replace with actual recipient name
+      from_name: "mEZURI", // Replace with your app name or sender name
+   
+
+        to_image:src,
+   
+      total_price: totalPrice,
       
- 
+     
+    };
     // Proceed with sending email
     emailjs.send(
       "service_bmvwx28",
       "template_zsdszy8",
-      {
-        to_name: "mICHAEL", // Replace with actual recipient name
-        from_name: "mEZURI", // Replace with your app name or sender name
-        message_html: emailBody,
-      },
+      templateParams,
       "KeePPXIGkpTcoiTBJ"
     )
     .then((response) => {
@@ -87,7 +88,7 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
           <p className="cart_this_sign"> &gt; </p>
           <p className="route_cart">Cart</p>
         </div>
-        <h2 className="h2_title">Cart Items</h2>
+        <h2>Cart Items</h2>
         {cartItems.length >= 1 && (
           <button className="bt_clear" onClick={handleCartClearance}>
             clear cart{" "}
@@ -107,8 +108,8 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
                 className="single_item_cart"
                 
               >
-                <img className="cart_image" src={item.image} alt={item.image} name={item.image} />
-                <Link to="/productdetails">  <h4 className="cart-title" onClick={() => handleAddProductDetails(item)} >{item.title}</h4></Link>
+                <img className="cart_image" src={item.image} alt={item.image}    />
+                <Link to="/productdetails">  <h4 className="cart-title" title={item.title}  onClick={() => handleAddProductDetails(item)} >{item.title} </h4></Link>
 
                 <span className="cart-price" name="price">
                   <p className="p_count">{item.quantity}</p> KSh {item.price}
