@@ -45,6 +45,11 @@
   top: 0rem;
   left: 11.8rem;
 }
+.h2_title{
+  position: absolute;
+  top: 0rem;
+
+}
 hr {
   position: absolute;
   top: 5rem;

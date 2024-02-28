@@ -84,7 +84,7 @@ function Navbar({ cartItems,fulldatas }) {
                 <MdMarkEmailUnread className="icons" />
                 Orders
               </ol>
-              <Link to="shoppingcart">
+              <Link to="liked">
                 <ol>
                   <FaRegHeart className="icons" />
                   Saved Items

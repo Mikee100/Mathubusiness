@@ -106,13 +106,6 @@
   transform: translate(0px, 0px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
-.prdt_category{
-  position: absolute;
-  background-color: grey;
-  top: 0rem;
-  width: 100%;
-  height: 2.5rem;
-}
 
 
 .product-image {
@@ -323,14 +316,14 @@ h1{
 }
 .heels_h3{
   position: absolute;
-  top: 1rem;
+  top: -1rem;
   
 }
 
 .heels_route{
   position: absolute;
   text-decoration: none;
-  top: 1rem;
+  top: 0rem;
   right: 2rem;
   width: 5rem;
 }
@@ -339,20 +332,34 @@ h1{
   top: 3rem;
   left: -15rem;
 }
-.a_bags_see_all{
+ .prdt_category{
   position: absolute;
-  right: 2rem;
-  top: .2rem;
+  background-color: grey;
+  top: 0rem;
+  width: 250%;
+  height: 2.5rem;
+}
+
+.a_bags_see_all{
+  position: sticky;
+left: 53rem;
+  top: .3rem;
   text-decoration: none;
+
+  width: 5rem;
 }
 .right_see_all{
   position: absolute;
-  right: -1.2rem;
-  top: .2rem;
+  right: -1rem;
+  top: .26rem;
 
 }
 .a_bags_see_all:hover, .right_see_all:hover{
   color: white;
+}
+.h3_title{
+  position: absolute;
+  top: .3rem;
 }
 
 

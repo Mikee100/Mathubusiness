@@ -20,9 +20,9 @@
 }
 .modal_left_delivery {
   position: absolute;
-  height: 25rem;
+  height: 24rem;
   width: 18rem;
-  top: 1.2rem;
+  top: 3.2rem;
   right: 2rem;
   background-color: white;
 }
@@ -323,8 +323,8 @@
 }
 .icon_heart {
   position: absolute;
-  top: 1.5rem;
-  left: 46rem;
+  top: 4rem;
+  left: 50rem;
   font-size: 1.3rem;
   color: rgb(128, 101, 66);
 }

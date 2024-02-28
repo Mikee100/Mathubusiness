@@ -26,7 +26,7 @@ import Mainpage from "./pages/Mainpage";
 import Womenboots from "./pages/womenshoescategories/Womenboots";
 import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
-import SearchBox from "./pages/SearchBox";
+
 import Catalog from "./pages/Catalog";
 import Pagination from "./pages/Pagination";
 import Sellers from "./pages/Sellers/Sellers";
@@ -39,7 +39,6 @@ function App() {
   const productshoessandals = shoessandals;
   const fashionwomenboot = womenboots;
   const womenheels = heels;
-  
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -64,19 +63,19 @@ function App() {
 
   const addLikedProduct = (productlike) => {
     const ProductExistLike = likedItems.find(
-      (items) => items.id === productlike.id
+      (itemsliked) => itemsliked.id === productlike.id
     );
 
     if (ProductExistLike) {
       setLikedItems(
-        likedItems.map((items) =>
-          items.id === productlike.id
+        likedItems.map((item) =>
+          item.id === productlike.id
             ? { ...ProductExistLike, quantity: ProductExistLike.quantity + 1 }
-            : items
+            : item
         )
       );
     } else {
-      setLikedItems([...cartItems, { ...productlike, quantity: 1 }]);
+      setLikedItems([...likedItems, { ...productlike, quantity: 1 }]);
     }
   };
 
@@ -120,7 +119,6 @@ function App() {
     <>
       <BrowserRouter>
         <main>
-       
           <Routes>
             <Route path="/routees" element={<Routees />} />
             <Route
@@ -197,31 +195,25 @@ function App() {
                 />
               }
             />
-            <Route  
-            path="womenboots"
-            element={
-              <Womenboots
-              fashionwomenboot={fashionwomenboot}
-             
-              />
-            } 
-            
-            
+            <Route
+              path="womenboots"
+              element={<Womenboots fashionwomenboot={fashionwomenboot} />}
             />
-              <Route  
-            path="heels"
-          element={<Heels
-            womenheels={womenheels}
-            handleAddProductDetails={handleAddProductDetails}
-            />}
-            
-            
+            <Route
+              path="heels"
+              element={
+                <Heels
+                  womenheels={womenheels}
+                  handleAddProductDetails={handleAddProductDetails}
+                />
+              }
             />
 
             <Route path="navbar" element={<Navbar />} />
 
             <Route
-              path="/productdetails" handleAddProductDetails={handleAddProductDetails}
+              path="/productdetails"
+              handleAddProductDetails={handleAddProductDetails}
               element={
                 <ProductDetails
                   handleAddProduct={handleAddProduct}
@@ -244,25 +236,28 @@ function App() {
                 />
               }
             />
-            <Route
-            path="catalog"
-            element={<Catalog  fulldatas={fulldatas} />}
-            
-            />
+            <Route path="catalog" element={<Catalog fulldatas={fulldatas} />} />
 
-            <Route path="liked" element={<Liked likedItems={likedItems} />} />
+            <Route
+              path="liked"
+              element={
+                <Liked
+                  likedItems={likedItems}
+                  handleAddProductDetails={handleAddProductDetails}
+                />
+              }
+            />
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />} />
-            <Route path="sellers" element={<Sellers  />} />
+            <Route path="sellers" element={<Sellers />} />
 
             <Route path="" element={<Footer />} />
           </Routes>
           <Pagination />
-            <SearchBox  />
+
           <AuthDetails />
-          <Navbar cartItems={cartItems}
-           fulldatas={fulldatas} />
+          <Navbar cartItems={cartItems} fulldatas={fulldatas} />
         </main>
       </BrowserRouter>
     </>

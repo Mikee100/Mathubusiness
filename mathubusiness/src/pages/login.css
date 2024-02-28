@@ -361,3 +361,8 @@ left: 22rem;
   border: 1.5px solid #2d79f3;
 }
 
+.member_name{
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}

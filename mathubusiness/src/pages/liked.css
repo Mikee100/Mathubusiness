@@ -1,14 +1,14 @@
 .container_liked{
   position: absolute;
-  top:7rem;
+  top: 7rem;
   left: 3rem;
   width: 50rem;
   height: 54rem;
   border: 1px solid grey;
   border-radius: 10px;
+  border: none;
+  background-color: white;
 
-
-  
 
 }
 .liked_container{

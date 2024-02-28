@@ -24,7 +24,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
            
            <div className="products"    >
             <div className="prdt_category" >
-                 <h3>Bags</h3>
+                 <h3 className="h3_title" >Bags</h3>
                  <a href="./bags" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
             </div>
         
