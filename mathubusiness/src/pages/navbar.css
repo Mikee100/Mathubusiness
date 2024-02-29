@@ -1,5 +1,20 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Off-screen by default */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease; /* Smooth transition effect */
+}
+
+.sidebar.open {
+  left: 0; /* Slides in when open */
+}
+
 .mymodal{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
@@ -8,27 +23,37 @@
   overflow-y: auto;
   scroll-behavior: auto;
 }
-.cancel_icon{
+.my_cancel_div{
   position: absolute;
-  right: 1rem;
-  top:7rem; 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0rem;
+  left: 0rem;
+  height: 2rem;
+
+}
+ .cancel_icon{
+  position: absolute;
+  left: 13.5rem;
+  top:.3rem; 
   font-size: 1.3rem;
   cursor: pointer;
+  color: white;
 
 }
 .cancel_icon:hover{
-  color: white;
+  color: black;
 }
 
 
 .input {
-  position: absolute;
-  top: 7rem;
-  right: 5rem;
+  position: relative;
+  top: 2rem;
+  left: 0rem;
   display: flex;
   flex-direction: column;
   width: 250px;
-  background-color: #0D1117;
+  
   justify-content: center;
   border-radius: 5px;
 
@@ -80,9 +105,9 @@
 }
 .bars_settings{
   position: fixed;
-  right: 2rem;
+ left: 1rem;
   color: black;
-  top: 2rem;
+  top: 1.7rem;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -191,7 +216,7 @@ text-decoration-line: none;
     font-size: 30px;
    font-family:[Kumbh Sans] ;
     font-weight: 700;
-    left:2rem;
+    left:3rem;
     color: black;
     top:1rem;
    
@@ -462,6 +487,8 @@ position: relative;
   top: .2rem;
   left: .5rem;
 }
+
+
 
 
 
