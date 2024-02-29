@@ -9,6 +9,9 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 import { TbTruckReturn } from "react-icons/tb";
 import { FaFileAlt } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+
+
+
 export default function ProductDetails({
   productdetails,
   handleAddProduct,
@@ -57,6 +60,7 @@ export default function ProductDetails({
     setSelectedImage(image);
   };
 
+
   return (
     <>
       <div className="modal" id="modal" key={1} onClick={toggleModal}>
@@ -69,8 +73,10 @@ export default function ProductDetails({
                 </a>
                 <p className="this_sign"> &gt; </p>
                 <p className="p_prdt_detail">Product Details</p>
+                <p className="this_sign2"> &gt; </p>
+             
               </div>
-              <div className="pdt_container">
+              <div className="pdt_container">   
                 {/**
 <img  
     className="product_image_popup_cart" 
@@ -114,7 +120,7 @@ export default function ProductDetails({
                 </div>
 
                 <h4 className="pop_product-title">{pop.title}</h4>
-
+                <p className="item_address" > {`${pop.title}`} </p>
                 <span className="pop_product-price">Ksh.{pop.price}</span>
 
                 <button

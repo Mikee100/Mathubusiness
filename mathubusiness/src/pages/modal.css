@@ -176,6 +176,17 @@
   top: 0rem;
   left: 4rem;
 }
+.this_sign2 {
+  position: absolute;
+  top: 0rem;
+  left: 11rem;
+}
+.item_address{
+  position: absolute;
+  top: -2.5rem;
+  left: 11rem;
+  font-size: .8rem;
+}
 .pdt_container {
   position: absolute;
   background-color: white;

@@ -129,7 +129,6 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
                 </button>
                 <hr className="line-cart" />
               </div>
-      
           </div>
         ))}
 

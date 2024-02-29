@@ -12,7 +12,8 @@ import { VscAccount } from "react-icons/vsc";
 import { FaRegHeart } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-
+import { getAuth, signOut } from "firebase/auth";
+import LogoutTemp from "./LogoutTemp";
 
 function Navbar({ cartItems,fulldatas }) {
   const [Mobile, setMobile] = useState(false);
@@ -43,6 +44,14 @@ function Navbar({ cartItems,fulldatas }) {
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       handleSearch();
+    }
+  };
+  const logout = async () => {
+    try {
+      await signOut(getAuth());
+      LogoutTemp({ type: 'success', message: 'You have successfully logged out.' });
+    } catch (error) {
+      LogoutTemp({ type: 'error', message: 'There was an error logging out.' });
     }
   };
 
@@ -91,7 +100,7 @@ function Navbar({ cartItems,fulldatas }) {
                 </ol>
               </Link>
               <hr />
-              <ol className="logout" >
+              <ol className="logout"   onClick={logout}>
                 LOGOUT
               </ol>
             </div>
