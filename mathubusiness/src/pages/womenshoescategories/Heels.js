@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from "react-router-dom";
 import "../csspages/sandals.css";
 
@@ -15,6 +15,10 @@ export default function Heels({ womenheels, handleAddProductDetails }) {
     setFilteredProducts(filtered);
   };
 
+  // Update filteredProducts when minPrice or maxPrice changes
+  useEffect(() => {
+    filterProducts();
+  });
   return (
     <div className='container_sandals'>
 
