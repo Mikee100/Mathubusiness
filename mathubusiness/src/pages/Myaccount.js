@@ -8,7 +8,7 @@ export default function Myaccount() {
   const [userData, setUserData] = useState(null);
 
   const show = async () => {
-    const docRef = doc(db, "Account Information", "Sr6tuipU2R8uOA3M7dOi");
+    const docRef = doc(db, "Account Information", "D82rJGF3JvrQg2mCQenW");
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
@@ -20,7 +20,7 @@ export default function Myaccount() {
 
   return (
     <div className="mymostdata">
-      <h1>Waweru</h1>
+     
       <button onClick={show}>Show</button>
       {userData && (
         <div>

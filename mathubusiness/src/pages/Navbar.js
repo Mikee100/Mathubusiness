@@ -25,6 +25,10 @@ function Navbar({ cartItems }) {
   const mydisappear = () => {
     setview(!view);
   };
+  const handleListClick = () => {
+    // Toggle sidebar to close when a list item is clicked
+    setview(false);
+  };
 
 
   
@@ -52,6 +56,11 @@ function Navbar({ cartItems }) {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  const handleListItemClick = () => {
+    // Toggle sidebar to close when a list item is clicked
+    setIsOpen(false);
+  };
+  
   return (
     <div className="container_navbar">
       <div className="nav">
@@ -81,17 +90,17 @@ function Navbar({ cartItems }) {
           {view && (
             <div className="mysmallest_list">
               <Link to="myaccount">
-                <ol>
+                <ol  onClick={handleListClick}>
                   <VscAccount className="icons" />
                   My Account
                 </ol>
               </Link>
-              <ol>
+              <ol onClick={handleListClick}>
                 <MdMarkEmailUnread className="icons" />
                 Orders
               </ol>
               <Link to="liked">
-                <ol>
+                <ol onClick={handleListClick}>
                   <FaRegHeart className="icons" />
                   Saved Items
                 </ol>
@@ -138,7 +147,7 @@ function Navbar({ cartItems }) {
         </div>
         <FaTimes className="cancel_icon" onClick={toggleSidebar}/>
         <div class="input">
-          <button class="value">
+          <button class="value"  onClick={handleListItemClick}>
             <svg
               data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +160,7 @@ function Navbar({ cartItems }) {
             </svg>
             Public profile
           </button>
-          <button class="value">
+          <button class="value" onClick={handleListItemClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -170,7 +179,7 @@ function Navbar({ cartItems }) {
             </svg>
             Account
           </button>
-          <button class="value">
+          <button class="value"  onClick={handleListItemClick}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <path
                 d="m109.9 20.63a6.232 6.232 0 0 0 -8.588-.22l-57.463 51.843c-.012.011-.02.024-.031.035s-.023.017-.034.027l-4.721 4.722a1.749 1.749 0 0 0 0 2.475l.341.342-3.16 3.16a8 8 0 0 0 -1.424 1.967 11.382 11.382 0 0 0 -12.055 10.609c-.006.036-.011.074-.015.111a5.763 5.763 0 0 1 -4.928 5.41 1.75 1.75 0 0 0 -.844 3.14c4.844 3.619 9.4 4.915 13.338 4.915a17.14 17.14 0 0 0 11.738-4.545l.182-.167a11.354 11.354 0 0 0 3.348-8.081c0-.225-.02-.445-.032-.667a8.041 8.041 0 0 0 1.962-1.421l3.16-3.161.342.342a1.749 1.749 0 0 0 2.475 0l4.722-4.722c.011-.011.018-.025.029-.036s.023-.018.033-.029l51.844-57.46a6.236 6.236 0 0 0 -.219-8.589zm-70.1 81.311-.122.111c-.808.787-7.667 6.974-17.826 1.221a9.166 9.166 0 0 0 4.36-7.036 1.758 1.758 0 0 0 .036-.273 7.892 7.892 0 0 1 9.122-7.414c.017.005.031.014.048.019a1.717 1.717 0 0 0 .379.055 7.918 7.918 0 0 1 4 13.317zm5.239-10.131c-.093.093-.194.176-.293.26a11.459 11.459 0 0 0 -6.289-6.286c.084-.1.167-.2.261-.3l3.161-3.161 6.321 6.326zm7.214-4.057-9.479-9.479 2.247-2.247 9.479 9.479zm55.267-60.879-50.61 56.092-9.348-9.348 56.092-50.61a2.737 2.737 0 0 1 3.866 3.866z"
@@ -179,7 +188,7 @@ function Navbar({ cartItems }) {
             </svg>
             Appearance
           </button>
-          <button class="value">
+          <button class="value" onClick={handleListItemClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -195,7 +204,7 @@ function Navbar({ cartItems }) {
             </svg>
             Accessibility
           </button>
-          <button class="value">
+          <button class="value" onClick={handleListItemClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 25"
@@ -212,13 +221,13 @@ function Navbar({ cartItems }) {
           </button>
           <Link to="./mainlogin" style={{ textDecoration: "none" }}>
             {" "}
-            <button class="value">
+            <button class="value"  onClick={handleListItemClick}>
               <LuLogIn /> Sign In{" "}
             </button>
           </Link>
           <Link to="./liked" style={{ textDecoration: "none" }}>
             {" "}
-            <button class="value">
+            <button class="value"  onClick={handleListItemClick}>
               <AiFillHeart /> Favourites{" "}
             </button>
           </Link>
