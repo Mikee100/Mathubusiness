@@ -239,7 +239,7 @@ function App() {
             <Route path="catalog" element={<Catalog fulldatas={fulldatas} />} />
 
             <Route
-              path="liked"
+              path="favourites"
               element={
                 <Liked
                   likedItems={likedItems}
