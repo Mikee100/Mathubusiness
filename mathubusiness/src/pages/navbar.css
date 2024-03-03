@@ -48,11 +48,11 @@
 
 .input {
   position: relative;
-  top: 2rem;
-  left: 0rem;
+  top: -3rem;
+  left: -1rem;
   display: flex;
   flex-direction: column;
-  width: 250px;
+
   
   justify-content: center;
   border-radius: 5px;

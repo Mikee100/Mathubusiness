@@ -99,7 +99,7 @@ function Navbar({ cartItems }) {
                 <MdMarkEmailUnread className="icons" />
                 Orders
               </ol>
-              <Link to="liked">
+              <Link to="favourites">
                 <ol onClick={handleListClick}>
                   <FaRegHeart className="icons" />
                   Saved Items
@@ -142,10 +142,8 @@ function Navbar({ cartItems }) {
       <FaBars className="bars_settings" onClick={toggleSidebar} />
       
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <div className="my_cancel_div">
-
-        </div>
-        <FaTimes className="cancel_icon" onClick={toggleSidebar}/>
+       
+       
         <div class="input">
           <button class="value"  onClick={handleListItemClick}>
             <svg
@@ -225,12 +223,15 @@ function Navbar({ cartItems }) {
               <LuLogIn /> Sign In{" "}
             </button>
           </Link>
-          <Link to="./liked" style={{ textDecoration: "none" }}>
+          <Link to="./favourites" style={{ textDecoration: "none" }}>
             {" "}
             <button class="value"  onClick={handleListItemClick}>
               <AiFillHeart /> Favourites{" "}
             </button>
           </Link>
+        </div>
+        <div className="my_cancel_div">
+ <FaTimes className="cancel_icon" onClick={toggleSidebar}/>
         </div>
       </div>
 </div>
