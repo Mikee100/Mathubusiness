@@ -1,9 +1,16 @@
+.master_container{
+  position: absolute;
+  background-color: yellow;
+  height: 70rem;
+  width: 100%;
+}
+
 .container_shopping {
   position: absolute;
   top: 7rem;
   left: 3rem;
   width: 50rem;
-  height: 54rem;
+  height: 40rem;
   border: 1px solid grey;
   border-radius: 10px;
   border: none;

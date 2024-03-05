@@ -144,7 +144,7 @@ function Navbar({ cartItems }) {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
        
        
-        <div class="input">
+       <div class="input"><Link to="./myaccount"> 
           <button class="value"  onClick={handleListItemClick}>
             <svg
               data-name="Layer 2"
@@ -156,8 +156,8 @@ function Navbar({ cartItems }) {
                 fill="#7D8590"
               ></path>
             </svg>
-            Public profile
-          </button>
+            My profile
+          </button></Link>
           <button class="value" onClick={handleListItemClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

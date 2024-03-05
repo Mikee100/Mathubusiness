@@ -11,15 +11,15 @@ import Footer from "./Footer";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
-export default function Mainpage({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals  }) {
+export default function Mainpage({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals}) {
 
 
 
   return (
   
-    
+    <div className="mainpage_mastercontainer">
     <div className='container' id="container" key={1} >
-    
+      
   
            
            <div className="products"    >
@@ -454,7 +454,6 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 <Link to='./sellers' className="sellers_link" >Sell on Mezuri</Link>
 
 <LeftNav />
-<Footer />
 
 
 
@@ -463,9 +462,10 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
 
 
+    
     </div>
-
-
+    <Footer />
+</div>
 
 
 

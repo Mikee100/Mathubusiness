@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import "./login.css";
 import { auth } from '../Firebase';
-import {  createUserWithEmailAndPassword } from "firebase/auth";
+import {  createUserWithEmailAndPassword, updateProfile  } from "firebase/auth";
 import {db} from "../Firebase"
 
 import { addDoc, collection } from "firebase/firestore"; 
@@ -23,7 +23,7 @@ const Login = () => {
 
         const history = useNavigate();
 
-        const handleSubmit = async (e) => {
+        const handleSubmit = async (e,email, password, firstName) => {
             e.preventDefault();
             try {
               const docRef = await addDoc(collection(db, "Account Information"), {
@@ -38,7 +38,10 @@ const Login = () => {
                 region:region
               });
             
+
               alert("Registration was successfull ", docRef.id);
+
+              
             } catch (e) {
               alert("Error adding document: ", e);
             }
@@ -51,6 +54,11 @@ const Login = () => {
                   history("/")
 
                   // ...
+                 updateProfile(userCredential.user, {
+                    displayName: firstName
+                  });
+              
+                  
                 })
                 .catch((error) => {
                   alert(error)
@@ -96,26 +104,23 @@ const Login = () => {
     <input type="number" className="pnumber" name="pnumber" value={number} onChange={(e) => setNumber(e.target.value) } placeholder="Phone Number" required />
     <input type="text" className="address" name="address" value={address} onChange={(e) => setAddress(e.target.value) } placeholder="Address" required />
     <div>
-      
-      <label htmlFor="city">Select City:</label>
-      <select id="city" value={selectedCity} onChange={handleCityChange} className='options'  >
-        <option value="">Select City</option>
-        <option value="Nairobi">Nairobi</option>
-        <option value="Nakuru">Nakuru</option>
+  <label htmlFor="city">Select City:</label>
+  <select id="city" value={selectedCity} onChange={handleCityChange} className='options'  >
+    <option value="">Select City</option>
+    <option value="Nairobi">Nairobi</option>
+    <option value="Nakuru">Nakuru</option>
+  </select>
+
+  {selectedCity && (
+    <div>
+      <select id="location" value={selectedLocation} onChange={handleLocationChange} className='diffoptions' >
+        {options[selectedCity].map((location, index) => (
+          <option key={index} value={location}>{location}</option>
+        ))}
       </select>
-
-      {selectedCity && (
-        <div>
-
-          <select id="location" value={selectedLocation} onChange={handleLocationChange} className='diffoptions' >
-      
-            {options[selectedCity].map((location, index) => (
-              <option key={index} value={location}>{location}</option>
-            ))}
-          </select>
-        </div>
-      )}
     </div>
+  )}
+</div>
       
       <input type="email" className="email" name="email" value={email} onChange={(e) => setEmail(e.target.value) } placeholder="Email" required />
       <input type="password"  className='password' name="password" value={password} onChange={(e) => setPassword(e.target.value) } placeholder="Password" required />

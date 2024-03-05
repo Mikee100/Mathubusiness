@@ -1,10 +1,32 @@
+.master_container_shoppingcart .footer{
+
+  position: absolute;
+  bottom:-30rem;
+  background-color: white;
+  height: 16rem;
+font-size: .7rem;
+  
+  left: 0rem;
+}
+.mainpage_mastercontainer .footer{
+
+  position: absolute;
+  bottom:-140rem;
+  background-color: white;
+  height: 16rem;
+font-size: .7rem;
+left: 0rem;
+ 
+}
+
+
 .footer{
     position: relative;
-    bottom:-15rem;
+    bottom:-14rem;
     background-color: aqua;
     height: 16rem;
   font-size: .7rem;
-    width: 139.3%;
+    width: 100%;
     left: -20rem;
   
   }

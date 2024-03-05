@@ -48,8 +48,8 @@
 
 .input {
   position: relative;
-  top: -3rem;
-  left: -1rem;
+  top:2rem;
+  left: 0rem;
   display: flex;
   flex-direction: column;
 

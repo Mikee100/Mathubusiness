@@ -3,7 +3,7 @@ import "./shoppingcart.css";
 import { Link,useNavigate } from "react-router-dom";
 import { auth } from '../Firebase' 
 import emailjs from "emailjs-com"
-
+import Footer from "./Footer";
 
 export default function ShoppingCart({
   cartItems,
@@ -72,6 +72,7 @@ export default function ShoppingCart({
 
   return (
     <>
+    <div className="master_container_shoppingcart" >
       <div className="container_shopping">
       
         <div className="small_routes_shopping">
@@ -139,6 +140,9 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
           <small>KSh {totalPrice}</small>
           <button className="checkout" onClick={sendEmail} >Checkout (KSh {totalPrice})</button>
         </div>
+       
+      </div>
+      <Footer />
       </div>
     </>
   );

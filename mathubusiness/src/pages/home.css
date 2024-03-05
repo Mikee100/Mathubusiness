@@ -1,11 +1,16 @@
 .container {
   position: absolute;
-  top: 2rem;
+  top:  0rem;
   left: 18rem;
   width: 56rem;
-  height: 120rem;
+  height: 50rem;
 
   border: none;
+}
+h1{
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
 }
 
 .bag_pad {
@@ -62,7 +67,7 @@
   flex-direction: row;
   width: 103%;
   top: 5rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 17.5rem;
   overflow-x: auto;
@@ -176,7 +181,7 @@
   flex-direction: row;
   width: 103%;
   top: 6rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -191,7 +196,7 @@
   flex-direction: row;
   width: 103%;
   top: 7rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -206,7 +211,7 @@
   flex-direction: row;
   width: 103%;
   top: 8rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -222,7 +227,7 @@
   flex-direction: row;
   width: 103%;
   top: 9rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -237,7 +242,7 @@
   flex-direction: row;
   width: 103%;
   top: 10rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -252,7 +257,7 @@
   flex-direction: row;
   width: 103%;
   top: 11rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;
@@ -268,7 +273,7 @@
   flex-direction: row;
   width: 103%;
   top: 12rem;
-  left: -3rem;
+  left: 0rem;
   background-color: white;
   height: 18rem;
   overflow-x: auto;

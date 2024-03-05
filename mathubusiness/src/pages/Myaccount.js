@@ -1,26 +1,24 @@
 import { useState, useEffect } from 'react';
-import { db } from "../Firebase";
-import { doc, getDoc } from "firebase/firestore";
+
 import { getAuth } from "firebase/auth";
+import { useAuthValue } from './AuthContext'
+
 
 export default function Myaccount() {
-  const [userData, setUserData] = useState(null);
+  const [ setUserData] = useState(null);
   const auth = getAuth();
+
+  const { currentUser } = useAuthValue()
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
-        const docRef = doc(db, "Account Information", user.uid);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-          setUserData(docSnap.data());
+    
+          setUserData(user);
         } else {
-          alert("No such document!");
+          setUserData(null);
         }
-      } else {
-        alert('No user is signed in.');
-      }
+      
     });
 
     return () => {
@@ -30,16 +28,14 @@ export default function Myaccount() {
 
   return (
     <div className="mymostdata">
-      {userData && (
+      {currentUser ? (
         <div>
-           <p>Address: {userData.address}</p>
-           <p>City: {userData.city}</p>
-           <p>Email: {userData.email}</p>
-          <p>First Name: <small>{userData.fname}</small></p>
-           <p>Phone Number: {userData.number}</p>
-          <p>Second Name: {userData.sname}</p>
-          <p>Region: {userData.region}</p>
+          <p>Name: {currentUser.displayName}</p>
+          <p>Email: {currentUser.email}</p>
+          {/* other user details */}
         </div>
+      ) : (
+        <p>User not found</p>
       )}
     </div>
   );
