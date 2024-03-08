@@ -1,6 +1,6 @@
 .seller_container{
     position: relative;
-    background-color: aqua;
+  
     width: 100%;
     
     
@@ -45,4 +45,30 @@
     left: 20rem;
     padding: 10px;
     width: 11rem; 
+}
+.product_list{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 103%;
+    top: 5rem;
+    left: 0rem;
+    background-color: white;
+    height: 17.5rem;
+    overflow-x: auto;
+    visibility: hidden;
+
+}
+.product_card{
+    position: relative;
+  left: 1rem;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 13rem;
+  width: 10rem;
+
+  margin-right: 12px;
 }
