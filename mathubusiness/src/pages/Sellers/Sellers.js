@@ -43,6 +43,8 @@ export default function Sellers() {
     );
   };
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -88,7 +90,8 @@ useEffect(() => {
         <input type="text" className='product_price' placeholder='Product Price' value={price} onChange={(e) => setPrice(e.target.value) }  />
         <input type="text" className='product_about' placeholder='Product About' value={about} onChange={(e) => setAbout(e.target.value) }  />
         <input type='text' className='product_seller_image' placeholder='Product image'  value={image} onChange={(e) => setImage(e.target.value) }/>
-        <input type="file" className='product_seller_image' onChange={handleImageChange} />
+
+        <input type="file"  onChange={handleImageChange} />
         <button className='seller_btn' >Send Products</button>
       </form>
       

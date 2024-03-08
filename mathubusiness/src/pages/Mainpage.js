@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
+import { db} from '../Firebase';
 
+import {collection, getDocs  } from "firebase/firestore"; 
 
 import LeftNav from "./LeftNav";
 
@@ -12,7 +14,20 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export default function Mainpage({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals}) {
+  const [myproducts, MysetProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, "Product Information"));
+      const products = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      console.log(products);
+      MysetProducts(products);
+    };
+    fetchProducts();
+  }, []);
 
 
   return (
@@ -21,6 +36,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
     <div className='container' id="container" key={1} >
       
   
+
            
            <div className="products"    >
             <div className="prdt_category" >
@@ -28,7 +44,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
                  <a href="./bags" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
             </div>
         
-{productItems.map((product,index) => (
+{myproducts.map((product,index) => (
   
 
   <Link key={product.id}
