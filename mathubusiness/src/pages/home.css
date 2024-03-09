@@ -72,6 +72,19 @@ h1{
   height: 17.5rem;
   overflow-x: auto;
 }
+.loading{
+  position: relative;
+  left: 1rem;
+  top: 3rem;
+ 
+  height: 13rem;
+  width: 10rem;
+background-color: #065a82;
+  
+}
+.loading p{
+  top:3rem
+}
 
 .products::-webkit-scrollbar {
   width: 0;

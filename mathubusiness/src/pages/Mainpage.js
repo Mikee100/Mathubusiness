@@ -15,8 +15,12 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function Mainpage({productItems,   handleAddProductDetails,productDresses, productShoes,fashionwomenboot,productshoessandals}) {
   const [myproducts, MysetProducts] = useState([]);
+  const [products_shoes, setProducts_shoes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
+
     const fetchProducts = async () => {
       const querySnapshot = await getDocs(collection(db, "Product Information"));
       const products = querySnapshot.docs.map(doc => ({
@@ -25,9 +29,32 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
       }));
       console.log(products);
       MysetProducts(products);
+      setIsLoading(false);
     };
     fetchProducts();
   }, []);
+
+
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, "Shoes"));
+      const products = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      console.log(products);
+      setProducts_shoes(products);
+      setIsLoading(false);
+    };
+    fetchProducts();
+  }, []);
+
+
+  
+  if (isLoading) {
+    return <div className="loading-message">Loading products...</div>;
+  }
 
 
   return (
@@ -39,10 +66,13 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
 
            
            <div className="products"    >
-            <div className="prdt_category" >
+           <div className="prdt_category" >
                  <h3 className="h3_title" >Bags</h3>
                  <a href="./bags" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
             </div>
+      
+     
+           
         
 {myproducts.map((product,index) => (
   
@@ -50,6 +80,12 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
   <Link key={product.id}
   // Moving to the product page
   to={`/productdetails?name=${product.title}?id=${product.id}`}  >
+            {isLoading ?  (
+        <div className="loading">
+          <p>Loading products...</p>
+          {/* Add a loading spinner if you want */}
+        </div>
+      ) : (
      <div className="product_firstmainpage"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
  key={index}
@@ -68,27 +104,14 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
      KSh {product.price} 
     </span>
 
-
-{/** 
-    <div className="buttons"> 
-   <Link to="/productdetails" > <button className="btn" onClick={() => handleAddProductDetails(product)} > details </button></Link> 
-   <button className="btn"  onClick={() => handleAddProduct(product)} > 
-    Add to Cart 
-   
-    </button>
-
-
-   </div>
-*/}
-
   </div>
-  
+  ) }
 
 
 </Link> 
 
-     ))}
-
+     ))};
+  
 
 </div>
 
@@ -98,7 +121,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
                  <h3>Shoes</h3>
                  <a href="./shoes" className="a_bags_see_all" >See all<MdKeyboardArrowRight className="right_see_all" /></a>
             </div>
-{productShoes.map((product) => (
+{products_shoes.map((product) => (
   
 
   <Link key={product.id}
