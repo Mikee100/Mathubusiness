@@ -31,6 +31,7 @@ import Catalog from "./pages/Catalog";
 import Pagination from "./pages/Pagination";
 import Sellers from "./pages/Sellers/Sellers";
 import Listdress from "./pages/Dresses/Listdress";
+import Push from "./Push";
 
 
 function App() {
@@ -259,6 +260,7 @@ function App() {
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />} />
             <Route path="sellers" element={<Sellers />} />
+            <Route path="push" element={<Push productItems={productItems}  />}  />
 
             <Route path="" element={<Footer />} />
           </Routes>
