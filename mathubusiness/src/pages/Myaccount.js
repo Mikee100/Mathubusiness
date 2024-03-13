@@ -11,6 +11,9 @@ export default function Myaccount() {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
+        const documentPath = `Account Information/${user.uid}`;
+        console.log("Document Path:", documentPath);
+        console.log("User UID:", user.uid);
         const docRef = doc(db, "Account Information", user.uid);
         const docSnap = await getDoc(docRef);
 
@@ -29,9 +32,9 @@ export default function Myaccount() {
     };
   }, [auth]);
 
-  return (
-    <div className="mymostdata">
-      {userData && (
+  if (userData) {
+    return (
+      <div className="mymostdata">
         <div>
            <p>Address: {userData.address}</p>
            <p>City: {userData.city}</p>
@@ -41,7 +44,9 @@ export default function Myaccount() {
           <p>Second Name: {userData.sname}</p>
           <p>Region: {userData.region}</p>
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
+  } else {
+    return <div>No user data available</div>;
+  }
 }
