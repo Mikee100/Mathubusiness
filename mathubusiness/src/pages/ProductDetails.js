@@ -307,7 +307,7 @@ export default function ProductDetails({
                 ;
               </div>
 
-              <p className="may_like">YOU MAY ALSO LIKE</p>
+             
             
               {/** items in the modal                  */}
 
@@ -416,7 +416,9 @@ export default function ProductDetails({
           </div>
         ))}
       </div>
+      
       <div className="products_modal" key={2}>
+      <p className="may_like">YOU MAY ALSO LIKE</p>
                 {productItems.map((product) => (
                   <Link to="/productdetails"  > <div className="product" key={1}>
                     <img

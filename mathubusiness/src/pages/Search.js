@@ -1,13 +1,35 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./home.css";
 import "./navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
+import { db} from '../Firebase';
+import { Link } from "react-router-dom";
+
+import {collection, getDocs  } from "firebase/firestore"; 
 
 export default function Search(fulldatas, { handleAddProduct }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [modal, setModal] = useState(false);
+  const [myproducts, MysetProducts] = useState([]);
+
+  
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, "Product Information"));
+      const products = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      console.log(products);
+      MysetProducts(products);
+      
+    };
+    fetchProducts();
+  }, []);
+
 
   const toggleModal = () => {
     setModal(!modal);
@@ -37,7 +59,7 @@ export default function Search(fulldatas, { handleAddProduct }) {
 
    
       <div className="template">
-        {fulldatas.fulldatas
+        {myproducts.myproducts
           // eslint-disable-next-line
           .filter((product) => {
             if (
@@ -48,6 +70,9 @@ export default function Search(fulldatas, { handleAddProduct }) {
           })
 
           .map((product) => (
+            <Link key={product.id}
+            // Moving to the product page
+            to={`/productdetails?name=${product.title}?id=${product.id}`}  >
             <div className="product_search" key={product.id}>
               <img
                 className="product-image"
@@ -70,7 +95,7 @@ export default function Search(fulldatas, { handleAddProduct }) {
                   Add to Cart
                 </button>
               </div>
-            </div>
+            </div></Link>
           ))}
       </div>
 

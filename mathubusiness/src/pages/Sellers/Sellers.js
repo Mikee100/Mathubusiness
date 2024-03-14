@@ -16,6 +16,7 @@ export default function Sellers() {
  
 
   const handleCategorySubmit = (e) => {
+    e.preventDefault();
     const category = e.target.value;
     handleSubmit(category, e);
   };
