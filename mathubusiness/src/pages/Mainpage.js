@@ -137,6 +137,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
      
    
     />
+
     <h4 className="product-title" >
       {product.title}
 

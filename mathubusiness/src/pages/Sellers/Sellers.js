@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "../Sellers/sellers.css";
 
 import { db } from '../../Firebase';
 
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 export default function Sellers() {
 
@@ -11,47 +11,38 @@ export default function Sellers() {
   const [price, setPrice] = useState("");
   const [about, setAbout] = useState("");
   const [image, setImage] = useState("");
-  const [products, setProducts] = useState([]);
-
+  
+  const [selectedCategories, setSelectedCategories] = useState([]);
  
 
-  const handleCategorySubmit = (e) => {
-    e.preventDefault();
-    const category = e.target.value;
-    handleSubmit(category, e);
+  const handleCategorySubmit = (category) => {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories((prevCategories) =>
+        prevCategories.filter((c) => c !== category)
+      );
+    } else {
+      setSelectedCategories((prevCategories) => [...prevCategories, category]);
+    }
   };
-
-  const handleSubmit = async (category, e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const docRef = await addDoc(collection(db, category), {
-        title: title,
-        price: price,
-        about: about,
-        image: image,
+      selectedCategories.forEach(async (category) => {
+        const docRef = await addDoc(collection(db, category), {
+          title: title,
+          price: price,
+          about: about,
+          image: image,
+        });
+        alert("Registration was successful in " + category, docRef.id);
       });
-
-      alert("Registration was successful ", docRef.id);
     } catch (e) {
       alert("Error adding document: ", e);
     }
   };
   
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const querySnapshot = await getDocs(collection(db, "Product Information"));
-      const products = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      console.log(products);
-      setProducts(products);
-    };
-    fetchProducts();
-  }, []);
-
+ 
  
 
   return (
@@ -62,26 +53,17 @@ export default function Sellers() {
         <input type="text" className='product_about' placeholder='Product About' value={about} onChange={(e) => setAbout(e.target.value)} />
         <input type='text' className='product_seller_image' placeholder='Product image' value={image} onChange={(e) => setImage(e.target.value)} />
 
-        <select name="category" onChange={handleCategorySubmit} className='mycategory' >
-          <option value="">Select Category</option>
-          <option value="Shoes">Shoes</option>
-          <option value="Bags">Bags</option>
-          <option value="dresses">Dresses</option>
-        </select>
-
+        <select name="category" onChange={(e) => handleCategorySubmit(e.target.value)} className='mycategory' multiple>
+  <option value="">Select Category</option>
+  <option value="Shoes" className={selectedCategories.includes('Shoes') ? 'selected-category' : ''}>Shoes</option>
+  <option value="Bags" className={selectedCategories.includes('Bags') ? 'selected-category' : ''}>Bags</option>
+  <option value="dresses" className={selectedCategories.includes('dresses') ? 'selected-category' : ''}>Dresses</option>
+  <option value="Product Information" className= {selectedCategories.includes('Product Information') ? 'selected-category' : ''}>All Products</option>
+</select>
         <button className='seller_btn'>Send Products</button>
       </form>
 
-      <div className='product_list'>
-        {products.map(product => (
-          <div className='product' key={product.id}>
-            <p className="product-title">{product.title}</p>
-            <p>{product.about}</p>
-            <p className="product-price">{product.price}</p>
-            <img className='product-image' src={product.image} alt={product.image} />
-          </div>
-        ))}
-      </div>
+  
     </div>
   )
 }

@@ -91,9 +91,9 @@ export default function ProductDetails({
 
                   <div className="thumbnails">
                     <img
-                      src={pop.image1}
+                      src={pop.image}
                       alt="Small 1"
-                      onClick={() => handleImageClick(pop.image1)}
+                      onClick={() => handleImageClick(pop.image)}
                     />
                     <img
                       src={pop.image2}

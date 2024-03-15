@@ -27,6 +27,7 @@ import Womenboots from "./pages/womenshoescategories/Womenboots";
 import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
 
+
 import Catalog from "./pages/Catalog";
 import Pagination from "./pages/Pagination";
 import Sellers from "./pages/Sellers/Sellers";
@@ -42,6 +43,7 @@ function App() {
   const productshoessandals = shoessandals;
   const fashionwomenboot = womenboots;
   const womenheels = heels;
+ 
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -137,7 +139,7 @@ function App() {
                   productshoessandals={productshoessandals}
                   fashionwomenboot={fashionwomenboot}
                   productDresses={productDresses}
-                  userData
+                  
                 />
               }
             />
@@ -224,6 +226,7 @@ function App() {
                   productdetails={productdetails}
                   productItems={productItems}
                   addLikedProduct={addLikedProduct}
+                  
                 />
               }
             />
