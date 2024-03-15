@@ -4,11 +4,31 @@ import { useLocation } from 'react-router-dom';
 // import Pagination from "./Pagination";
 
 import "./csspages/sandals.css"
+
+import {collection, getDocs  } from "firebase/firestore"; 
+import { db} from '../Firebase';
 export default function Catalog({fulldatas,handleAddProduct,handleAddProductDetails}) {
     
     const location = useLocation();
     const [query,setQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [myproducts, MysetProducts] = useState([]);
+
+  
+    useEffect(() => {
+  
+      const fetchProducts = async () => {
+        const querySnapshot = await getDocs(collection(db, "Product Information"));
+        const products = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        console.log(products);
+        MysetProducts(products);
+        
+      };
+      fetchProducts();
+    }, [])
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
@@ -16,12 +36,12 @@ export default function Catalog({fulldatas,handleAddProduct,handleAddProductDeta
     
         // Perform search with your data from the database
         setQuery(query || '');
-        const filteredResults = fulldatas.filter(item =>
+        const filteredResults = myproducts.filter(item =>
             item.title?.toLowerCase().includes(query.toLowerCase())
           );
     
         setSearchResults(filteredResults);
-      }, [location.search,fulldatas,query]);
+      }, [location.search,myproducts,query]);
      // const [currentPage, setCurrentPage] = useState(1);
   //const [itemsPerPage] = useState(10); // Number of items per page
 
