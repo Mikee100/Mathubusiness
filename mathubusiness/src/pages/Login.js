@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import "./login.css";
 import { auth } from '../Firebase';
-import {  createUserWithEmailAndPassword, updateProfile  } from "firebase/auth";
+import {  createUserWithEmailAndPassword } from "firebase/auth";
 import {db} from "../Firebase"
 
 import { addDoc, collection } from "firebase/firestore"; 
@@ -23,7 +23,7 @@ const Login = () => {
 
         const history = useNavigate();
 
-        const handleSubmit = async (e,email, password, firstName) => {
+        const handleSubmit = async (e) => {
             e.preventDefault();
             try {
               const docRef = await addDoc(collection(db, "Account Information"), {
@@ -43,7 +43,7 @@ const Login = () => {
 
               
             } catch (e) {
-              alert("Error adding document: ", e);
+              console.log("Error adding document: ", e);
             }
             
             createUserWithEmailAndPassword(auth,email, password)
@@ -54,9 +54,6 @@ const Login = () => {
                   history("/")
 
                   // ...
-                 updateProfile(userCredential.user, {
-                    displayName: firstName
-                  });
               
                   
                 })
