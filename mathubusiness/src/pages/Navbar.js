@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import { FaShoppingCart } from "react-icons/fa";
@@ -14,8 +14,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import LogoutTemp from "./LogoutTemp";
-import {collection, getDocs  } from "firebase/firestore"; 
-import { db} from '../Firebase';
+
 function Navbar({ cartItems }) {
   const [Mobile, setMobile] = useState(false);
 
@@ -24,23 +23,10 @@ function Navbar({ cartItems }) {
   const [view, setview] = useState(false);
 
 
-  const [myproducts, MysetProducts] = useState([]);
+
 
   
-  useEffect(() => {
 
-    const fetchProducts = async () => {
-      const querySnapshot = await getDocs(collection(db, "Product Information"));
-      const products = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      console.log(products);
-      MysetProducts(products);
-      
-    };
-    fetchProducts();
-  }, []);
 
   const mydisappear = () => {
     setview(!view);

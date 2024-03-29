@@ -178,6 +178,7 @@ function App() {
                   handleRemoveProduct={handleRemoveProduct}
                   handleCartClearance={handleCartClearance}
                   handleAddProductDetails={handleAddProductDetails}
+                  productItems={productItems}
                 />
               }
             />

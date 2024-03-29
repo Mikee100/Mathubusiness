@@ -11,10 +11,10 @@ export default function ShoppingCart({
   handleRemoveProduct,
   handleCartClearance,
   handleAddProductDetails,
+  productItems
 }) {
   
-  const [src] = useState();
-
+ 
  
   const totalPrice = cartItems.reduce(
     (price, item) => price + item.quantity * item.price,
@@ -41,15 +41,15 @@ export default function ShoppingCart({
       return;
     }
     const templateParams = {
-      to_name: "mICHAEL", // Replace with actual recipient name
-      from_name: "mEZURI", // Replace with your app name or sender name
-   
-
-        to_image:src,
-   
-      total_price: totalPrice,
-      
-     
+      to_name: user.displayName,
+      from_name: "Mezuri",
+      total_price: totalPrice, 
+      productItems: productItems.map(item => ({
+        title: item.title,
+        image: item.image,
+        quantity: item.quantity,
+        price: item.price
+      }))
     };
     // Proceed with sending email
     emailjs.send(
@@ -59,11 +59,11 @@ export default function ShoppingCart({
       "KeePPXIGkpTcoiTBJ"
     )
     .then((response) => {
-      console.log('Email sent successfully:', response.status, response.text);
+      alert('Email sent successfully:', response.status, response.text);
       // Handle success, maybe show a success message to the user
     })
     .catch((error) => {
-      console.error('Email sending failed:', error);
+      alert('Email sending failed:', error);
       // Handle error, show an error message to the user
     });
   };

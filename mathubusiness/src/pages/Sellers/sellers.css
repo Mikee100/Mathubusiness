@@ -11,7 +11,7 @@
     top: 6rem;
     left:2rem;                                                                                                 width: 70rem;
     height: 29rem;
-   
+  
 }
 .product_title{
     position: absolute;
@@ -99,4 +99,10 @@
     left: 0rem;
     padding: 10px;
     width: 30rem; 
+}
+.colorCategory{
+    position: absolute;
+    width: 10rem;
+    left: 20rem;
+    top: 18rem;
 }

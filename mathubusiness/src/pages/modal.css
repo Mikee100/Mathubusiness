@@ -205,26 +205,26 @@
 .pop_product-title {
   position: absolute;
   top: 5rem;
-  left: 22rem;
+  left: 24rem;
   font-size: 1.1rem;
 }
 .pop_product-price {
   position: absolute;
   top: 10rem;
   font-size: 1.4rem;
-  left: 22rem;
+  left: 24rem;
   color: rgb(128, 101, 66);
 }
 .pop_btn {
   position: absolute;
   top: 20rem;
-  left: 22rem;
+  left: 24rem;
   padding: 0.9rem;
   border: none;
   border-radius: 5px;
   background-color: rgb(128, 101, 66);
   display: flex;
-  width: 24rem;
+  width: 27rem;
   justify-content: center;
 }
 .pop_btn_wish {
@@ -583,8 +583,8 @@
 }
 
 .big-image img {
-  max-width: 400px;
-  max-height: 250px;
+  max-width: 500px;
+  max-height: 350px;
   margin-left: 15px;
 }
 

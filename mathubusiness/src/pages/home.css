@@ -99,8 +99,7 @@ background-color: #065a82;
   top: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ 
   height: 13rem;
   width: 10rem;
 
@@ -112,11 +111,10 @@ background-color: #065a82;
   top: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   height: 13rem;
   width: 10rem;
-
+  
   margin-right: 12px;
 }
 .product:hover, .product_firstmainpage:hover{
@@ -128,14 +126,14 @@ background-color: #065a82;
 
 .product-image {
   position: relative;
-
-  top: -2.98rem;
+  
+  top: 0rem;
   height: 9rem;
   width: 10rem;
 }
 .product-title {
   position: absolute;
-  top: 9rem;
+  top: 10rem;
   left: 0.2rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -149,7 +147,7 @@ background-color: #065a82;
 }
 .product-price {
   position: absolute;
-  top: 10rem;
+  top: 11rem;
   left: 0.2rem;
   font-weight: 500;
   font-size: 18px;

@@ -19,7 +19,7 @@ export default function Sellers() {
 
   
   const [selectedCategories, setSelectedCategories] = useState([]);
- 
+  const [selectedColor, setSelectedColor] = useState("");
 
   const handleCategorySubmit = (category) => {
     if (selectedCategories.includes(category)) {
@@ -30,9 +30,20 @@ export default function Sellers() {
       setSelectedCategories((prevCategories) => [...prevCategories, category]);
     }
   };
+  const handleColorSubmit = (color) => {
+    setSelectedColor(color);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (selectedCategories.length === 0) {
+        alert("Please select at least one category");
+        return;
+      }
+      if (!selectedColor) {
+        alert("Please select a color");
+        return;
+      }
       selectedCategories.forEach(async (category) => {
         const docRef = await addDoc(collection(db, category), {
           title: title,
@@ -44,6 +55,7 @@ export default function Sellers() {
           image4: image4,
           image5: image5,
           image6: image6,
+          color: selectedColor,
 
         });
         alert("Registration was successful in " + category, docRef.id);
@@ -77,7 +89,16 @@ export default function Sellers() {
   <option value="Bags" className={selectedCategories.includes('Bags') ? 'selected-category' : ''}>Bags</option>
   <option value="dresses" className={selectedCategories.includes('dresses') ? 'selected-category' : ''}>Dresses</option>
   <option value="Product Information" className= {selectedCategories.includes('Product Information') ? 'selected-category' : ''}>All Products</option>
+  <option value="Heels" className={selectedCategories.includes('heels') ? 'selected-category' : ''}>Heels</option>
 </select>
+
+<select  className='colorCategory' onChange={(e) => handleColorSubmit(e.target.value)}>
+    <option value="">Choose Color</option>
+    <option value="red" >Red</option>
+    <option value="white" >White</option>
+    <option value="green" >Green</option>
+    <option value="silver" >Silver</option>
+  </select>
         <button className='seller_btn'>Send Products</button>
       </form>
 

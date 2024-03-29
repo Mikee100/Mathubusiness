@@ -4,9 +4,7 @@ import "./home.css";
 import "./modal.css";
 import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
-import { BsTruck } from "react-icons/bs";
-import { SlEnvolopeLetter } from "react-icons/sl";
-import { TbTruckReturn } from "react-icons/tb";
+
 import { FaFileAlt } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 
@@ -130,17 +128,9 @@ export default function ProductDetails({
                   ADD TO CART
                 </button>
 
-                <hr className="line_pdrt_detail" />
-                <p className="p_share_prdt">SHARE THE PRODUCT</p>
-                <div className="facebook_icon">
-                  <FaFacebookF className="icon_facebook" />
-                </div>
+              
 
-                <p className="promotions">PROMOTIONS</p>
-
-                <p className="reporting_prdt">
-                  Report incorrect product information
-                </p>
+          
               </div>
 
               <FaRegHeart
@@ -154,31 +144,7 @@ export default function ProductDetails({
               >
                 <hr className="hr_desc" />
                 <small className="small_desc">PRODUCT DETAILS</small>
-                <small className="about_specs">
-                  Product Details：
-                  <br />
-                  1.Material: PU Leather.
-                  <br />
-                  2.Type: Solid.
-                  <br />
-                  3.Dimension: See the Picture.
-                  <br />
-                  4.Accessories: Removable and adjustable shoulder strap.
-                  <br />
-                  5.Minimalist style, integrating good design and good
-                  functions, the exterior is classic, and the interior is
-                  practical.
-                  <br />
-                  6.The thickened shoulder strap design is not easy to break,
-                  has a longer practical life, and relieves the stress on the
-                  shoulder at the same time.
-                  <br />
-                  7.Three-in-one bags, different capacity combinations to meet
-                  your diverse storage needs and fashion needs.
-                  <br />
-                  8.Are you still looking for a classic, versatile, practical
-                  and simple bag? Choose this one!
-                </small>
+            
               </div>
               <div className="rating_container" id="rating_container">
                 <small className="small_rate">CUSTOMER FEEDBACK</small>
@@ -265,19 +231,7 @@ export default function ProductDetails({
                 <h4>Specifications</h4>
                 <hr />
 
-                <div className="key_features">
-                  <p>KEY FEATURES</p>
-
-                  <ul className="list_features">
-                    <li>Mechanical Control</li>
-                    <li>Interior LED light</li>
-                    <li>Energy-saving and low noise</li>
-                    <li>Adjustable front feet</li>
-                    <li>Lock&key</li>
-                  </ul>
-
-                  <hr />
-                </div>
+              
               </div>
 
               <div className="location_of_divs">
@@ -290,11 +244,6 @@ export default function ProductDetails({
                 <small onClick={handleClickScrol3}>Customer Feedback</small>
               </div>
 
-              <div className="sellers_info">
-                <p>SELLER INFORMATION</p>
-
-                <hr className="hr_seller_info" />
-              </div>
 
               <div className="prdt_cart">
                 {productdetails.map((product) => (
@@ -311,78 +260,7 @@ export default function ProductDetails({
             
               {/** items in the modal                  */}
 
-              <div className="modal_left_delivery">
-                <p className="delivery_status"> Delivery & Status</p>
-                <hr className="delivery_status_line" />
-
-                <p className="choosing_location_status">
-                  {" "}
-                  Choose your location{" "}
-                </p>
-
-                <select className="counties" id="counties">
-                  <option value="Nakuru">Nakuru</option>
-                  <option value="Nairobi">Nairobi</option>
-                  <option value="Mombasa">Mombasa</option>
-                  <option value="Kisumu">Kisumu</option>
-
-                  <option value="Muranga">Muranga</option>
-                  <option value="Narok">Narok</option>
-                  <option value="Kajiado">Kajiado</option>
-                  <option value="Busia">Busia</option>
-
-                  <option value="Kiambu">Kiambu</option>
-                  <option value="Turkana">Turkana</option>
-                  <option value="Marsabit">Marsabit</option>
-                  <option value="Garissa">Garissa</option>
-
-                  <option value="Kiambu">Uasin Gishu</option>
-                  <option value="Turkana">West Pokot</option>
-                  <option value="Marsabit">Embu</option>
-                  <option value="Garissa">Meru</option>
-
-                  <option value="Kiambu">Nyeri</option>
-                  <option value="Turkana">Nyandarua</option>
-                  <option value="Marsabit">Kericho</option>
-                  <option value="Garissa">Tana River</option>
-                </select>
-                <BsTruck className="delivery_truck" />
-                <div className="template_deliver">
-                  <p className="p_door_delivery">Door Delivery</p>
-                  <p className="p_free_delivery">Free Delivery</p>
-                  <p className="p_deliverby">
-                    Deliver by "date" when you order within"Amount of time"{" "}
-                  </p>
-
-                  <button className="a_details" onClick={toggleModal}>
-                    Details
-                  </button>
-                </div>
-
-                <SlEnvolopeLetter className="delivery_item" />
-                <div className=" receive_template">
-                  <p className="p_door_delivery">Pickup Station</p>
-                  <p className="p_free_delivery">Free Delivery</p>
-                  <p className="p_deliverby">
-                    Deliver by "date" when you order within"Amount of time"{" "}
-                  </p>
-                  <button className="a_details" onClick={toggleModal}>
-                    Details
-                  </button>
-                </div>
-
-                <hr className="rtn_policy_ln" />
-
-                <TbTruckReturn className="delivery_return" />
-                <div className=" return_template">
-                  <p className="p_door_delivery">Return Policy</p>
-                  <p className="p_free_delivery">Easy Return, Quick Refund</p>
-
-                  <button className="a_details" onClick={toggleModal}>
-                    Details
-                  </button>
-                </div>
-              </div>
+             
 
               {modal1 && (
                 <div className="modal1">

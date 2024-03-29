@@ -56,6 +56,22 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
     return <div className="loading-message">Loading products...</div>;
   }
 
+  
+  if (isLoading) {
+    return (
+      <div className="mainpage_mastercontainer">
+        <div className="loading-container">
+          <div className="loading-message">Loading products...</div>
+          <div className="loading-items">
+            {Array.from({ length: 12 }, (_, index) => (
+              <div key={index} className="loading-item"></div>
+            ))}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
   
@@ -88,7 +104,7 @@ export default function Mainpage({productItems,   handleAddProductDetails,produc
       ) : (
      <div className="product_firstmainpage"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
- key={index}
+    
     <img  
       className="product-image"
       src={product.image}
