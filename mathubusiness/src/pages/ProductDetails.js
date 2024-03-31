@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./navbar.css";
 import "./home.css";
 import "./modal.css";
@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 
 import { FaFileAlt } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
+import { db} from '../Firebase';
+
+import {collection, getDocs  } from "firebase/firestore"; 
 
 
 
@@ -19,6 +21,7 @@ export default function ProductDetails({
 }) {
   
   const [modal1, setModal1] = useState(false);
+  const [myproducts, MysetProducts] = useState([]);
 
   const toggleModal = () => {
     setModal1(modal1);
@@ -50,13 +53,28 @@ export default function ProductDetails({
   };
 
   // State to track the currently selected big image
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState();
 
   // Function to handle click on a smaller image
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
   };
+
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, "Product Information"));
+      const products = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      console.log(products);
+      MysetProducts(products);
+      
+    };
+    fetchProducts();
+  }, []);
 
 
   return (
@@ -228,10 +246,18 @@ export default function ProductDetails({
                 className="specifications_container"
                 id="specifications_container"
               >
-                <h4>Specifications</h4>
-                <hr />
+                   <h4>Specifications</h4>
+                   <hr />
+                {myproducts.map((product) => (
+  <ol className="ul_specifications">
+  <li className="li_specifications">Color:   {product.Color} </li>
+  <li className="li_specifications">Height:  {product.Dimensions}</li>
+  <li className="li_specifications">Weight:  {product.Weight}</li>
+    
+ </ol>
 
-              
+     ))}
+
               </div>
 
               <div className="location_of_divs">

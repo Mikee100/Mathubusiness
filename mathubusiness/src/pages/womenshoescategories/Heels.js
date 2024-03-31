@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import "../csspages/sandals.css";
 
@@ -8,17 +8,16 @@ export default function Heels({ womenheels, handleAddProductDetails }) {
   const [filteredProducts, setFilteredProducts] = useState(womenheels);
 
   // Filter products based on price range
-  const filterProducts = () => {
-    const filtered = womenheels.filter(product => {
+  const filterProducts = useCallback(() => {
+    const filtered = womenheels.filter((product) => {
       return product.price >= minPrice && product.price <= maxPrice;
     });
     setFilteredProducts(filtered);
-  };
+  }, [minPrice, maxPrice, womenheels]);
 
-  // Update filteredProducts when minPrice or maxPrice changes
   useEffect(() => {
-    filterProducts();
-  });
+    setFilteredProducts(womenheels.filter(product => product.price >= minPrice && product.price <= maxPrice));
+  }, [minPrice, maxPrice, womenheels]);
   return (
     <div className='container_sandals'>
 
@@ -31,32 +30,32 @@ export default function Heels({ womenheels, handleAddProductDetails }) {
       <div className='container_functionalities'>
         <h3>Category</h3>
         <hr className='category_line' />
-       
-          <div className='price_ranges' >
-             <h4>Price Kshs</h4>
+
+        <div className='price_ranges' >
+          <h4>Price Kshs</h4>
           <input
             type="number"
             value={minPrice}
             className='min-value_input'
             onChange={e => setMinPrice(Number(e.target.value))}
           />
-      
+
           <input
             type="number"
             value={maxPrice}
             className='max-value_input'
             onChange={e => setMaxPrice(Number(e.target.value))}
           />
-        
-        <button onClick={filterProducts}>Apply</button>
+
+          <button onClick={filterProducts}>Apply</button>
         </div>
-        < hr className='btm_categoty_line' />  
+        <hr className='btm_categoty_line' />
       </div>
 
       <div className="products_sandals">
         <p>Womens Heels</p>
         <hr className='line' />
-     
+
         {filteredProducts.map((product) => (
           <Link key={product.id} to={`/productdetails?name=${product.title}?id=${product.id}`}>
             <div className="product_sandals" onClick={() => handleAddProductDetails(product)}>

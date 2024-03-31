@@ -615,3 +615,28 @@
   right: 2rem;
   background-color: #065a82;
 }
+.ul_specifications{
+  position: absolute;
+  height: 15rem;
+  width: 10rem;
+  
+ display: flex;
+ flex-direction: column;
+ justify-content: left;
+  top:4rem;
+  
+  
+}
+
+.li_specifications{
+  position: relative;
+  left: 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  margin: .4rem;
+  
+   
+ 
+ 
+}
