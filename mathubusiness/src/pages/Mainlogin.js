@@ -94,19 +94,9 @@ export default function Mainlogin() {
     <button class="button-submit" onClick={handleSignIn} >Sign In</button>
     <a href='./login' > <p class="p">Don't have an account? <span class="span" >Sign Up</span>
 
-    </p></a><p class="p_line">Or With</p>
-
-    <div class="flex-row">
-      <button class="btn google">
-
-   
-        Google 
+    </p></a>
         
-      </button><button class="btn apple">
-
-        Apple 
-        
-</button></div></form>
+</form>
 
 
 

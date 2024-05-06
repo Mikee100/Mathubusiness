@@ -109,7 +109,7 @@ const Login = () => {
   </select>
 
   {selectedCity && (
-    <div>
+    <div  >
       <select id="location" value={selectedLocation} onChange={handleLocationChange} className='diffoptions' >
         {options[selectedCity].map((location, index) => (
           <option key={index} value={location}>{location}</option>

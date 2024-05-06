@@ -27,13 +27,13 @@ import Womenboots from "./pages/womenshoescategories/Womenboots";
 import heels from "./db/heels";
 import Heels from "./pages/womenshoescategories/Heels";
 
-
 import Catalog from "./pages/Catalog";
 import Pagination from "./pages/Pagination";
 import Sellers from "./pages/Sellers/Sellers";
 import Listdress from "./pages/Dresses/Listdress";
 import Push from "./Push";
-
+import Checkout from "./pages/Checkout";
+import Notification from "./pages/Notification";
 
 function App() {
   const productItems = products;
@@ -43,7 +43,6 @@ function App() {
   const productshoessandals = shoessandals;
   const fashionwomenboot = womenboots;
   const womenheels = heels;
- 
 
   const [cartItems, setCartItems] = useState([]);
   const [likedItems, setLikedItems] = useState([]);
@@ -139,7 +138,6 @@ function App() {
                   productshoessandals={productshoessandals}
                   fashionwomenboot={fashionwomenboot}
                   productDresses={productDresses}
-                  
                 />
               }
             />
@@ -227,7 +225,6 @@ function App() {
                   productdetails={productdetails}
                   productItems={productItems}
                   addLikedProduct={addLikedProduct}
-                  
                 />
               }
             />
@@ -255,18 +252,20 @@ function App() {
                 />
               }
             />
+            <Route path="listdresses" element={<Listdress />} />
+
             <Route
-            path="listdresses" 
-            element={
-              <Listdress />
-            } />
+              path="checkout"
+              element={<Checkout   cartItems={cartItems} />}
+            />
             <Route path="login" element={<Login />} />
             <Route path="mainlogin" element={<Mainlogin />} />
             <Route path="myaccount" element={<Myaccount />} />
             <Route path="sellers" element={<Sellers />} />
-            <Route path="push" element={<Push productItems={productItems}  />}  />
+            <Route path="push" element={<Push productItems={productItems} />} />
+            <Route path="notication" element={<Notification />} />
 
-            <Route path="" element={<Footer />} />
+          <Route path="" element={<Footer />} />
           </Routes>
           <Pagination />
 

@@ -1,0 +1,100 @@
+.form_checkout{
+
+    display: absolute;
+    height: 35rem;
+    top: 6rem;
+    left: 40rem;
+    
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .form_checkout h2{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .form_checkout h4{
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+ 
+  .shippinginput{
+    
+    margin-top: 0px;
+    margin-left: 10px;
+    border: solid 1px ;
+    border-radius: 6px;
+    
+    width: 100%;
+    height: 2rem;
+  }
+  .location_checkout{
+    position: absolute;
+    left: -8rem;
+    top: 19.8rem;
+    width: 20rem;
+  }
+  .expiry{
+    margin-top: 0px;
+    margin-left: 10px;
+    border: solid 1px ;
+    border-radius: 6px;
+    
+    width: 13rem;
+    height: 2rem;
+    
+  }
+  .pdrt_container_checkout{
+    position: absolute;
+    top: 6rem;
+   
+    height: 40rem;
+    width: 40rem;
+  }
+  .ordered_items_h1{
+    position: absolute;
+    top: 1rem;
+  }
+  .cart_container_checkout {
+    position: relative;
+    height: 12rem;
+    width: 50%;
+    
+    top: 5.5rem;
+  }
+  .single_item_cart_checkout {
+    position: absolute;
+
+    width: 100%;
+  }
+  .cart-title_checkout {
+    position: absolute;
+    top: 3rem;
+    left:7rem;
+    width: 100%;
+    font-size: 1rem;
+    font-size: 14px;
+  }
+  .cart-price_checkout{
+    position: absolute;
+    left: 35rem;
+    top: 4rem;
+    width: 5rem;
+    font-size: 14px;
+
+  }
+  .p_totalprice{
+    position: absolute;
+    top: 3rem;
+    left: 0rem;
+  }
+  .p_count_checkout{
+    position: absolute;
+    top: 3rem;
+    left: -28rem;
+    font-size: 10px;
+  }

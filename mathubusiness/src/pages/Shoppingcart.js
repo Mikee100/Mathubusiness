@@ -1,8 +1,7 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 import "./shoppingcart.css";
 import { Link,useNavigate } from "react-router-dom";
-import { auth } from '../Firebase' 
-import emailjs from "emailjs-com"
+
 import Footer from "./Footer";
 
 export default function ShoppingCart({
@@ -11,7 +10,8 @@ export default function ShoppingCart({
   handleRemoveProduct,
   handleCartClearance,
   handleAddProductDetails,
-  productItems
+  productItems,
+  
 }) {
   
  
@@ -20,52 +20,16 @@ export default function ShoppingCart({
     (price, item) => price + item.quantity * item.price,
     0
   );
-  const [user, setUser] = useState(null);
- 
+
   const history = useNavigate();
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
+ 
 
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
-  const sendEmail = () => {
-    if (!user) {
-      // User is not logged in, redirect to login page
-      history("/mainlogin"); // Assuming you have a route for the login page
-      return;
-    }
-    const templateParams = {
-      to_name: user.displayName,
-      from_name: "Mezuri",
-      total_price: totalPrice, 
-      productItems: productItems.map(item => ({
-        title: item.title,
-        image: item.image,
-        quantity: item.quantity,
-        price: item.price
-      }))
-    };
+  const ToCheckout = () => {
+    
     // Proceed with sending email
-    emailjs.send(
-      "service_bmvwx28",
-      "template_zsdszy8",
-      templateParams,
-      "KeePPXIGkpTcoiTBJ"
-    )
-    .then((response) => {
-      alert('Email sent successfully:', response.status, response.text);
-      // Handle success, maybe show a success message to the user
-    })
-    .catch((error) => {
-      alert('Email sending failed:', error);
-      // Handle error, show an error message to the user
-    });
+    history("/checkout");
+    
   };
 
   
@@ -138,7 +102,7 @@ to={`/productdetails?name=${handleAddProductDetails.title}?id=${handleAddProduct
           <p className="sub_total">Subtotal</p>
           <p className="cart_summary">Cart Summary</p>
           <small>KSh {totalPrice}</small>
-          <button className="checkout" onClick={sendEmail} >Checkout (KSh {totalPrice})</button>
+          <button className="checkout" onClick={ToCheckout} >Checkout (KSh {totalPrice})</button>
         </div>
        
       </div>

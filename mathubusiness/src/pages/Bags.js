@@ -28,7 +28,7 @@ export default function Bags({productItems,handleAddProductDetails, productShoes
   to={`/productdetails?name=${product.title}?id=${product.id}`}  >
      <div className="product_firstmainpage"  
   onClick={() => handleAddProductDetails(product)} key={product.id}>
- key={index}
+ 
     <img  
       className="product-image"
       src={product.image}
